@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Odin's Webserver
                 </div>
 
                 <div class="links">
