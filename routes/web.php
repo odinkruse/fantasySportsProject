@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Home@view');
+Route::get('/add-race', 'AddRace@view');
+Route::post('/add-race', 'AddRace@store');

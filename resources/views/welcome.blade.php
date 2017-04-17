@@ -65,8 +65,14 @@
         </style>
     </head>
     <body>
-        <div id="app" class="flex-center position-ref full-height">
-            <app></app>
+        <div id="app" class="full-height">
+            {{--{{$data}}--}}
+            {{--{{ $data }}--}}
+            {{--{{$data}}--}}
+            <app
+                json = "{{ json_encode($data->json) }}"
+                view = "{{$data->view}}"
+            ></app>
         </div>
         <script src="/js/app.js"></script>
     </body>
