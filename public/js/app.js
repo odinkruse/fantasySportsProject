@@ -2231,9 +2231,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {}
+    props: ['data'],
+    data: function data() {
+        return {};
+    }
 });
 
 /***/ }),
@@ -2298,7 +2308,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2568,12 +2578,10 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "home-vue"
-  }, [_c('h1', [_vm._v("Coming from the Home View")])])
-}]}
+  }, [_c('h1', [_vm._v("Coming from the Home View")]), _vm._v(" "), _c('div', [_vm._v("\n        " + _vm._s(_vm.data.data[0].raceNo) + "\n        " + _vm._s(_vm.data.data[0].name) + "\n        " + _vm._s(_vm.data.data[0].track) + "\n        " + _vm._s(_vm.data.data[0].laps) + "\n        " + _vm._s(_vm.data.data[0].raceDate) + "\n    ")])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
