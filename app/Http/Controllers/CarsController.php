@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\RaceResults2017;
+use App\Cars;
 use Illuminate\Http\Request;
 
-class RaceResults2017Controller extends Controller
+class CarsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class RaceResults2017Controller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\RaceResults2017  $raceResults2017
+     * @param  \App\Cars  $carList
      * @return \Illuminate\Http\Response
      */
-    public function show(RaceResults2017 $raceResults2017)
+    public function show(Cars $carList)
     {
         //
     }
@@ -52,10 +52,10 @@ class RaceResults2017Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\RaceResults2017  $raceResults2017
+     * @param  \App\Cars  $carList
      * @return \Illuminate\Http\Response
      */
-    public function edit(RaceResults2017 $raceResults2017)
+    public function edit(Cars $carList)
     {
         //
     }
@@ -64,10 +64,10 @@ class RaceResults2017Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\RaceResults2017  $raceResults2017
+     * @param  \App\Cars  $carList
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RaceResults2017 $raceResults2017)
+    public function update(Request $request, Cars $carList)
     {
         //
     }
@@ -75,10 +75,10 @@ class RaceResults2017Controller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\RaceResults2017  $raceResults2017
+     * @param  \App\Cars  $carList
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RaceResults2017 $raceResults2017)
+    public function destroy(Cars $carList)
     {
         //
     }

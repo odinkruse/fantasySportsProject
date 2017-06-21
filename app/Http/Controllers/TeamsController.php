@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\CarList2017;
+use App\Teams;
 use Illuminate\Http\Request;
 
-class CarList2017Controller extends Controller
+class TeamsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CarList2017Controller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\CarList2017  $carList2017
+     * @param  \App\Teams  $teamList
      * @return \Illuminate\Http\Response
      */
-    public function show(CarList2017 $carList2017)
+    public function show(Teams $teamList)
     {
         //
     }
@@ -52,10 +52,10 @@ class CarList2017Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\CarList2017  $carList2017
+     * @param  \App\Teams  $teamList
      * @return \Illuminate\Http\Response
      */
-    public function edit(CarList2017 $carList2017)
+    public function edit(Teams $teamList)
     {
         //
     }
@@ -64,10 +64,10 @@ class CarList2017Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\CarList2017  $carList2017
+     * @param  \App\Teams  $teamList
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CarList2017 $carList2017)
+    public function update(Request $request, Teams $teamList)
     {
         //
     }
@@ -75,10 +75,10 @@ class CarList2017Controller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CarList2017  $carList2017
+     * @param  \App\Teams  $teamList
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CarList2017 $carList2017)
+    public function destroy(Teams $teamList)
     {
         //
     }

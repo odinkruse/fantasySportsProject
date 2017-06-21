@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\FantasyTeams2017;
+use App\Races;
 use Illuminate\Http\Request;
 
-class FantasyTeams2017Controller extends Controller
+class Races extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class FantasyTeams2017Controller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\FantasyTeams2017  $fantasyTeams2017
+     * @param  \App\Races  $raceList
      * @return \Illuminate\Http\Response
      */
-    public function show(FantasyTeams2017 $fantasyTeams2017)
+    public function show(Races $raceList)
     {
         //
     }
@@ -52,10 +52,10 @@ class FantasyTeams2017Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\FantasyTeams2017  $fantasyTeams2017
+     * @param  \App\Races  $raceList
      * @return \Illuminate\Http\Response
      */
-    public function edit(FantasyTeams2017 $fantasyTeams2017)
+    public function edit(Races $raceList)
     {
         //
     }
@@ -64,10 +64,10 @@ class FantasyTeams2017Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\FantasyTeams2017  $fantasyTeams2017
+     * @param  \App\Races  $raceList
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, FantasyTeams2017 $fantasyTeams2017)
+    public function update(Request $request, Races $raceList)
     {
         //
     }
@@ -75,10 +75,10 @@ class FantasyTeams2017Controller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\FantasyTeams2017  $fantasyTeams2017
+     * @param  \App\Races  $raceList
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FantasyTeams2017 $fantasyTeams2017)
+    public function destroy(Races $raceList)
     {
         //
     }
