@@ -13,4 +13,6 @@
 
 Route::get('/', 'Home@view');
 Route::get('/add-race', 'AddRace@view');
+Route::get('/add-third','TeamsController@index');
 Route::post('/add-race', 'AddRace@store');
+Route::post('/add-third','TeamsController@store');

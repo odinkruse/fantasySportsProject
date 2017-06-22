@@ -20,6 +20,6 @@ class Home extends Controller
         $data->json->teams = Teams::get();
         $data->view = "home-view";
 //        $data = "Coming from Home Controller";
-        return view('welcome')->with("data",$data);
+        return view('main')->with("data",$data);
     }
 }

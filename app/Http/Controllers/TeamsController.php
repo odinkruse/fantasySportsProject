@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Teams;
 use Illuminate\Http\Request;
 
+
 class TeamsController extends Controller
 {
     /**
@@ -14,7 +15,10 @@ class TeamsController extends Controller
      */
     public function index()
     {
-        //
+        $data = new \stdClass();
+        $data->json = Teams::get();
+        $data->view = 'add-third-view';
+        return view('main')->with("data",$data);
     }
 
     /**
@@ -35,7 +39,7 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return ['from TeamsController',$request->formData];
     }
 
     /**

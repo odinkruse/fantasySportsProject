@@ -13,7 +13,8 @@
 </template>
 <script>
     import Home from './components/home.vue';
-    import Add from './components/add.vue';
+    import AddRace from './components/add.vue';
+    import AddThird from './components/addThird.vue';
     import Header from'./global/header.vue';
     import Footer from './global/footer.vue';
     export default {
@@ -21,7 +22,8 @@
             'header-component': Header,
             'footer-component': Footer,
             'home-view': Home,
-            'add-race-view': Add
+            'add-race-view': AddRace,
+            'add-third-view': AddThird
         },
         props:['json','view'],
         created(){

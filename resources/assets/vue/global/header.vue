@@ -5,6 +5,7 @@
             <a>Season Breakdown</a>
             <a>Teams and Drivers</a>
             <a href="/add-race">Add a Race</a>
+            <a href="/add-third">Add a Third</a>
         </div>
     </div>
 </template>

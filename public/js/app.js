@@ -2139,10 +2139,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_home_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_add_vue__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_add_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_add_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__global_header_vue__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__global_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__global_header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_footer_vue__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__global_footer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addThird_vue__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addThird_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_header_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__global_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global_footer_vue__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__global_footer_vue__);
 //
 //
 //
@@ -2156,6 +2158,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
@@ -2163,10 +2166,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        'header-component': __WEBPACK_IMPORTED_MODULE_2__global_header_vue___default.a,
-        'footer-component': __WEBPACK_IMPORTED_MODULE_3__global_footer_vue___default.a,
+        'header-component': __WEBPACK_IMPORTED_MODULE_3__global_header_vue___default.a,
+        'footer-component': __WEBPACK_IMPORTED_MODULE_4__global_footer_vue___default.a,
         'home-view': __WEBPACK_IMPORTED_MODULE_0__components_home_vue___default.a,
-        'add-race-view': __WEBPACK_IMPORTED_MODULE_1__components_add_vue___default.a
+        'add-race-view': __WEBPACK_IMPORTED_MODULE_1__components_add_vue___default.a,
+        'add-third-view': __WEBPACK_IMPORTED_MODULE_2__components_addThird_vue___default.a
     },
     props: ['json', 'view'],
     created: function created() {
@@ -2301,6 +2305,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /***/ }),
 /* 36 */
@@ -2325,7 +2330,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2353,7 +2358,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2594,7 +2599,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "/add-race"
     }
-  }, [_vm._v("Add a Race")])])])
+  }, [_vm._v("Add a Race")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": "/add-third"
+    }
+  }, [_vm._v("Add a Third")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -12307,6 +12316,236 @@ module.exports = g;
 __webpack_require__(11);
 module.exports = __webpack_require__(12);
 
+
+/***/ }),
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['data'],
+    data: function data() {
+        return {
+            formData: {
+                teamArray: []
+            }
+        };
+    },
+
+    computed: {},
+    methods: {
+        addThird: function addThird() {
+            for (var entry in this.formData.teamArray) {
+                for (var input in entry.pickArr) {
+                    if (input.carNumber == "" || input.price == "") {
+                        alert("Please fill in " + el.constructor.name);
+                        return;
+                    }
+                }
+            }
+            console.log(this.formData);
+            this.$http.post('/add-third', { formData: this.formData }).then(function (response) {
+                console.log(response);
+            });
+        }
+    },
+    created: function created() {
+        var _this = this;
+
+        this.data.forEach(function (team) {
+            var defaultPickArr = [];
+            for (var i = 0; i < 5; i++) {
+                defaultPickArr.push({
+                    carNumber: "team " + team.teamNumber,
+                    price: "car " + (i + 1)
+                });
+            }
+            _this.formData.teamArray.push({
+                team: team,
+                pickArr: defaultPickArr
+            });
+        });
+    },
+    ready: function ready() {}
+});
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.inline{\n    display: inline-block;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(71)
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(67),
+  /* template */
+  __webpack_require__(70),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/Odin-Iris/Desktop/dev/lenny1/resources/assets/vue/components/addThird.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] addThird.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3344e954", Component.options)
+  } else {
+    hotAPI.reload("data-v-3344e954", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return (_vm.formData.teamArray && _vm.formData.teamArray.length) ? _c('div', {
+    staticClass: "add-third-view"
+  }, [_vm._l((_vm.formData.teamArray), function(entry, teamIndex) {
+    return _c('div', [_c('div', [_c('h1', [_vm._v("Team Number " + _vm._s(entry.team.teamNumber))]), _vm._v(" "), _c('h1', [_vm._v(_vm._s(entry.team.teamMember1) + " & " + _vm._s(entry.team.teamMember2))]), _vm._v(" "), _c('h3', {
+      staticClass: "inline"
+    }, [_vm._v("\n                Car Number\n            ")]), _vm._v(" "), _c('h3', {
+      staticClass: "inline"
+    }, [_vm._v("\n                $\n            ")])]), _vm._v(" "), _vm._l((entry.pickArr), function(car, count) {
+      return _c('div', [_c('h3', {
+        staticClass: "inline"
+      }, [_vm._v(_vm._s(count + 1))]), _vm._v("\n            " + _vm._s(teamIndex) + "\n            "), _c('input', {
+        directives: [{
+          name: "model",
+          rawName: "v-model",
+          value: (_vm.formData.teamArray[teamIndex].pickArr[count].carNumber),
+          expression: "formData.teamArray[teamIndex].pickArr[count].carNumber"
+        }],
+        staticClass: "inline",
+        domProps: {
+          "value": (_vm.formData.teamArray[teamIndex].pickArr[count].carNumber)
+        },
+        on: {
+          "input": function($event) {
+            if ($event.target.composing) { return; }
+            _vm.formData.teamArray[teamIndex].pickArr[count].carNumber = $event.target.value
+          }
+        }
+      }), _vm._v("\n            " + _vm._s(count) + "\n            "), _c('input', {
+        directives: [{
+          name: "model",
+          rawName: "v-model",
+          value: (_vm.formData.teamArray[teamIndex].pickArr[count].price),
+          expression: "formData.teamArray[teamIndex].pickArr[count].price"
+        }],
+        staticClass: "inline",
+        domProps: {
+          "value": (_vm.formData.teamArray[teamIndex].pickArr[count].price)
+        },
+        on: {
+          "input": function($event) {
+            if ($event.target.composing) { return; }
+            _vm.formData.teamArray[teamIndex].pickArr[count].price = $event.target.value
+          }
+        }
+      })])
+    })], 2)
+  }), _vm._v(" "), _c('div', [_c('a', {
+    on: {
+      "click": _vm.addThird
+    }
+  }, [_vm._v("Add")])])], 2) : _vm._e()
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-3344e954", module.exports)
+  }
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(68);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("6c8e7c81", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3344e954\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addThird.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3344e954\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addThird.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

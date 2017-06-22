@@ -33,7 +33,7 @@ export default{
     },
     methods:{
         addUrl(){
-            for(var el in this.formData){
+            for(let el in this.formData){
                if(el == "")
                {
                    alert(`Please fill in ${el.constructor.name}`);
