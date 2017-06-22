@@ -1,12 +1,17 @@
 <template>
     <div class="home-vue">
         <h1>Coming from the Home View</h1>
-        <div>
-            {{data.data[0].raceNo}}
-            {{data.data[0].name}}
-            {{data.data[0].track}}
-            {{data.data[0].laps}}
-            {{data.data[0].raceDate}}
+        <div v-for="race in data.races">
+            {{race.raceNo}}
+            {{race.name}}
+            {{race.track}}
+            {{race.laps}}
+            {{race.raceDate}}
+        </div>
+        <div v-for="team in data.teams">
+            {{team.teamNumber}}
+            {{team.teamMember1}}
+            {{team.teamMember2}}
         </div>
     </div>
 </template>

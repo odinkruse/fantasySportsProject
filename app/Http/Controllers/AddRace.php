@@ -178,8 +178,8 @@ class AddRace extends Controller
     }
     private function insertResult($resultData, $raceID, $carID){
         $results = new Results();
-        $results->driver = (int)$carID;
-        $results->race = (int)$raceID;
+        $results->carID = (int)$carID;
+        $results->raceID = (int)$raceID;
         $results->position = (int)$resultData[self::POS];
         $results->lapsCompleted = (int)$resultData[self::LAPS];
         $results->startPosition = (int)$resultData[self::START];

@@ -14,8 +14,8 @@ class CreateRaceResultsTable extends Migration
     public function up()
     {
         Schema::create('results', function (Blueprint $table) {
-            $table->integer('driver');
-            $table->integer('race');
+            $table->integer('carID');
+            $table->integer('raceID');
             $table->integer('position');
             $table->integer('lapsCompleted');
             $table->integer('startPosition');

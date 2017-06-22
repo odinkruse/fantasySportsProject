@@ -19,6 +19,7 @@ class CreateDriversTable extends Migration
             $table->integer('carNumber');
             $table->timestamps();
         });
+
     }
 
     /**
