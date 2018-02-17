@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTeamListsTable extends Migration
+class AddActiveThird extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateTeamListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('teamNumber');
-            $table->string('teamMember1');
-            $table->string('teamMember2');
-            $table->timestamps();
+        Schema::table('seasons', function($table) {
+            $table->boolean('active')->default(0);
         });
     }
 
@@ -29,6 +25,8 @@ class CreateTeamListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team_lists');
+        Schema::table('seasons', function($table) {
+            $table->dropColumn('active');
+        });
     }
 }

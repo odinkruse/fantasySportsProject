@@ -1,11 +1,12 @@
 <template>
-    <div class="header-vue">
-        <h1>Header</h1>
-        <div>
-            <a>Season Breakdown</a>
-            <a>Teams and Drivers</a>
-            <a href="/add-race">Add a Race</a>
-            <a href="/add-third">Add a Third</a>
+    <div class="header-vue container">
+        <div class="col-md-8 offset-md-2">
+            <h1>Middle of the Pack Fantasy Nascar</h1>
+            <div>
+                <a>Current Team Lineups</a>
+                <a>Third Standings</a>
+                <a>Season Standings</a>
+            </div>
         </div>
     </div>
 </template>

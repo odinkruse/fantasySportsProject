@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCarListsTable extends Migration
+class AddActiveSeason extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateCarListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cars', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('carNumber');
-            $table->string('driver');
-            $table->timestamps();
+        Schema::table('thirds', function($table) {
+            $table->boolean('active')->default(0);
         });
     }
 
@@ -28,6 +25,8 @@ class CreateCarListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('car_lists');
+        Schema::table('thirds', function($table) {
+            $table->dropColumn('active');
+        });
     }
 }

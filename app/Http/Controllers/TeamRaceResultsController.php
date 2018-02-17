@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Teams;
+use App\TeamRaceResults;
 use Illuminate\Http\Request;
 
-
-class TeamsController extends Controller
+class TeamRaceResultsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,7 @@ class TeamsController extends Controller
      */
     public function index()
     {
-        $data = new \stdClass();
-        $data->json = Teams::get();
-        $data->view = 'add-third-view';
-        return view('main')->with("data",$data);
+        //
     }
 
     /**
@@ -39,16 +35,16 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
-        return ['from TeamsController',$request->formData];
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Teams  $teamList
+     * @param  \App\TeamRaceResults  $teamRaceResults
      * @return \Illuminate\Http\Response
      */
-    public function show(Teams $teamList)
+    public function show(TeamRaceResults $teamRaceResults)
     {
         //
     }
@@ -56,10 +52,10 @@ class TeamsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Teams  $teamList
+     * @param  \App\TeamRaceResults  $teamRaceResults
      * @return \Illuminate\Http\Response
      */
-    public function edit(Teams $teamList)
+    public function edit(TeamRaceResults $teamRaceResults)
     {
         //
     }
@@ -68,10 +64,10 @@ class TeamsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Teams  $teamList
+     * @param  \App\TeamRaceResults  $teamRaceResults
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Teams $teamList)
+    public function update(Request $request, TeamRaceResults $teamRaceResults)
     {
         //
     }
@@ -79,10 +75,10 @@ class TeamsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Teams  $teamList
+     * @param  \App\TeamRaceResults  $teamRaceResults
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teams $teamList)
+    public function destroy(TeamRaceResults $teamRaceResults)
     {
         //
     }

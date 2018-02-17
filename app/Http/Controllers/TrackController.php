@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cars;
+use App\Track;
 use Illuminate\Http\Request;
 
-class CarsController extends Controller
+class TrackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CarsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cars  $carList
+     * @param  \App\Track  $track
      * @return \Illuminate\Http\Response
      */
-    public function show(Cars $carList)
+    public function show(Track $track)
     {
         //
     }
@@ -52,10 +52,10 @@ class CarsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Cars  $carList
+     * @param  \App\Track  $track
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cars $carList)
+    public function edit(Track $track)
     {
         //
     }
@@ -64,10 +64,10 @@ class CarsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cars  $carList
+     * @param  \App\Track  $track
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cars $carList)
+    public function update(Request $request, Track $track)
     {
         //
     }
@@ -75,10 +75,10 @@ class CarsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cars  $carList
+     * @param  \App\Track  $track
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cars $carList)
+    public function destroy(Track $track)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Races;
+use App\Season;
 use Illuminate\Http\Request;
 
-class Races extends Controller
+class SeasonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class Races extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Races  $raceList
+     * @param  \App\Season  $season
      * @return \Illuminate\Http\Response
      */
-    public function show(Races $raceList)
+    public function show(Season $season)
     {
         //
     }
@@ -52,10 +52,10 @@ class Races extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Races  $raceList
+     * @param  \App\Season  $season
      * @return \Illuminate\Http\Response
      */
-    public function edit(Races $raceList)
+    public function edit(Season $season)
     {
         //
     }
@@ -64,10 +64,10 @@ class Races extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Races  $raceList
+     * @param  \App\Season  $season
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Races $raceList)
+    public function update(Request $request, Season $season)
     {
         //
     }
@@ -75,10 +75,10 @@ class Races extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Races  $raceList
+     * @param  \App\Season  $season
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Races $raceList)
+    public function destroy(Season $season)
     {
         //
     }

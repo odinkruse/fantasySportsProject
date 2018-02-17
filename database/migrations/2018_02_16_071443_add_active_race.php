@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDriversTable extends Migration
+class AddActiveRace extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateDriversTable extends Migration
      */
     public function up()
     {
-        Schema::create('drivers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->integer('carNumber');
-            $table->timestamps();
+        Schema::table('races', function($table) {
+            $table->boolean('active')->default(0);
         });
-
     }
 
     /**
@@ -29,6 +25,8 @@ class CreateDriversTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('drivers');
+        Schema::table('races', function($table) {
+            $table->dropColumn('active');
+        });
     }
 }

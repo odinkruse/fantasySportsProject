@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Races;
+use App\Race;
 
-use App\Teams;
+use App\TeamSeasonStanding;
+
+use App\Season;
 
 
 class Home extends Controller
@@ -15,9 +17,9 @@ class Home extends Controller
 
         $data = new \stdClass();
         $data->json = new \stdClass();
-        $data->json->year = "2017";
-        $data->json->races = Races::get();
-        $data->json->teams = Teams::get();
+        $data->json->season = Season::where('active', 1)->first();
+        $data->json->race = Race::where('active', 1)->first();
+        $data->json->seasonStandings = TeamSeasonStanding::where('seasonId', $data->json->season->id)->get();
         $data->view = "home-view";
 //        $data = "Coming from Home Controller";
         return view('main')->with("data",$data);

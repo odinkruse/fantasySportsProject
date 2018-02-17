@@ -1,17 +1,32 @@
 <template>
     <div class="home-vue">
-        <h1>Coming from the Home View</h1>
-        <div v-for="race in data.races">
-            {{race.raceNo}}
-            {{race.name}}
-            {{race.track}}
-            {{race.laps}}
-            {{race.raceDate}}
-        </div>
-        <div v-for="team in data.teams">
-            {{team.teamNumber}}
-            {{team.teamMember1}}
-            {{team.teamMember2}}
+        <div class="container">
+            <div class="col-md-8 offset-md-2">
+                <h1>{{data.season.name}}</h1>
+                <div>
+                    Next Race: {{data.race.name}}
+                    Race Number: {{data.race.raceNo}}
+                </div>
+                <table class="table">
+                    <thead>
+                        <h3>Standings</h3>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Team's</td>
+                            <td v-for="team in data.seasonStandings">
+                                {{team.teamNumber}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Season Points</td>
+                            <td v-for="team in data.seasonStandings">
+                                {{team.points}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </template>

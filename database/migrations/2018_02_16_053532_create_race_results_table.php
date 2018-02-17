@@ -13,16 +13,20 @@ class CreateRaceResultsTable extends Migration
      */
     public function up()
     {
-        Schema::create('results', function (Blueprint $table) {
-            $table->integer('carID');
-            $table->integer('raceID');
+        Schema::create('race_results', function (Blueprint $table) {
+            $table->integer('raceId')->unsigned();
+            $table->integer('teamNumber')->unsigned();
+            $table->integer('carId')->unsigned();
+            $table->integer('driverId')->unsigned();
             $table->integer('position');
-            $table->integer('lapsCompleted');
-            $table->integer('startPosition');
             $table->integer('points');
-            $table->integer('bonusPoints');
-            $table->integer('penalty');
             $table->timestamps();
+
+            $table->foreign('raceId')->references('id')->on('races');
+            $table->foreign('teamNumber')->references('number')->on('teams');
+            $table->foreign('carId')->references('id')->on('cars');
+            $table->foreign('driverId')->references('id')->on('drivers');
+
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRaceList2017sTable extends Migration
+class CreateSeasonsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateRaceList2017sTable extends Migration
      */
     public function up()
     {
-        Schema::create('race_list2017s', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->increments('raceNo');
-            $table->string('name');
-            $table->string('track');
-            $table->integer('laps');
-            $table->date('raceDate');
+        Schema::create('seasons', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('year');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateRaceList2017sTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('race_list2017s');
+        Schema::dropIfExists('seasons');
     }
 }
