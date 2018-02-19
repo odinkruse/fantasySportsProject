@@ -10,4 +10,20 @@ class RaceResults extends Model
     {
         return $this->belongsTo('App\Race');
     }
+    public function cars()
+    {
+        return $this->belongsToMany('App\Car');
+    }
+    public function drivers()
+    {
+        $this->belongsToMany('App\Driver');
+    }
+    public function teams()
+    {
+        $this->belongsToMany('App\Team');
+    }
+    public function third()
+    {
+        $this->belongsTo('App\Third');
+    }
 }

@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 
 class RaceResultsController extends Controller
 {
-    const POS = 0;
+    const POSITION = 0;
     const START = 1;
     const CAR = 2;
     const DRIVER = 3;
@@ -22,7 +22,7 @@ class RaceResultsController extends Controller
     const LAPS = 6;
     const STATUS = 7;
     const LED = 8;
-    const PTS = 7;
+    const POINTS = 7;
     const PLAYOFF_POINTS = 8;
     /**
      * Display a listing of the resource.
@@ -76,7 +76,9 @@ class RaceResultsController extends Controller
             $results->teamNumber = $teamCarData->teamNumber;
             $results->carId = $teamCarData->carId;
             $results->driverId = $this->getDriverId($row[self::DRIVER]);
-
+            $results->position=$row[self::POSITION];
+            $results->points=$row[self::POINTS];
+            $results->save();
 
         }
         return ["data",$race->name];
@@ -138,22 +140,28 @@ class RaceResultsController extends Controller
     {
         $formattedDriver = str_replace(',','',$driverName);
         $driverArray = explode(' ', $formattedDriver);
-        if(count($driverArray) == 2){
-            $driver = Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->get();
-            $driverCount = Driver::count($driver);
-            if($driverCount != 0)
-            {
-                return $driver->first()->id;
-            }
-            else
-            {
-                //create new driver
-            }
-        }
-        else if(count($driverArray) == 3)
+
+        $driver = Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->get();
+        $driverCount = Driver::count($driver);
+        if($driverCount != 0)
         {
-            //check/create a driver with a first name last name and suffix
+            return $driver->first()->id;
         }
+        else
+        {
+            $newDriver = new Driver();
+            $newDriver->firstName = $driverArray[0];
+            $newDriver->lastName = $driverArray[1];
+            if(count($driverArray) == 3)
+            {
+                $newDriver->suffix = $driverArray[2];
+            }
+            $driver->save();
+
+            return Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->first()->id;
+        }
+
+
     }
     public function getTeamForCar($carNumber, $thirdId){
         $teamCarData = new \stdClass();

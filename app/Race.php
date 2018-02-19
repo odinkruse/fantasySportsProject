@@ -10,4 +10,12 @@ class Race extends Model
     {
         return $this->hasOne('App\RaceResults');
     }
+    public function track()
+    {
+        return $this->hasOne('App\Track');
+    }
+    public function third()
+    {
+        return $this->belongsTo('App\Thirds');
+    }
 }

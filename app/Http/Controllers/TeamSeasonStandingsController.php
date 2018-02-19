@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TeamSeasonStanding;
+use App\TeamSeasonStandings;
 use Illuminate\Http\Request;
 
-class TeamSeasonStandingController extends Controller
+class TeamSeasonStandingsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TeamSeasonStandingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TeamSeasonStanding  $teamSeasonStanding
+     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
      * @return \Illuminate\Http\Response
      */
-    public function show(TeamSeasonStanding $teamSeasonStanding)
+    public function show(TeamSeasonStandings $teamSeasonStanding)
     {
         //
     }
@@ -52,10 +52,10 @@ class TeamSeasonStandingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TeamSeasonStanding  $teamSeasonStanding
+     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
      * @return \Illuminate\Http\Response
      */
-    public function edit(TeamSeasonStanding $teamSeasonStanding)
+    public function edit(TeamSeasonStandings $teamSeasonStanding)
     {
         //
     }
@@ -64,10 +64,10 @@ class TeamSeasonStandingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TeamSeasonStanding  $teamSeasonStanding
+     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TeamSeasonStanding $teamSeasonStanding)
+    public function update(Request $request, TeamSeasonStandings $teamSeasonStanding)
     {
         //
     }
@@ -75,10 +75,10 @@ class TeamSeasonStandingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TeamSeasonStanding  $teamSeasonStanding
+     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TeamSeasonStanding $teamSeasonStanding)
+    public function destroy(TeamSeasonStandings $teamSeasonStanding)
     {
         //
     }

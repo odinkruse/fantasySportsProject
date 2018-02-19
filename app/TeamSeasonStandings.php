@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TeamCars extends Model
+class TeamSeasonStandings extends Model
 {
-    public function cars()
+    public function season()
     {
-        return $this->belongsToMany('App\Car');
+        return $this->belongsTo('App\Season');
     }
     public function teams()
     {
