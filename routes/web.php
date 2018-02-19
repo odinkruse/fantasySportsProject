@@ -10,9 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//DEV
 
+//GET
 Route::get('/', 'Home@view');
-Route::get('/add-race', 'AddRace@view');
-Route::get('/add-third','TeamsController@index');
-Route::post('/add-race', 'AddRace@store');
-Route::post('/add-third','TeamsController@store');
+Route::get('/add-race-results', 'RaceResultsController@create');
+Route::get('/test-dump', 'TestDumpController@viewTestDump');
+Route::get('/current-race-results', 'RaceResultsController@showActive');
+Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showActive');
+Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
+//POST
+Route::post('/add-race-results', 'RaceResultsController@store');

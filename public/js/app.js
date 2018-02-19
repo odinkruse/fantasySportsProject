@@ -13308,7 +13308,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13352,16 +13352,20 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_home_vue__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_home_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_add_vue__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_add_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_add_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addThird_vue__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addThird_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_header_vue__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__global_header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global_footer_vue__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__global_footer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_testDumpView_vue__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_testDumpView_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_testDumpView_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_home_vue__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_home_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_activeRaceResults_vue__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_activeRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_activeRaceResults_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_addThird_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__global_header_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__global_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__global_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__global_footer_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__global_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__global_footer_vue__);
 //
 //
 //
@@ -13375,6 +13379,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+//DEV
+
+//Live
 
 
 
@@ -13383,11 +13391,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        'header-component': __WEBPACK_IMPORTED_MODULE_3__global_header_vue___default.a,
-        'footer-component': __WEBPACK_IMPORTED_MODULE_4__global_footer_vue___default.a,
-        'home-view': __WEBPACK_IMPORTED_MODULE_0__components_home_vue___default.a,
-        'add-race-view': __WEBPACK_IMPORTED_MODULE_1__components_add_vue___default.a,
-        'add-third-view': __WEBPACK_IMPORTED_MODULE_2__components_addThird_vue___default.a
+        'header-component': __WEBPACK_IMPORTED_MODULE_5__global_header_vue___default.a,
+        'footer-component': __WEBPACK_IMPORTED_MODULE_6__global_footer_vue___default.a,
+        'home-view': __WEBPACK_IMPORTED_MODULE_1__components_home_vue___default.a,
+        'add-race-results-view': __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue___default.a,
+        'add-third-view': __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue___default.a,
+        'active-race-results-view': __WEBPACK_IMPORTED_MODULE_3__components_activeRaceResults_vue___default.a,
+        //DEV
+        'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView_vue___default.a
     },
     props: ['json', 'view'],
     created: function created() {
@@ -13545,7 +13556,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "container"
   }, [_c('div', {
-    staticClass: "col-md-8 offset-md-2"
+    staticClass: "col-md-6 col-md-offset-3"
   }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_vm._v("\n                Next Race: " + _vm._s(_vm.data.race.name) + "\n                Race Number: " + _vm._s(_vm.data.race.raceNo) + "\n            ")]), _vm._v(" "), _c('table', {
     staticClass: "table"
   }, [_vm._m(0), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Team's")]), _vm._v(" "), _vm._l((_vm.data.seasonStandings), function(team) {
@@ -13565,275 +13576,11 @@ if (false) {
 }
 
 /***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(46)
-
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(48),
-  /* template */
-  __webpack_require__(49),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/Odin-Iris/Sites/lenny1/resources/assets/vue/components/add.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] add.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f5b7defa", Component.options)
-  } else {
-    hotAPI.reload("data-v-f5b7defa", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(47);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("465c51d9", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-f5b7defa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./add.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-f5b7defa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./add.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)();
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            formData: {
-                url: "http://www.espn.com/racing/raceresults?raceId=201702260001&series=sprint",
-                raceName: "Daytona 500",
-                raceNumber: "1",
-                track: "Daytona",
-                laps: "250",
-                raceDate: "2/22/2017"
-            }
-        };
-    },
-
-    methods: {
-        addUrl: function addUrl() {
-            for (var el in this.formData) {
-                if (el == "") {
-                    alert("Please fill in " + el.constructor.name);
-                    return;
-                }
-            }
-            console.log(this.formData);
-            this.$http.post('/add-race', { formData: this.formData }).then(function (response) {
-                console.log(response);
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "add-vue"
-  }, [_c('h1', [_vm._v("Race Name")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.formData.raceName),
-      expression: "formData.raceName"
-    }],
-    attrs: {
-      "placeholder": "Daytona 500"
-    },
-    domProps: {
-      "value": (_vm.formData.raceName)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "raceName", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('h1', [_vm._v("Race Number")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.formData.raceNumber),
-      expression: "formData.raceNumber"
-    }],
-    attrs: {
-      "placeholder": "1"
-    },
-    domProps: {
-      "value": (_vm.formData.raceNumber)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "raceNumber", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('h1', [_vm._v("Track")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.formData.track),
-      expression: "formData.track"
-    }],
-    attrs: {
-      "placeholder": "Daytona"
-    },
-    domProps: {
-      "value": (_vm.formData.track)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "track", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('h1', [_vm._v("Laps")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.formData.laps),
-      expression: "formData.laps"
-    }],
-    attrs: {
-      "placeholder": "250"
-    },
-    domProps: {
-      "value": (_vm.formData.laps)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "laps", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('h1', [_vm._v("raceDate")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.formData.raceDate),
-      expression: "formData.raceDate"
-    }],
-    attrs: {
-      "placeholder": "2/22/2017"
-    },
-    domProps: {
-      "value": (_vm.formData.raceDate)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "raceDate", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('h1', [_vm._v("Results URL")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.formData.url),
-      expression: "formData.url"
-    }],
-    attrs: {
-      "placeholder": "www.espn.com"
-    },
-    domProps: {
-      "value": (_vm.formData.url)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "url", $event.target.value)
-      }
-    }
-  }), _vm._v(" "), _c('div', [_c('a', {
-    on: {
-      "click": _vm.addUrl
-    }
-  }, [_vm._v("Add")])])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-f5b7defa", module.exports)
-  }
-}
-
-/***/ }),
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14350,6 +14097,484 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(76)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(78),
+  /* template */
+  __webpack_require__(79),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/Odin-Iris/Sites/lenny1/resources/assets/vue/components/addRaceResults.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] addRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-416d2d12", Component.options)
+  } else {
+    hotAPI.reload("data-v-416d2d12", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(77);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("d1cda0d0", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-416d2d12\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceResults.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-416d2d12\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceResults.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            formData: {
+                url: "http://racing-reference.info/race/2018_Daytona_500/W",
+                raceName: "Daytona 500",
+                raceNumber: "1",
+                track: "Daytona",
+                raceDate: "2/18/2018"
+            }
+        };
+    },
+
+    methods: {
+        addUrl: function addUrl() {
+            for (var el in this.formData) {
+                if (el == "") {
+                    alert("Please fill in " + el.constructor.name);
+                    return;
+                }
+            }
+            console.log(this.formData);
+            this.$http.post('/add-race-results', { formData: this.formData }).then(function (response) {
+                console.log(response);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "add-vue container"
+  }, [_c('div', {
+    staticClass: "col-md-6 col-md-offset-3"
+  }, [_c('h1', [_vm._v("Race Name")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.raceName),
+      expression: "formData.raceName"
+    }],
+    attrs: {
+      "placeholder": "Daytona 500"
+    },
+    domProps: {
+      "value": (_vm.formData.raceName)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "raceName", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h1', [_vm._v("Race Number")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.raceNumber),
+      expression: "formData.raceNumber"
+    }],
+    attrs: {
+      "placeholder": "1"
+    },
+    domProps: {
+      "value": (_vm.formData.raceNumber)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "raceNumber", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h1', [_vm._v("Track")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.track),
+      expression: "formData.track"
+    }],
+    attrs: {
+      "placeholder": "Daytona"
+    },
+    domProps: {
+      "value": (_vm.formData.track)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "track", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h1', [_vm._v("raceDate")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.raceDate),
+      expression: "formData.raceDate"
+    }],
+    attrs: {
+      "placeholder": "2/22/2017"
+    },
+    domProps: {
+      "value": (_vm.formData.raceDate)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "raceDate", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h1', [_vm._v("Results URL")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.url),
+      expression: "formData.url"
+    }],
+    attrs: {
+      "placeholder": "www.espn.com"
+    },
+    domProps: {
+      "value": (_vm.formData.url)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "url", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('div', [_c('a', {
+    on: {
+      "click": _vm.addUrl
+    }
+  }, [_vm._v("Add")])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-416d2d12", module.exports)
+  }
+}
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(81)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(83),
+  /* template */
+  __webpack_require__(84),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/Odin-Iris/Sites/lenny1/resources/assets/vue/components/activeRaceResults.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] activeRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0377e461", Component.options)
+  } else {
+    hotAPI.reload("data-v-0377e461", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(82);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("399077a8", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0377e461\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./activeRaceResults.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0377e461\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./activeRaceResults.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c("div")
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-0377e461", module.exports)
+  }
+}
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(86)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(88),
+  /* template */
+  __webpack_require__(89),
+  /* scopeId */
+  "data-v-721e8ff9",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/Odin-Iris/Sites/lenny1/resources/assets/vue/components/testDumpView.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] testDumpView.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-721e8ff9", Component.options)
+  } else {
+    hotAPI.reload("data-v-721e8ff9", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(87);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("a674f928", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-721e8ff9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./testDumpView.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-721e8ff9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./testDumpView.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "test-dump",
+    props: ['data'],
+    data: function data() {
+        return {};
+    }
+});
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "test-dump-vue container"
+  }, [_vm._v("\n    " + _vm._s(_vm.data.dump1) + "\n    " + _vm._s(_vm.data.dump2) + "\n    " + _vm._s(_vm.data.dump3) + "\n")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-721e8ff9", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

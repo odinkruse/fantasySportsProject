@@ -1,7 +1,7 @@
 <template>
     <div class="home-vue">
         <div class="container">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-6 col-md-offset-3">
                 <h1>{{data.season.name}}</h1>
                 <div>
                     Next Race: {{data.race.name}}

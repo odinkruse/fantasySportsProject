@@ -12,8 +12,12 @@
     </div>
 </template>
 <script>
+    //DEV
+    import TestDump from './components/testDumpView.vue';
+    //Live
     import Home from './components/home.vue';
-    import AddRace from './components/add.vue';
+    import AddRaceResults from './components/addRaceResults.vue';
+    import ActiveRaceResults from './components/activeRaceResults.vue';
     import AddThird from './components/addThird.vue';
     import Header from'./global/header.vue';
     import Footer from './global/footer.vue';
@@ -22,8 +26,11 @@
             'header-component': Header,
             'footer-component': Footer,
             'home-view': Home,
-            'add-race-view': AddRace,
-            'add-third-view': AddThird
+            'add-race-results-view': AddRaceResults,
+            'add-third-view': AddThird,
+            'active-race-results-view': ActiveRaceResults,
+            //DEV
+            'test-dump-view': TestDump
         },
         props:['json','view'],
         created(){

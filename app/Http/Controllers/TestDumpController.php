@@ -4,19 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Cars;
+use App\Car;
 
-use App\Races;
+use App\Race;
 
-use App\Results;
+use App\RaceResults;
 
-use App\Drivers;
+use App\Driver;
 
 use Goutte\Client;
 
-class AddRace extends Controller
+class TestDumpController extends Controller
 {
-    public $scrapedData = array();
+    public $position = 1;
     const POS = 0;
     const DRIVER = 1;
     const CAR = 2;
@@ -41,7 +41,22 @@ class AddRace extends Controller
         $data->view = "add-race-view";
         return view('welcome')->with("data",$data);
     }
-
+    public function viewTestDump()
+    {
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $client = new Client();
+        $html = $client->request('GET', "http://racing-reference.info/race/2018_Daytona_500/W");
+            $table = $html->filterXPath('//table[@class="tb"][3]');
+            $tableArray = $table->filter('tr')->each(function ($row) {
+                return $rowArray = $row->filter('td')->each(function ($cell) {
+                    return preg_replace('/\n/', "", $cell->text());
+                });
+        });
+        $data->json->dump1 = $tableArray;
+        $data->view = "test-dump-view";
+        return view('main')->with("data",$data);
+    }
     /**
      * Show the form for creating a new resource.
      *
