@@ -6,6 +6,7 @@ use App\RaceResults;
 use App\Race;
 use App\Car;
 use App\Driver;
+use App\Team;
 use App\TeamCars;
 use App\Third;
 use Goutte\Client;
@@ -56,44 +57,44 @@ class RaceResultsController extends Controller
     {
 
 
-//        $data = new \stdClass();
-//        $data->json = new \stdClass();
-//        $client = new Client();
-//        $html = $client->request('GET', $request->formData['url']);
-//        $table = $html->filterXPath('//table[@class="tb"][3]');
-//        $tableArray = $table->filter('tr')->each(function ($row) {
-//            return $rowArray = $row->filter('td')->each(function ($cell) {
-//                return preg_replace("/[^A-Za-z0-9 ]/", '', preg_replace('/\n/', "", $cell->text()));
-//            });
-//        });
-//        $data->json->resultsArray = array();
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $client = new Client();
+        $html = $client->request('GET', $request->formData['url']);
+        $table = $html->filterXPath('//table[@class="tb"][3]');
+        $tableArray = $table->filter('tr')->each(function ($row) {
+            return $rowArray = $row->filter('td')->each(function ($cell) {
+                return preg_replace("/[^A-Za-z0-9 ]/", '', preg_replace('/\n/', "", $cell->text()));
+            });
+        });
+        $data->json->resultsArray = array();
 
 
         $third = Third::where('active',1)->first();
-        $race = Race::where('raceNo', $request->formData['raceNumber'])->where('thirdId', $third->id)->first();
+        $race = Race::where('raceNo', $request->formData['raceNumber'])->where('third_id', $third->id)->first();
 
 
-//        foreach($tableArray as $row)
-//        {
-//            if(!empty($row)) {
-//
-//                $result = new RaceResults();
-//                $result->raceId = $race->id;
-//                $teamCarData = $this->getTeamForCar($row[self::CAR], $third->id);
-//                $result->teamNumber = $teamCarData->teamNumber;
-//                $result->carId = $teamCarData->carId;
-//                $result->driverId = $this->getDriverId($row[self::DRIVER]);
-//                $result->position = $row[self::POSITION];
-//                $result->points = $row[self::POINTS];
-//
-//                $checkDuplicate = RaceResults::where('raceId', $result->raceId)->where('carId', $result->carId)->first();
-//                if($checkDuplicate == null) {
-//                    $result->save();
-//                }
-//            }
-//        }
+        foreach($tableArray as $row)
+        {
+            if(!empty($row)) {
 
-        return ["newRaceData",RaceResults::where('raceId', $race->id)->get()];
+                $result = new RaceResults();
+                $result->race_id = $race->id;
+                $teamCarData = $this->getTeamForCar($row[self::CAR], $third->id);
+                $result->teamNumber = $teamCarData->teamNumber;
+                $result->car_id = $teamCarData->car_id;
+                $result->driver_id = $this->getDriverId($row[self::DRIVER]);
+                $result->position = $row[self::POSITION];
+                $result->points = $row[self::POINTS];
+
+                $checkDuplicate = RaceResults::where('race_id', $result->race_id)->where('car_id', $result->car_id)->first();
+                if($checkDuplicate == null) {
+                    $result->save();
+                }
+            }
+        }
+
+        return ["newRaceData",RaceResults::where('race_id', $race->id)->get()];
     }
 
     /**
@@ -106,13 +107,22 @@ class RaceResultsController extends Controller
     {
         //
     }
-    public function showActive()
+    public function showLatestResults()
     {
         $data = new \stdClass();
         $data->json = new \stdClass();
-        $activeRace = Race::where('active', 1)->get();
-        $data->json->raceResults = $activeRace->results;
-        $data->view = "active-race-results-view";
+        $data->json->raceResultsByTeam = array();
+        $currentThird = Third::where('active', 1)->first();
+        $teams = Team::get();
+        $race = Race::where('resultsImported', 1)->where('third_id', $currentThird->id)->orderBy('raceNo','desc')->first();
+        $data->json->race = $race;
+        foreach($teams as $team)
+        {
+            array_push($data->json->raceResultsByTeam, ["Team"=>$team,"Results"=>RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->get()]);
+        }
+//        $data->json->raceResults = RaceResults
+//            ::join('teams', 'race_results.team_id',)
+        $data->view = "latest-race-results-view";
         return view('main')->with("data",$data);
     }
     /**
@@ -173,7 +183,7 @@ class RaceResultsController extends Controller
             return Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->first()->id;
         }
     }
-    public function getTeamForCar($carNumber, $thirdId){
+    public function getTeamForCar($carNumber, $third_id){
         $teamCarData = new \stdClass();
         if(Car::where('number', $carNumber)->first() == null)
         {
@@ -182,7 +192,7 @@ class RaceResultsController extends Controller
             $newCar->save();
         }
         $car = Car::where('number', $carNumber)->first();
-        $teamCarRow = TeamCars::where('carId', $car->id)->where('thirdId', $thirdId)->first();
+        $teamCarRow = TeamCars::where('car_id', $car->id)->where('third_id', $third_id)->first();
         if($teamCarRow != null)
         {
             $teamCarData->teamNumber = $teamCarRow->teamNumber;
@@ -191,7 +201,7 @@ class RaceResultsController extends Controller
         {
             $teamCarData->teamNumber = null;
         }
-        $teamCarData->carId = $car->id;
+        $teamCarData->car_id = $car->id;
         return $teamCarData;
     }
 }

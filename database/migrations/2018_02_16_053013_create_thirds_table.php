@@ -15,11 +15,11 @@ class CreateThirdsTable extends Migration
     {
         Schema::create('thirds', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('seasonId')->unsigned();
+            $table->integer('season_id')->unsigned();
             $table->integer('thirdNo');
             $table->string('name')->nullable();
 
-            $table->foreign('seasonId')->references('id')->on('seasons');
+            $table->foreign('season_id')->references('id')->on('seasons');
             $table->timestamps();
         });
     }

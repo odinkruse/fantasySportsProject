@@ -16,7 +16,7 @@
 Route::get('/', 'Home@view');
 Route::get('/add-race-results', 'RaceResultsController@create');
 Route::get('/test-dump', 'TestDumpController@viewTestDump');
-Route::get('/current-race-results', 'RaceResultsController@showActive');
+Route::get('/latest-race-results', 'RaceResultsController@showLatestResults');
 Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showActive');
 Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
 //POST

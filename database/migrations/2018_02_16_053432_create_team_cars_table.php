@@ -15,12 +15,12 @@ class CreateTeamCarsTable extends Migration
     {
         Schema::create('team_cars', function (Blueprint $table) {
             $table->integer('teamNumber')->unsigned();
-            $table->integer('carId')->unsigned();
-            $table->integer('thirdId')->unsigned();
+            $table->integer('car_id')->unsigned();
+            $table->integer('third_id')->unsigned();
 
             $table->foreign('teamNumber')->references('number')->on('teams');
-            $table->foreign('thirdId')->references('id')->on('thirds');
-            $table->foreign('carId')->references('id')->on('cars');
+            $table->foreign('third_id')->references('id')->on('thirds');
+            $table->foreign('car_id')->references('id')->on('cars');
             $table->timestamps();
         });
     }

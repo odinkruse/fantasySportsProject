@@ -85,15 +85,15 @@ class ThirdController extends Controller
     {
 
         $third = Third::where('active', 1)->first();
-        $races = Race::where('thirdId', $third->id)->pluck('id')->toArray();
-        $carArray = RaceResults::whereIn('raceId', $races)->select('carId')->groupBy('carId')->get();
-        //return["CarIdArray"=>$carIdArray];
+        $races = Race::where('third_id', $third->id)->pluck('id')->toArray();
+        $carArray = RaceResults::whereIn('race_id', $races)->select('car_id')->groupBy('car_id')->get();
+        //return["CarIdArray"=>$car_idArray];
         foreach($carArray as $car)
         {
             $carStanding = CarThirdStandings::firstOrNew(
-                ["carId"=>$car->carId],["thirdId"=>$third->id]
+                ["car_id"=>$car->car_id],["third_id"=>$third->id]
             );
-            $pointsArray = RaceResults::where('carId', $car->carId)->whereIn('raceId', $races)->pluck('points')->toArray();
+            $pointsArray = RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray();
             $carStanding->points = array_sum($pointsArray);
             $carStanding->save();
         }
@@ -103,21 +103,21 @@ class ThirdController extends Controller
         $teamThirdResultsArray = array();
         foreach($teams as $team)
         {
-            $cars = TeamCars::where('teamNumber', $team->number)->where('thirdId', $third->id)->get();
+            $cars = TeamCars::where('teamNumber', $team->number)->where('third_id', $third->id)->get();
 
             $teamThirdTeam = TeamThirdStandings::firstOrCreate(
-                ['teamNumber'=>$team->number],['thirdId'=>$third->id]
+                ['teamNumber'=>$team->number],['third_id'=>$third->id]
             );
             $thirdPoints = 0;
             foreach($cars as $car)
             {
-                $thirdPoints += CarThirdStandings::where('carId', $car->carId)->where('thirdId', $third->id)->first()->points;
+                $thirdPoints += CarThirdStandings::where('car_id', $car->car_id)->where('third_id', $third->id)->first()->points;
             }
             $teamThirdTeam->points = $thirdPoints;
             $teamThirdTeam->save();
             array_push($teamThirdResultsArray, [$teamThirdTeam, $cars, $thirdPoints]);
         }
-        return ["ThirdStandings"=>[CarThirdStandings::where('thirdId', $third->id)->get(),TeamThirdStandings::where('thirdId', $third->id)->get()]];
+        return ["ThirdStandings"=>[CarThirdStandings::where('third_id', $third->id)->get(),TeamThirdStandings::where('third_id', $third->id)->get()]];
 
     }
 

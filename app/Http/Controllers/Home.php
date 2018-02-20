@@ -21,8 +21,8 @@ class Home extends Controller
         $data->json = new \stdClass();
         $data->json->season = Season::where('active', 1)->first();
         $data->json->race = Race::where('active', 1)->first();
-        $data->json->seasonStandings = TeamSeasonStandings::where('seasonId', $data->json->season->id)->get();
-        $data->json->thirdTeamStandings = TeamThirdStandings::where('thirdId', $data->json->race->thirdId)->get();
+        $data->json->seasonStandings = TeamSeasonStandings::where('season_id', $data->json->season->id)->get();
+        $data->json->thirdTeamStandings = TeamThirdStandings::where('third_id', $data->json->race->third_id)->get();
         $data->view = "home-view";
 //        $data = "Coming from Home Controller";
         return view('main')->with("data",$data);

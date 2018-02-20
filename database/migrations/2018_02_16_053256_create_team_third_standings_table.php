@@ -15,11 +15,11 @@ class CreateTeamThirdStandingsTable extends Migration
     {
         Schema::create('team_third_standings', function (Blueprint $table) {
             $table->integer('teamNumber')->unsigned();
-            $table->integer('thirdId')->unsigned();
+            $table->integer('third_id')->unsigned();
             $table->integer('points')->default(0);
 
             $table->foreign('teamNumber')->references('number')->on('teams');
-            $table->foreign('thirdId')->references('id')->on('thirds');
+            $table->foreign('third_id')->references('id')->on('thirds');
             $table->timestamps();
         });
     }

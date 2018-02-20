@@ -15,13 +15,13 @@ class CreateRacesTable extends Migration
     {
         Schema::create('races', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('thirdId')->unsigned();
-            $table->integer('trackId')->unsigned();
+            $table->integer('third_id')->unsigned();
+            $table->integer('track_id')->unsigned();
             $table->string('name');
             $table->integer('raceNo');
 
-            $table->foreign('trackId')->references('id')->on('tracks');
-            $table->foreign('thirdId')->references('id')->on('thirds');
+            $table->foreign('track_id')->references('id')->on('tracks');
+            $table->foreign('third_id')->references('id')->on('thirds');
             $table->timestamps();
         });
     }

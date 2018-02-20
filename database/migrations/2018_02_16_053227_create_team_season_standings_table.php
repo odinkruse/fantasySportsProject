@@ -15,11 +15,11 @@ class CreateTeamSeasonStandingsTable extends Migration
     {
         Schema::create('team_season_standings', function (Blueprint $table) {
             $table->integer('teamNumber')->unsigned();
-            $table->integer('seasonId')->unsigned();
+            $table->integer('season_id')->unsigned();
             $table->integer('points')->default(0);
 
             $table->foreign('teamNumber')->references('number')->on('teams');
-            $table->foreign('seasonId')->references('id')->on('seasons');
+            $table->foreign('season_id')->references('id')->on('seasons');
             $table->timestamps();
         });
     }

@@ -14,12 +14,12 @@ class CreateCarSeasonStandingsTable extends Migration
     public function up()
     {
         Schema::create('car_season_standings', function (Blueprint $table) {
-            $table->integer('carId')->unsigned();
-            $table->integer('seasonId')->unsigned();
+            $table->integer('car_id')->unsigned();
+            $table->integer('season_id')->unsigned();
             $table->integer('points')->default(0);
 
-            $table->foreign('carId')->references('id')->on('cars');
-            $table->foreign('seasonId')->references('id')->on('seasons');
+            $table->foreign('car_id')->references('id')->on('cars');
+            $table->foreign('season_id')->references('id')->on('seasons');
             $table->timestamps();
         });
     }
