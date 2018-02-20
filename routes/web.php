@@ -21,3 +21,5 @@ Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showAc
 Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
+Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
+Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');

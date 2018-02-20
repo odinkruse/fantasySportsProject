@@ -22,8 +22,8 @@ class RaceResultsController extends Controller
     const LAPS = 6;
     const STATUS = 7;
     const LED = 8;
-    const POINTS = 7;
-    const PLAYOFF_POINTS = 8;
+    const POINTS = 9;
+    const PLAYOFF_POINTS = 10;
     /**
      * Display a listing of the resource.
      *
@@ -56,32 +56,44 @@ class RaceResultsController extends Controller
     {
 
 
-        $data = new \stdClass();
-        $data->json = new \stdClass();
-        $client = new Client();
-        $html = $client->request('GET', $request->formData['url']);
-        $table = $html->filterXPath('//table[@class="tb"][3]');
-        $tableArray = $table->filter('tr')->each(function ($row) {
-            return $rowArray = $row->filter('td')->each(function ($cell) {
-                return preg_replace('/\n/', "", $cell->text());
-            });
-        });
-        $data->json->tableArray = $tableArray;
+//        $data = new \stdClass();
+//        $data->json = new \stdClass();
+//        $client = new Client();
+//        $html = $client->request('GET', $request->formData['url']);
+//        $table = $html->filterXPath('//table[@class="tb"][3]');
+//        $tableArray = $table->filter('tr')->each(function ($row) {
+//            return $rowArray = $row->filter('td')->each(function ($cell) {
+//                return preg_replace("/[^A-Za-z0-9 ]/", '', preg_replace('/\n/', "", $cell->text()));
+//            });
+//        });
+//        $data->json->resultsArray = array();
+
+
         $third = Third::where('active',1)->first();
         $race = Race::where('raceNo', $request->formData['raceNumber'])->where('thirdId', $third->id)->first();
-        foreach($tableArray as $row) {
-            $results = new RaceResults();
-            $results->raceId = $race->id;
-            $teamCarData = $this->getTeamForCar($row[self::CAR], $third->Id);
-            $results->teamNumber = $teamCarData->teamNumber;
-            $results->carId = $teamCarData->carId;
-            $results->driverId = $this->getDriverId($row[self::DRIVER]);
-            $results->position=$row[self::POSITION];
-            $results->points=$row[self::POINTS];
-            $results->save();
 
-        }
-        return ["data",$race->name];
+
+//        foreach($tableArray as $row)
+//        {
+//            if(!empty($row)) {
+//
+//                $result = new RaceResults();
+//                $result->raceId = $race->id;
+//                $teamCarData = $this->getTeamForCar($row[self::CAR], $third->id);
+//                $result->teamNumber = $teamCarData->teamNumber;
+//                $result->carId = $teamCarData->carId;
+//                $result->driverId = $this->getDriverId($row[self::DRIVER]);
+//                $result->position = $row[self::POSITION];
+//                $result->points = $row[self::POINTS];
+//
+//                $checkDuplicate = RaceResults::where('raceId', $result->raceId)->where('carId', $result->carId)->first();
+//                if($checkDuplicate == null) {
+//                    $result->save();
+//                }
+//            }
+//        }
+
+        return ["newRaceData",RaceResults::where('raceId', $race->id)->get()];
     }
 
     /**
@@ -138,14 +150,14 @@ class RaceResultsController extends Controller
     }
     public function getDriverId($driverName)
     {
-        $formattedDriver = str_replace(',','',$driverName);
-        $driverArray = explode(' ', $formattedDriver);
+        //$formattedDriver = str_replace(',','',$driverName);
+        $driverArray = explode(" ", trim($driverName));
 
-        $driver = Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->get();
-        $driverCount = Driver::count($driver);
-        if($driverCount != 0)
+        $driver = Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->first();
+
+        if($driver != null)
         {
-            return $driver->first()->id;
+            return $driver->id;
         }
         else
         {
@@ -156,18 +168,29 @@ class RaceResultsController extends Controller
             {
                 $newDriver->suffix = $driverArray[2];
             }
-            $driver->save();
+            $newDriver->save();
 
             return Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->first()->id;
         }
-
-
     }
     public function getTeamForCar($carNumber, $thirdId){
         $teamCarData = new \stdClass();
+        if(Car::where('number', $carNumber)->first() == null)
+        {
+            $newCar = new Car();
+            $newCar->number = $carNumber;
+            $newCar->save();
+        }
         $car = Car::where('number', $carNumber)->first();
-        $team = TeamCars::where('carId', $car->id)->where('thirdId', $thirdId)->first();
-        $teamCarData->teamNumber = $team->number;
+        $teamCarRow = TeamCars::where('carId', $car->id)->where('thirdId', $thirdId)->first();
+        if($teamCarRow != null)
+        {
+            $teamCarData->teamNumber = $teamCarRow->teamNumber;
+        }
+        else
+        {
+            $teamCarData->teamNumber = null;
+        }
         $teamCarData->carId = $car->id;
         return $teamCarData;
     }

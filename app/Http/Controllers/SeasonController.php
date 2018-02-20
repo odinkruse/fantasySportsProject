@@ -71,7 +71,10 @@ class SeasonController extends Controller
     {
         //
     }
+    public function updateSeasonStandings()
+    {
 
+    }
     /**
      * Remove the specified resource from storage.
      *

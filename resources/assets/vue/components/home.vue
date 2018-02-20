@@ -1,7 +1,7 @@
 <template>
     <div class="home-vue">
         <div class="container">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-8 col-md-offset-2">
                 <h1>{{data.season.name}}</h1>
                 <div>
                     Next Race: {{data.race.name}}
@@ -13,14 +13,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Team's</td>
+                            <td>Teams</td>
                             <td v-for="team in data.seasonStandings">
                                 {{team.teamNumber}}
                             </td>
                         </tr>
                         <tr>
                             <td>Season Points</td>
-                            <td v-for="team in data.seasonStandings">
+                            <td v-for="team in data.thirdTeamStandings">
+                                {{team.points}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Third Points</td>
+                            <td v-for="team in data.thirdTeamStandings">
                                 {{team.points}}
                             </td>
                         </tr>

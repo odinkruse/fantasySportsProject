@@ -8,7 +8,7 @@ class RaceResults extends Model
 {
     public function race()
     {
-        return $this->belongsTo('App\Race');
+        return $this->belongsToMany('App\Race');
     }
     public function cars()
     {

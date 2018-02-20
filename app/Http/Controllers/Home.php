@@ -10,6 +10,8 @@ use App\TeamSeasonStandings;
 
 use App\Season;
 
+use App\TeamThirdStandings;
+
 
 class Home extends Controller
 {
@@ -20,6 +22,7 @@ class Home extends Controller
         $data->json->season = Season::where('active', 1)->first();
         $data->json->race = Race::where('active', 1)->first();
         $data->json->seasonStandings = TeamSeasonStandings::where('seasonId', $data->json->season->id)->get();
+        $data->json->thirdTeamStandings = TeamThirdStandings::where('thirdId', $data->json->race->thirdId)->get();
         $data->view = "home-view";
 //        $data = "Coming from Home Controller";
         return view('main')->with("data",$data);

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CarThirdStandings extends Model
 {
+    protected $fillable = ['carId', 'thirdId'];
     public function third()
     {
         return $this->belongsTo('App\Third');

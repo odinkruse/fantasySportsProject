@@ -8,7 +8,7 @@ class Race extends Model
 {
     public function results()
     {
-        return $this->hasOne('App\RaceResults');
+        return $this->hasMany('App\RaceResults');
     }
     public function track()
     {
@@ -16,6 +16,6 @@ class Race extends Model
     }
     public function third()
     {
-        return $this->belongsTo('App\Thirds');
+        return $this->belongsTo('App\Third');
     }
 }

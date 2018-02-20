@@ -14,6 +14,9 @@
             <div>
                 <a @click="addUrl">Add</a>
             </div>
+            <div>
+                <a @click="updateThird">Update Third</a>
+            </div>
         </div>
     </div>
 </template>
@@ -39,9 +42,17 @@ export default{
                    return;
                }
             }
-            console.log(this.formData);
+            console.log("addRaceResults");
             this.$http.post('/add-race-results', {formData:this.formData}).then(function(response){
                console.log(response);
+               //this.updateThird();
+            });
+        },
+        updateThird(){
+            console.log("updateThird");
+            this.$http.post('/update-third-standings').then(function(response){
+                console.log(response);
+
             });
         }
     }
