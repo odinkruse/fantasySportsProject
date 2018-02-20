@@ -20,6 +20,6 @@ Route::get('/current-race-results', 'RaceResultsController@showActive');
 Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showActive');
 Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
 //POST
-Route::post('/add-race-results', 'RaceResultsController@store');
-Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
-Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
+//Route::post('/add-race-results', 'RaceResultsController@store');
+//Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
+//Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
