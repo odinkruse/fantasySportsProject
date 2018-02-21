@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Race;
+use App\Third;
 use Illuminate\Http\Request;
 
 class RaceController extends Controller
@@ -16,7 +17,6 @@ class RaceController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *

@@ -2,36 +2,46 @@
     <div class="home-vue">
         <div class="container">
             <div class="col-md-8 col-md-offset-2">
-                <h1>{{data.season.name}}</h1>
-                <div>
-                    Next Race: {{data.race.name}}
-                    Race Number: {{data.race.raceNo}}
+                <div class="row">
+                    <h1>{{data.season.name}}</h1>
+                    <div>
+                        <h3>Next Race - {{data.race.name}}</h3>
+                        <h4>Race Number {{data.race.raceNo}}</h4>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <h3>Standings</h3>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Teams</td>
+                                <td v-for="team in data.seasonStandings">
+                                    {{team.team_id}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Season Points</td>
+                                <td v-for="team in data.thirdTeamStandings">
+                                    {{team.points}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Third Points</td>
+                                <td v-for="team in data.thirdTeamStandings">
+                                    {{team.points}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table class="table">
-                    <thead>
-                        <h3>Standings</h3>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Teams</td>
-                            <td v-for="team in data.seasonStandings">
-                                {{team.team_id}}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Season Points</td>
-                            <td v-for="team in data.thirdTeamStandings">
-                                {{team.points}}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Third Points</td>
-                            <td v-for="team in data.thirdTeamStandings">
-                                {{team.points}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="row">
+                    <h3>Recent Race Results</h3>
+                    <div v-for="race in data.recentRaceResults">
+                        <a :href="'/team-results/race/'+race.id">
+                            {{race.name}}
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

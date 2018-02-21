@@ -17,7 +17,7 @@
     //Live
     import Home from './components/home.vue';
     import AddRaceResults from './components/addRaceResults.vue';
-    import LatestRaceResults from './components/latestRaceResults.vue';
+    import TeamRaceResults from './components/latestRaceResults.vue';
     import AddThird from './components/addThird.vue';
     import Header from'./global/header.vue';
     import Footer from './global/footer.vue';
@@ -28,7 +28,7 @@
             'home-view': Home,
             'add-race-results-view': AddRaceResults,
             'add-third-view': AddThird,
-            'latest-race-results-view': LatestRaceResults,
+            'team-race-results-view': TeamRaceResults,
             //DEV
             'test-dump-view': TestDump
         },

@@ -19,6 +19,7 @@ Route::get('/test-dump', 'TestDumpController@viewTestDump');
 Route::get('/latest-race-results', 'RaceResultsController@showLatestResults');
 Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showActive');
 Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
+Route::get('/team-results/race/{race}', 'RaceResultsController@showRaceResultsByTeam');
 //POST
 //Route::post('/add-race-results', 'RaceResultsController@store');
 //Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');

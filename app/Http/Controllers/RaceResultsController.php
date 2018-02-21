@@ -107,14 +107,14 @@ class RaceResultsController extends Controller
     {
         //
     }
-    public function showLatestResults()
+    public function showRaceResultsByTeam(Race $race)
     {
         $data = new \stdClass();
         $data->json = new \stdClass();
         $data->json->raceResultsByTeam = array();
-        $currentThird = Third::where('active', 1)->first();
+        $raceThird = $race->third;
         $teams = Team::get();
-        $race = Race::where('resultsImported', 1)->where('third_id', $currentThird->id)->orderBy('raceNo','desc')->first();
+        //$race = Race::where('resultsImported', 1)->where('third_id', $raceThird->id)->orderBy('raceNo','desc')->first();
         $data->json->race = $race;
         foreach($teams as $team)
         {
@@ -128,7 +128,7 @@ class RaceResultsController extends Controller
         }
 //        $data->json->raceResults = RaceResults
 //            ::join('teams', 'race_results.team_id',)
-        $data->view = "latest-race-results-view";
+        $data->view = "team-race-results-view";
         return view('main')->with("data",$data);
     }
     /**
