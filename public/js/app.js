@@ -14327,7 +14327,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14336,6 +14336,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /* 68 */
 /***/ (function(module, exports) {
 
+//
+//
 //
 //
 //
@@ -14364,23 +14366,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "header-vue container"
   }, [_c('div', {
     staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "row"
   }, [_c('h1', [_vm._v("Middle of the Pack Fantasy Nascar")]), _vm._v(" "), _c('div', [_c('a', {
     attrs: {
       "href": "/"
     }
-  }, [_vm._v("Home")]), _vm._v("\n            |\n            "), _c('a', {
+  }, [_vm._v("Home")]), _vm._v("\n                |\n                "), _c('a', {
     attrs: {
       "href": "#"
     }
-  }, [_vm._v("Current Team Lineups")]), _vm._v("\n            |\n            "), _c('a', {
+  }, [_vm._v("Current Team Lineups")]), _vm._v("\n                |\n                "), _c('a', {
     attrs: {
       "href": "#"
     }
-  }, [_vm._v("Third Standings")]), _vm._v("\n            |\n            "), _c('a', {
+  }, [_vm._v("Third Standings")]), _vm._v("\n                |\n                "), _c('a', {
     attrs: {
       "href": "#"
     }
-  }, [_vm._v("Season Standings")])])])])
+  }, [_vm._v("Season Standings")])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
