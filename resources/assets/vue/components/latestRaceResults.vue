@@ -1,11 +1,11 @@
 <template>
 <div class="latest-results-vue container">
     <div class="col-md-8 col-md-offset-3">
-        <h3>Results for {{data.race.name}}</h3>
+        <h2>Results for {{data.race.name}}</h2>
         <template v-for="TeamResults in data.raceResultsByTeam">
-            <h2>
+            <h3>
                 Team {{TeamResults.Team.number}} - {{TeamResults.Team.member1}} & {{TeamResults.Team.member2}}
-            </h2>
+            </h3>
             <table class="table">
                 <tbody>
                     <tr class="bold">
