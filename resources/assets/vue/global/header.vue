@@ -3,6 +3,8 @@
         <div class="col-md-8 col-md-offset-2">
             <h1>Middle of the Pack Fantasy Nascar</h1>
             <div>
+                <a href="/">Home</a>
+                |
                 <a href="#">Current Team Lineups</a>
                 |
                 <a href="/latest-race-results">Latest Race Results</a>

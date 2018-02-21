@@ -14307,7 +14307,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14316,6 +14316,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /* 68 */
 /***/ (function(module, exports) {
 
+//
+//
 //
 //
 //
@@ -14345,6 +14347,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "col-md-8 col-md-offset-2"
   }, [_c('h1', [_vm._v("Middle of the Pack Fantasy Nascar")]), _vm._v(" "), _c('div', [_c('a', {
+    attrs: {
+      "href": "/"
+    }
+  }, [_vm._v("Home")]), _vm._v("\n            |\n            "), _c('a', {
     attrs: {
       "href": "#"
     }
@@ -14590,7 +14596,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14601,6 +14607,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -14640,10 +14651,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "latest-results-vue container"
   }, [_c('div', {
     staticClass: "col-md-8 col-md-offset-3"
-  }, [_c('table', [_c('thead', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('tbody', [_vm._l((_vm.data.raceResultsByTeam), function(Team) {
-    return [_c('tr', [_c('td', [_vm._v("\n                        Team " + _vm._s(Team.Team.number) + " " + _vm._s(Team.Team.member1) + ", " + _vm._s(Team.Team.member2) + "\n                    ")])]), _vm._v(" "), _vm._l((Team.Results), function(Results) {
-      return _c('tr', [_c('td', [_vm._v("Car ID: " + _vm._s(Results.car_id))]), _vm._v(" "), _c('td', [_vm._v("Points: " + _vm._s(Results.points))])])
-    })]
+  }, [_c('table', [_c('thead', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('tbody', [_vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
+    return [_c('tr', [_c('td', [_vm._v("\n                        Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                    ")])]), _vm._v(" "), _vm._l((TeamResults.Results), function(Results) {
+      return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.points))])])
+    }), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Total")]), _vm._v(" "), _c('td', [_vm._v(_vm._s(TeamResults.TotalPoints))])])]
   })], 2)])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true

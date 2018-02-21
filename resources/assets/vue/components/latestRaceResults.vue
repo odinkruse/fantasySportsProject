@@ -4,15 +4,20 @@
         <table>
             <thead>Results for {{data.race.name}}</thead>
             <tbody>
-            <template v-for="Team in data.raceResultsByTeam">
+            <template v-for="TeamResults in data.raceResultsByTeam">
                 <tr>
                     <td>
-                        Team {{Team.Team.number}} {{Team.Team.member1}}, {{Team.Team.member2}}
+                        Team {{TeamResults.Team.number}} - {{TeamResults.Team.member1}} & {{TeamResults.Team.member2}}
                     </td>
-
                 </tr>
-                <tr v-for="Results in Team.Results">
-                    <td>Car ID: {{Results.car_id}}</td> <td>Points: {{Results.points}}</td>
+                <tr v-for="Results in TeamResults.Results">
+                    <td>{{Results.carNumber}}</td>
+                    <td>{{Results.driverName.firstName}} {{Results.driverName.lastName}}</td>
+                    <td>{{Results.points}}</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>{{TeamResults.TotalPoints}}</td>
                 </tr>
             </template>
             </tbody>

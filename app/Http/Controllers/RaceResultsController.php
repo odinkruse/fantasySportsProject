@@ -118,7 +118,13 @@ class RaceResultsController extends Controller
         $data->json->race = $race;
         foreach($teams as $team)
         {
-            array_push($data->json->raceResultsByTeam, ["Team"=>$team,"Results"=>RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->get()]);
+            array_push($data->json->raceResultsByTeam,
+                [
+                    "Team"=>$team,
+                    "Results"=>$this->getTeamRaceResults($team->id, $race->id),
+                    "TotalPoints"=>array_sum(RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->pluck('points')->toArray())
+                ]
+            );
         }
 //        $data->json->raceResults = RaceResults
 //            ::join('teams', 'race_results.team_id',)
@@ -203,5 +209,20 @@ class RaceResultsController extends Controller
         }
         $teamCarData->car_id = $car->id;
         return $teamCarData;
+    }
+    public function getTeamRaceResults($team_id, $race_id)
+    {
+        $results = RaceResults::where('race_id', $race_id)->where('team_id',$team_id)->get();
+        $teamResults = array();
+        foreach($results as $result)
+        {
+            $resultObj = new \stdClass();
+            $resultObj->position = $result->position;
+            $resultObj->carNumber = Car::where('id', $result->car_id)->first()->number;
+            $resultObj->driverName = Driver::select('firstName', 'lastName')->where('id', $result->driver_id)->first();
+            $resultObj->points = $result->points;
+            array_push($teamResults, $resultObj);
+        }
+        return $teamResults;
     }
 }
