@@ -13684,7 +13684,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_vm._v("\n                Next Race: " + _vm._s(_vm.data.race.name) + "\n                Race Number: " + _vm._s(_vm.data.race.raceNo) + "\n            ")]), _vm._v(" "), _c('table', {
     staticClass: "table"
   }, [_vm._m(0), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Teams")]), _vm._v(" "), _vm._l((_vm.data.seasonStandings), function(team) {
-    return _c('td', [_vm._v("\n                            " + _vm._s(team.teamNumber) + "\n                        ")])
+    return _c('td', [_vm._v("\n                            " + _vm._s(team.team_id) + "\n                        ")])
   })], 2), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Season Points")]), _vm._v(" "), _vm._l((_vm.data.thirdTeamStandings), function(team) {
     return _c('td', [_vm._v("\n                            " + _vm._s(team.points) + "\n                        ")])
   })], 2), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Third Points")]), _vm._v(" "), _vm._l((_vm.data.thirdTeamStandings), function(team) {

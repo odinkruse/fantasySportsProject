@@ -15,7 +15,7 @@
                         <tr>
                             <td>Teams</td>
                             <td v-for="team in data.seasonStandings">
-                                {{team.teamNumber}}
+                                {{team.team_id}}
                             </td>
                         </tr>
                         <tr>

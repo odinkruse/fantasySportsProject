@@ -108,6 +108,8 @@ class ThirdController extends Controller
             $teamThirdTeam = TeamThirdStandings::firstOrCreate(
                 ['teamNumber'=>$team->number],['third_id'=>$third->id]
             );
+
+            //should update this to just get a plucked array and just add them with array_sum
             $thirdPoints = 0;
             foreach($cars as $car)
             {
