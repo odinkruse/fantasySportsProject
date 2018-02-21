@@ -13358,8 +13358,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_home_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_latestRaceResults_vue__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_latestRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_latestRaceResults_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_addThird_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__global_header_vue__ = __webpack_require__(65);
@@ -13396,7 +13396,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         'home-view': __WEBPACK_IMPORTED_MODULE_1__components_home_vue___default.a,
         'add-race-results-view': __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue___default.a,
         'add-third-view': __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue___default.a,
-        'team-race-results-view': __WEBPACK_IMPORTED_MODULE_3__components_latestRaceResults_vue___default.a,
+        'team-race-results-view': __WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue___default.a,
         //DEV
         'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView_vue___default.a
     },
@@ -14542,26 +14542,31 @@ if (false) {
 /* 82 */,
 /* 83 */,
 /* 84 */,
-/* 85 */
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(86)
+__webpack_require__(91)
 
 var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(88),
+  __webpack_require__(93),
   /* template */
-  __webpack_require__(89),
+  __webpack_require__(94),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/latestRaceResults.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/teamRaceResults.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] latestRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] teamRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -14570,9 +14575,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3c05361d", Component.options)
+    hotAPI.createRecord("data-v-1ad68b72", Component.options)
   } else {
-    hotAPI.reload("data-v-3c05361d", Component.options)
+    hotAPI.reload("data-v-1ad68b72", Component.options)
   }
 })()}
 
@@ -14580,23 +14585,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 86 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(87);
+var content = __webpack_require__(92);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("31ec85a7", content, false);
+var update = __webpack_require__(2)("2eff6f4e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3c05361d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./latestRaceResults.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3c05361d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./latestRaceResults.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1ad68b72\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamRaceResults.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1ad68b72\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamRaceResults.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14606,7 +14611,7 @@ if(false) {
 }
 
 /***/ }),
-/* 87 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)();
@@ -14620,11 +14625,13 @@ exports.push([module.i, "\n.bold{\n    font-weight:bold;\n}\n", ""]);
 
 
 /***/ }),
-/* 88 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -14665,7 +14672,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 89 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14673,15 +14680,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "latest-results-vue container"
   }, [_c('div', {
     staticClass: "col-md-8 col-md-offset-3"
+  }, [_c('div', {
+    staticClass: "row"
   }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
-    return [_c('h3', [_vm._v("\n                Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n            ")]), _vm._v(" "), _c('table', {
+    return [_c('h3', [_vm._v("\n                    Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                ")]), _vm._v(" "), _c('table', {
       staticClass: "table"
     }, [_c('tbody', [_vm._m(0, true), _vm._v(" "), _vm._l((TeamResults.Results), function(Results) {
       return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.points))])])
     }), _vm._v(" "), _c('tr', {
       staticClass: "bold"
     }, [_c('td', [_vm._v("Total")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v(_vm._s(TeamResults.TotalPoints))])])], 2)])]
-  })], 2)])
+  })], 2)])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('tr', {
     staticClass: "bold"
@@ -14691,7 +14700,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-3c05361d", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-1ad68b72", module.exports)
   }
 }
 

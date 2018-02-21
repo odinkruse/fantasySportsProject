@@ -17,7 +17,7 @@
     //Live
     import Home from './components/home.vue';
     import AddRaceResults from './components/addRaceResults.vue';
-    import TeamRaceResults from './components/latestRaceResults.vue';
+    import TeamRaceResults from './components/teamRaceResults.vue';
     import AddThird from './components/addThird.vue';
     import Header from'./global/header.vue';
     import Footer from './global/footer.vue';
