@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class TeamCars extends Model
 {
-    public function cars()
+    public function car()
     {
-        return $this->belongsToMany('App\Car');
+        return $this->belongsTo('App\Car');
     }
-    public function teams()
+    public function team()
     {
-        return $this->belongsToMany('App\Team');
+        return $this->belongsTo('App\Team');
     }
 }

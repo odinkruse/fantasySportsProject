@@ -6,7 +6,7 @@
                 <div>
                     <a href="/">Home</a>
                     |
-                    <a href="#">Current Team Lineups</a>
+                    <a href="/team-cars/current">Current Team Lineups</a>
                     |
                     <a href="#">Third Standings</a>
                     |

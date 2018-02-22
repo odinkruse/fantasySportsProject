@@ -19,6 +19,7 @@
     import AddRaceResults from './components/addRaceResults.vue';
     import TeamRaceResults from './components/teamRaceResults.vue';
     import AddThird from './components/addThird.vue';
+    import TeamCars from './components/teamCars';
     import Header from'./global/header.vue';
     import Footer from './global/footer.vue';
     export default {
@@ -29,6 +30,7 @@
             'add-race-results-view': AddRaceResults,
             'add-third-view': AddThird,
             'team-race-results-view': TeamRaceResults,
+            'team-cars-view': TeamCars,
             //DEV
             'test-dump-view': TestDump
         },

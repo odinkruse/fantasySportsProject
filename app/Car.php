@@ -10,6 +10,10 @@ class Car extends Model
     {
         return $this->hasMany('App\TeamCars');
     }
+    public function drivers()
+    {
+        return $this->hasMany('App\Driver');
+    }
     public function  thirdStandings()
     {
         return $this->hasMany('App\CarThirdStandings');

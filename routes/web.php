@@ -20,6 +20,8 @@ Route::get('/latest-race-results', 'RaceResultsController@showLatestResults');
 Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showActive');
 Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
 Route::get('/team-results/race/{race}', 'RaceResultsController@showRaceResultsByTeam');
+Route::get('/team-cars/third/{third}', 'TeamCarsController@show');
+Route::get('/team-cars/current', 'TeamCarsController@showCurrentTeamCars');
 //POST
 //Route::post('/add-race-results', 'RaceResultsController@store');
 //Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');

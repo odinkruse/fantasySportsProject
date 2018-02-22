@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Car;
+use App\Team;
 use App\TeamCars;
+use App\Third;
 use Illuminate\Http\Request;
 
 class TeamCarsController extends Controller
@@ -41,14 +44,43 @@ class TeamCarsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TeamCars  $teamCars
+     * @param  \App\TeamCars  $third
      * @return \Illuminate\Http\Response
      */
-    public function show(TeamCars $teamCars)
+    public function show(Third $third)
     {
-        //
-    }
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $data->json->teamCarList = array();
+        $data->json->third = $third;
+        $teams = Team::get();
+        foreach($teams as $team)
+        {
+            $teamCars = new \stdClass();
+            $teamCars->teamNumber = $team->number;
+            $teamCars->member1 = $team->member1;
+            $teamCars->member2 = $team->member2;
+            $thirdTeamCars = TeamCars::where('team_id', $team->id)->where('third_id', $third->id)->get();
+            $teamCars->carList = array();
+            foreach($thirdTeamCars as $teamCar)
+            {
+                $carInfo = new \stdClass();
+                //$car = Car::where('id', $team->car_id)->first();
+                $carInfo->carNumber = $teamCar->car->number;
+                $carInfo->drivers = $teamCar->car->drivers;
+                array_push($teamCars->carList, $carInfo);
+            }
+            array_push($data->json->teamCarList, $teamCars);
+        }
 
+        $data->view = 'team-cars-view';
+        return view('main')->with("data",$data);
+
+    }
+    public function showCurrentTeamCars(){
+        $third = Third::where('active', 1)->first();
+        return $this->show($third);
+    }
     /**
      * Show the form for editing the specified resource.
      *
