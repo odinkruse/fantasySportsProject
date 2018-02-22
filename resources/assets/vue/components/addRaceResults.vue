@@ -1,21 +1,30 @@
 <template>
     <div class="add-vue container">
         <div class="col-md-6 col-md-offset-3">
-            <h1>Race Name</h1>
+            <h3>Season Year</h3>
+            <input v-model="formData.season" placeholder="2018 Season, 2017 Season">
+            <h3>Third</h3>
+            <input v-model="formData.third" placeholder="1,2 or 3">
+            <h3>Race Name</h3>
             <input v-model="formData.raceName" placeholder="Daytona 500">
-            <h1>Race Number</h1>
+            <h3>Race Number</h3>
             <input v-model="formData.raceNumber" placeholder="1">
-            <h1>Track</h1>
+            <h3>Track</h3>
             <input v-model="formData.track" placeholder="Daytona">
-            <h1>raceDate</h1>
+            <h3>raceDate</h3>
             <input v-model="formData.raceDate" placeholder="2/22/2017">
-            <h1>Results URL</h1>
+            <h3>Results URL</h3>
             <input v-model="formData.url" placeholder="www.espn.com">
+            <h3>Auth</h3>
+            <input v-model="formData.auth" placeholder="dont mess this up">
             <div>
                 <a @click="addUrl">Add</a>
             </div>
             <div>
                 <a @click="updateThird">Update Third</a>
+            </div>
+            <div>
+                <a @click="updateThird">Update Season</a>
             </div>
         </div>
     </div>
@@ -25,11 +34,14 @@ export default{
     data(){
         return {
             formData: {
-                url: "http://racing-reference.info/race/2018_Daytona_500/W",
+                season:"2018",
+                third:"1",
+                url: "http://racing-reference.info/race/2017_Daytona_500/W",
                 raceName:"Daytona 500",
                 raceNumber:"1",
                 track:"Daytona",
-                raceDate:"2/18/2018"
+                raceDate:"02/26/2017",
+                auth:""
             }
         }
     },

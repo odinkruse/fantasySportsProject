@@ -23,6 +23,10 @@ Route::get('/team-results/race/{race}', 'RaceResultsController@showRaceResultsBy
 Route::get('/team-cars/third/{third}', 'TeamCarsController@show');
 Route::get('/team-cars/current', 'TeamCarsController@showCurrentTeamCars');
 //POST
-//Route::post('/add-race-results', 'RaceResultsController@store');
+Route::post('/add-race-results', 'RaceResultsController@store');
 //Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
 //Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

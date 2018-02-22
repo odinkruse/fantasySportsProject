@@ -13798,7 +13798,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13831,16 +13831,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             formData: {
-                url: "http://racing-reference.info/race/2018_Daytona_500/W",
+                season: "2018",
+                third: "1",
+                url: "http://racing-reference.info/race/2017_Daytona_500/W",
                 raceName: "Daytona 500",
                 raceNumber: "1",
                 track: "Daytona",
-                raceDate: "2/18/2018"
+                raceDate: "02/26/2017",
+                auth: ""
             }
         };
     },
@@ -13877,7 +13889,45 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "add-vue container"
   }, [_c('div', {
     staticClass: "col-md-6 col-md-offset-3"
-  }, [_c('h1', [_vm._v("Race Name")]), _vm._v(" "), _c('input', {
+  }, [_c('h3', [_vm._v("Season Year")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.season),
+      expression: "formData.season"
+    }],
+    attrs: {
+      "placeholder": "2018 Season, 2017 Season"
+    },
+    domProps: {
+      "value": (_vm.formData.season)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "season", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Third")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.third),
+      expression: "formData.third"
+    }],
+    attrs: {
+      "placeholder": "1,2 or 3"
+    },
+    domProps: {
+      "value": (_vm.formData.third)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "third", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Race Name")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -13896,7 +13946,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$set(_vm.formData, "raceName", $event.target.value)
       }
     }
-  }), _vm._v(" "), _c('h1', [_vm._v("Race Number")]), _vm._v(" "), _c('input', {
+  }), _vm._v(" "), _c('h3', [_vm._v("Race Number")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -13915,7 +13965,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$set(_vm.formData, "raceNumber", $event.target.value)
       }
     }
-  }), _vm._v(" "), _c('h1', [_vm._v("Track")]), _vm._v(" "), _c('input', {
+  }), _vm._v(" "), _c('h3', [_vm._v("Track")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -13934,7 +13984,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$set(_vm.formData, "track", $event.target.value)
       }
     }
-  }), _vm._v(" "), _c('h1', [_vm._v("raceDate")]), _vm._v(" "), _c('input', {
+  }), _vm._v(" "), _c('h3', [_vm._v("raceDate")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -13953,7 +14003,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$set(_vm.formData, "raceDate", $event.target.value)
       }
     }
-  }), _vm._v(" "), _c('h1', [_vm._v("Results URL")]), _vm._v(" "), _c('input', {
+  }), _vm._v(" "), _c('h3', [_vm._v("Results URL")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -13972,6 +14022,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$set(_vm.formData, "url", $event.target.value)
       }
     }
+  }), _vm._v(" "), _c('h3', [_vm._v("Auth")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.auth),
+      expression: "formData.auth"
+    }],
+    attrs: {
+      "placeholder": "dont mess this up"
+    },
+    domProps: {
+      "value": (_vm.formData.auth)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "auth", $event.target.value)
+      }
+    }
   }), _vm._v(" "), _c('div', [_c('a', {
     on: {
       "click": _vm.addUrl
@@ -13980,7 +14049,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.updateThird
     }
-  }, [_vm._v("Update Third")])])])])
+  }, [_vm._v("Update Third")])]), _vm._v(" "), _c('div', [_c('a', {
+    on: {
+      "click": _vm.updateThird
+    }
+  }, [_vm._v("Update Season")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

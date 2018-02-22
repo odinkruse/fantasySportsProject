@@ -55,8 +55,12 @@ class RaceResultsController extends Controller
      */
     public function store(Request $request)
     {
-
-
+        if(strcmp ( (string)date("m/d/Y") , $request->formData['auth'] ) != 0)
+        {
+            return ["Failed Auth"=>[$request->formData['auth'],date("m/d/Y")]];
+        }
+        return ["Survived Auth"=>[$request->formData,date("m/d/Y")]];
+        //should really validate the data
         $data = new \stdClass();
         $data->json = new \stdClass();
         $client = new Client();
