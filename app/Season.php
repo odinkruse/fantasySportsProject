@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Season extends Model
 {
+    protected $fillable = ['year', 'name'];
     public function thirds()
     {
         return $this->hasMany('App\Third');

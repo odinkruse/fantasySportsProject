@@ -1,30 +1,36 @@
 <template>
     <div class="add-vue container">
-        <div class="col-md-6 col-md-offset-3">
-            <h3>Season Year</h3>
-            <input v-model="formData.season" placeholder="2018 Season, 2017 Season">
-            <h3>Third</h3>
-            <input v-model="formData.third" placeholder="1,2 or 3">
-            <h3>Race Name</h3>
-            <input v-model="formData.raceName" placeholder="Daytona 500">
-            <h3>Race Number</h3>
-            <input v-model="formData.raceNumber" placeholder="1">
-            <h3>Track</h3>
-            <input v-model="formData.track" placeholder="Daytona">
-            <h3>raceDate</h3>
-            <input v-model="formData.raceDate" placeholder="2/22/2017">
-            <h3>Results URL</h3>
-            <input v-model="formData.url" placeholder="www.espn.com">
-            <h3>Auth</h3>
-            <input v-model="formData.auth" placeholder="dont mess this up">
-            <div>
-                <a @click="addUrl">Add</a>
-            </div>
-            <div>
-                <a @click="updateThird">Update Third</a>
-            </div>
-            <div>
-                <a @click="updateThird">Update Season</a>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <form>
+                    <div class="form-group">
+                        <h3>Season Year</h3>
+                        <input class="form-control" v-model="formData.season" placeholder="2018 Season, 2017 Season">
+                        <h3>Third</h3>
+                        <input class="form-control" v-model="formData.third" placeholder="1,2 or 3">
+                        <h3>Race Name</h3>
+                        <input class="form-control" v-model="formData.raceName" placeholder="Daytona 500">
+                        <h3>Race Number</h3>
+                        <input class="form-control" v-model="formData.raceNumber" placeholder="1">
+                        <h3>Track</h3>
+                        <input class="form-control" v-model="formData.track" placeholder="Daytona">
+                        <h3>raceDate</h3>
+                        <input class="form-control" v-model="formData.raceDate" placeholder="2/22/2017">
+                        <h3>Results URL</h3>
+                        <input class="form-control" v-model="formData.url" placeholder="www.espn.com">
+                        <h3>Auth</h3>
+                        <input class="form-control" v-model="formData.auth" placeholder="dont mess this up">
+                    </div>
+                    <a class="btn btn-primary" @click="addUrl">
+                        Add
+                    </a>
+                    <a class="btn btn-primary" @click="updateThird">
+                        Update Third
+                    </a>
+                    <a class="btn btn-primary" @click="updateThird">
+                        Update Season
+                    </a>
+                </form>
             </div>
         </div>
     </div>
@@ -34,13 +40,13 @@ export default{
     data(){
         return {
             formData: {
-                season:"2018",
-                third:"1",
-                url: "http://racing-reference.info/race/2017_Daytona_500/W",
-                raceName:"Daytona 500",
-                raceNumber:"1",
-                track:"Daytona",
-                raceDate:"02/26/2017",
+                season:"",
+                third:"",
+                url: "",
+                raceName:"",
+                raceNumber:"",
+                track:"",
+                raceDate:"",
                 auth:""
             }
         }

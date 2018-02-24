@@ -13798,7 +13798,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13840,18 +13840,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             formData: {
-                season: "2018",
-                third: "1",
-                url: "http://racing-reference.info/race/2017_Daytona_500/W",
-                raceName: "Daytona 500",
-                raceNumber: "1",
-                track: "Daytona",
-                raceDate: "02/26/2017",
+                season: "",
+                third: "",
+                url: "",
+                raceName: "",
+                raceNumber: "",
+                track: "",
+                raceDate: "",
                 auth: ""
             }
         };
@@ -13888,7 +13894,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "add-vue container"
   }, [_c('div', {
-    staticClass: "col-md-6 col-md-offset-3"
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('form', [_c('div', {
+    staticClass: "form-group"
   }, [_c('h3', [_vm._v("Season Year")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
@@ -13896,6 +13906,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.season),
       expression: "formData.season"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "2018 Season, 2017 Season"
     },
@@ -13915,6 +13926,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.third),
       expression: "formData.third"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "1,2 or 3"
     },
@@ -13934,6 +13946,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.raceName),
       expression: "formData.raceName"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "Daytona 500"
     },
@@ -13953,6 +13966,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.raceNumber),
       expression: "formData.raceNumber"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "1"
     },
@@ -13972,6 +13986,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.track),
       expression: "formData.track"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "Daytona"
     },
@@ -13991,6 +14006,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.raceDate),
       expression: "formData.raceDate"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "2/22/2017"
     },
@@ -14010,6 +14026,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.url),
       expression: "formData.url"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "www.espn.com"
     },
@@ -14029,6 +14046,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formData.auth),
       expression: "formData.auth"
     }],
+    staticClass: "form-control",
     attrs: {
       "placeholder": "dont mess this up"
     },
@@ -14041,19 +14059,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$set(_vm.formData, "auth", $event.target.value)
       }
     }
-  }), _vm._v(" "), _c('div', [_c('a', {
+  })]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-primary",
     on: {
       "click": _vm.addUrl
     }
-  }, [_vm._v("Add")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\n                    Add\n                ")]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-primary",
     on: {
       "click": _vm.updateThird
     }
-  }, [_vm._v("Update Third")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\n                    Update Third\n                ")]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-primary",
     on: {
       "click": _vm.updateThird
     }
-  }, [_vm._v("Update Season")])])])])
+  }, [_vm._v("\n                    Update Season\n                ")])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

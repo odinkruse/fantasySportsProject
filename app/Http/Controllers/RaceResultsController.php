@@ -6,9 +6,12 @@ use App\RaceResults;
 use App\Race;
 use App\Car;
 use App\Driver;
+use App\Season;
 use App\Team;
 use App\TeamCars;
 use App\Third;
+use App\Track;
+use \DateTime;
 use Goutte\Client;
 use Illuminate\Http\Request;
 
@@ -55,49 +58,97 @@ class RaceResultsController extends Controller
      */
     public function store(Request $request)
     {
-        if(strcmp ( (string)date("m/d/Y") , $request->formData['auth'] ) != 0)
+        $data = $request->formData;
+
+        if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)
         {
-            return ["Failed Auth"=>[$request->formData['auth'],date("m/d/Y")]];
+            return ["Failed Auth"=>[$data['auth'],date("m/d/Y")]];
         }
-        return ["Survived Auth"=>[$request->formData,date("m/d/Y")]];
+
         //should really validate the data
-        $data = new \stdClass();
-        $data->json = new \stdClass();
+        $season = Season::firstOrCreate(
+            ['year'=>$data['season']]
+        );
+        if($season->name == null)
+        {
+            $season->name = $season->year." Season";
+            $season->save();
+        }
+
+        $third = Third::firstOrCreate(
+            ['season_id'=>$season->id],
+            ['thirdNo'=>$data['third']]
+        );
+        if($third->name == null)
+        {
+            $numberToNameArray = ["First", "Second", "Third"];
+            $third->name = $numberToNameArray[$third->thirdNo-1]." Third of ".$season->year;
+            $third->save();
+        }
+
+        $track = Track::firstOrCreate(
+            ['name'=>$data['track']]
+        );
+        $race = Race::firstOrCreate(
+            ['third_id'=>$third->id],
+            ['track_id'=>$track->id],
+            ['raceNo'=>(int)$data['raceNumber']]
+        );
+        if($race->name ==null)
+        {
+            $race->name = $data['raceName'];
+            $race->save();
+        }
+        if($race->raceDate == null)
+        {
+            $race->raceDate = DateTime::createFromFormat('m-d-Y',$data['raceDate'])->format('Y-m-d');
+            $race->save();
+        }
         $client = new Client();
-        $html = $client->request('GET', $request->formData['url']);
+        $html = $client->request('GET', $data['url']);
         $table = $html->filterXPath('//table[@class="tb"][3]');
         $tableArray = $table->filter('tr')->each(function ($row) {
             return $rowArray = $row->filter('td')->each(function ($cell) {
                 return preg_replace("/[^A-Za-z0-9 ]/", '', preg_replace('/\n/', "", $cell->text()));
             });
         });
-        $data->json->resultsArray = array();
-
-
-        $third = Third::where('active',1)->first();
-        $race = Race::where('raceNo', $request->formData['raceNumber'])->where('third_id', $third->id)->first();
-
-
+        $resultArray = array();
         foreach($tableArray as $row)
         {
             if(!empty($row)) {
-
-                $result = new RaceResults();
-                $result->race_id = $race->id;
                 $teamCarData = $this->getTeamForCar($row[self::CAR], $third->id);
-                $result->teamNumber = $teamCarData->teamNumber;
-                $result->car_id = $teamCarData->car_id;
-                $result->driver_id = $this->getDriverId($row[self::DRIVER]);
-                $result->position = $row[self::POSITION];
-                $result->points = $row[self::POINTS];
-
-                $checkDuplicate = RaceResults::where('race_id', $result->race_id)->where('car_id', $result->car_id)->first();
-                if($checkDuplicate == null) {
+                $queryObj = new \stdClass();
+                $queryObj->teamCarData = $teamCarData;
+                $queryObj->race_id = $race->id;
+                $queryObj->team_id = $teamCarData->teamNumber;
+                $queryObj->car_id = $teamCarData->car_id;
+                $queryObj->driver_id = $this->getDriverId($row[self::DRIVER], $teamCarData->car_id, $season->id);
+                $queryObj->position = $row[self::POSITION];
+                $queryObj->points = $row[self::POINTS];
+                $result = RaceResults::where('race_id',$queryObj->race_id)
+                    ->where('team_id',$queryObj->team_id)
+                    ->where('car_id',$queryObj->car_id)
+                    ->where('driver_id',$queryObj->driver_id)
+                    ->where('position', $queryObj->position)
+                    ->where('points',$queryObj->points)
+                    ->first();
+                if($result == null)
+                {
+                    $result = new RaceResults();
+                    $result->race_id = $queryObj->race_id;
+                    $result->team_id = $queryObj->team_id;
+                    $result->car_id = $queryObj->car_id;
+                    $result->driver_id = $queryObj->driver_id;
+                    $result->position = $queryObj->position;
+                    $result->points = $queryObj->points;
                     $result->save();
                 }
+                array_push($resultArray, $result);
             }
         }
-
+        //return [$resultArray];
+        $race->raceResultsURL = $data->url;
+        $race->save();
         return ["newRaceData",RaceResults::where('race_id', $race->id)->get()];
     }
 
@@ -168,44 +219,56 @@ class RaceResultsController extends Controller
     {
         //
     }
-    public function getDriverId($driverName)
+    public function getDriverId($driverName, $car_id, $season_id)
     {
-        //$formattedDriver = str_replace(',','',$driverName);
         $driverArray = explode(" ", trim($driverName));
-
-        $driver = Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->first();
-
-        if($driver != null)
+        $firstName = $driverArray[0];
+        $lastName = $driverArray[1];
+        $suffix = null;
+        //$car = Car::where('id', $car_id)->first();
+        if(count($driverArray) == 3)
         {
-            return $driver->id;
+            $suffix = $driverArray[2];
         }
-        else
+        $driver = Driver:: where('firstNAme',$firstName)
+            ->where('lastName',$lastName)
+            ->where('car_id', $car_id)
+            ->where('season_id', $season_id)
+            ->first();
+        if($driver == null)
         {
-            $newDriver = new Driver();
-            $newDriver->firstName = $driverArray[0];
-            $newDriver->lastName = $driverArray[1];
-            if(count($driverArray) == 3)
-            {
-                $newDriver->suffix = $driverArray[2];
-            }
-            $newDriver->save();
-
-            return Driver::where('firstName', $driverArray[0])->where('lastName', $driverArray[1])->first()->id;
+            $driver = new Driver();
+            $driver->firstName = $firstName;
+            $driver->lastName = $lastName;
+            $driver->suffix = $suffix;
+            $driver->car_id = $car_id;
+            $driver->season_id = $season_id;
+            $driver->save();
         }
+//        $driver = Driver::firstOrNew(
+//            ['firstName'=>$firstName],
+//            ['lastName'=>$lastName],
+//            ['car_id'=>$car->id],
+//            ['season_id'=>$season_id]
+//
+//        );
+//        if($suffix != null && $driver->suffix == null)
+//        {
+//            $driver->suffix = $suffix;
+//            $driver->save();
+//        }
+        return $driver->id;
     }
     public function getTeamForCar($carNumber, $third_id){
         $teamCarData = new \stdClass();
-        if(Car::where('number', $carNumber)->first() == null)
-        {
-            $newCar = new Car();
-            $newCar->number = $carNumber;
-            $newCar->save();
-        }
-        $car = Car::where('number', $carNumber)->first();
+
+        $car = Car::firstOrCreate(
+            ['number'=>$carNumber]
+        );
         $teamCarRow = TeamCars::where('car_id', $car->id)->where('third_id', $third_id)->first();
         if($teamCarRow != null)
         {
-            $teamCarData->teamNumber = $teamCarRow->teamNumber;
+            $teamCarData->teamNumber = $teamCarRow->team_id;
         }
         else
         {

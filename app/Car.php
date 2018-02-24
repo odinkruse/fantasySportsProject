@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model
 {
+    protected $fillable = ['number'];
     public function teams()
     {
         return $this->hasMany('App\TeamCars');

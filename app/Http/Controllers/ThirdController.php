@@ -91,7 +91,8 @@ class ThirdController extends Controller
         foreach($carArray as $car)
         {
             $carStanding = CarThirdStandings::firstOrNew(
-                ["car_id"=>$car->car_id],["third_id"=>$third->id]
+                ["car_id"=>$car->car_id],
+                ["third_id"=>$third->id]
             );
             $pointsArray = RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray();
             $carStanding->points = array_sum($pointsArray);
@@ -106,7 +107,8 @@ class ThirdController extends Controller
             $cars = TeamCars::where('teamNumber', $team->number)->where('third_id', $third->id)->get();
 
             $teamThirdTeam = TeamThirdStandings::firstOrCreate(
-                ['teamNumber'=>$team->number],['third_id'=>$third->id]
+                ['teamNumber'=>$team->number],
+                ['third_id'=>$third->id]
             );
 
             //should update this to just get a plucked array and just add them with array_sum
