@@ -89,7 +89,7 @@ class RaceResultsController extends Controller
         $track = Track::firstOrCreate(
             ['name'=>$data['track']]
         );
-        $race = Race::firstOrCreate(
+        $race = Race::firstOrNew(
             ['third_id'=>$third->id],
             ['track_id'=>$track->id],
             ['raceNo'=>(int)$data['raceNumber']]
@@ -97,13 +97,12 @@ class RaceResultsController extends Controller
         if($race->name ==null)
         {
             $race->name = $data['raceName'];
-            $race->save();
         }
         if($race->raceDate == null)
         {
             $race->raceDate = DateTime::createFromFormat('m-d-Y',$data['raceDate'])->format('Y-m-d');
-            $race->save();
         }
+        $race->save();
         $client = new Client();
         $html = $client->request('GET', $data['url']);
         $table = $html->filterXPath('//table[@class="tb"][3]');
