@@ -89,20 +89,19 @@ class RaceResultsController extends Controller
         $track = Track::firstOrCreate(
             ['name'=>$data['track']]
         );
-        $race = Race::firstOrNew(
-            ['third_id'=>$third->id],
-            ['track_id'=>$track->id],
-            ['raceNo'=>(int)$data['raceNumber']]
-        );
-        if($race->name ==null)
-        {
+        $race = Race::where('third_id',$third->id)
+            ->where('track_id',$track->id)
+            ->where('raceNo',(int)$data['raceNumber'])
+            ->first();
+        if($race == null) {
+            $race = new Race();
+            $race->third_id = $third->id;
+            $race->track_id = $track->id;
+            $race->raceNo = (int)$data['raceNumber'];
             $race->name = $data['raceName'];
+            $race->raceDate = DateTime::createFromFormat('m-d-Y', $data['raceDate'])->format('Y-m-d');
+            $race->save();
         }
-        if($race->raceDate == null)
-        {
-            $race->raceDate = DateTime::createFromFormat('m-d-Y',$data['raceDate'])->format('Y-m-d');
-        }
-        $race->save();
         $client = new Client();
         $html = $client->request('GET', $data['url']);
         $table = $html->filterXPath('//table[@class="tb"][3]');
