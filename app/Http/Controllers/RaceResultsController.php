@@ -147,7 +147,7 @@ class RaceResultsController extends Controller
             }
         }
         //return [$resultArray];
-        $race->raceResultsURL = $data->url;
+        $race->raceResultsURL = $data['url'];
         $race->save();
         return ["newRaceData",RaceResults::where('race_id', $race->id)->get()];
     }
