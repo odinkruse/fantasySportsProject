@@ -14207,7 +14207,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "latest-results-vue container"
+    staticClass: "team-results-vue container"
   }, [_c('div', {
     staticClass: "col-md-8 col-md-offset-2"
   }, [_c('div', {

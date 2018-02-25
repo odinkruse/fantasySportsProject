@@ -67,7 +67,8 @@ class TeamCarsController extends Controller
                 $carInfo = new \stdClass();
                 //$car = Car::where('id', $team->car_id)->first();
                 $carInfo->carNumber = $teamCar->car->number;
-                $carInfo->drivers = $teamCar->car->drivers;
+                //
+                $carInfo->drivers = $teamCar->car->drivers->where('season_id',$third->season->id);
                 array_push($teamCars->carList, $carInfo);
             }
             array_push($data->json->teamCarList, $teamCars);
