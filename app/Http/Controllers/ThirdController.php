@@ -78,15 +78,37 @@ class ThirdController extends Controller
         //
     }
 
+    public function updateThirdStandingsView()
+    {
+        $data = new \stdClass();
+        $data->json = new \stdClass;
+        $data->view = "update-third-standings-view";
+        return view('main')->with("data",$data);
+    }
     /**
      * @return array
      */
-    public function updateThirdStandings()
+    public function updateThirdStandings(Request $request)
     {
+        $data = $request->formData;
 
-        $third = Third::where('active', 1)->first();
-        $races = Race::where('third_id', $third->id)->pluck('id')->toArray();
-        $carArray = RaceResults::whereIn('race_id', $races)->select('car_id')->groupBy('car_id')->get();
+        if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)
+        {
+            return ["Failed Auth"=>[$data['auth'],date("m/d/Y")]];
+        }
+
+        $third = Third::where('season_id', Season::where('year',$data['year'])
+            ->first()->id)->where('thirdNo', $data['third'])
+            ->first();
+
+        $races = Race::where('third_id', $third->id)
+            ->pluck('id')
+            ->toArray();
+
+        $carArray = RaceResults::whereIn('race_id', $races)
+            ->select('car_id')
+            ->groupBy('car_id')
+            ->get();
         //return["CarIdArray"=>$car_idArray];
         foreach($carArray as $car)
         {
@@ -94,17 +116,22 @@ class ThirdController extends Controller
                 ["car_id"=>$car->car_id],
                 ["third_id"=>$third->id]
             );
-            $pointsArray = RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray();
-            $carStanding->points = array_sum($pointsArray);
+            $carStanding->points = array_sum(RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
             $carStanding->save();
         }
 
-
+        //*
+        ///I need to go through the races in the third
+        ///from those races i need to go through the cars in
+        ///
+        ///
+        ///
+        //*
         $teams = Team::get();
         $teamThirdResultsArray = array();
         foreach($teams as $team)
         {
-            $cars = TeamCars::where('teamNumber', $team->number)->where('third_id', $third->id)->get();
+            $cars = TeamCars::where('teamNumber', $team->number)->where('third_id', $third->id)->pluck('car_id')->toArray();
 
             $teamThirdTeam = TeamThirdStandings::firstOrCreate(
                 ['teamNumber'=>$team->number],
@@ -113,10 +140,9 @@ class ThirdController extends Controller
 
             //should update this to just get a plucked array and just add them with array_sum
             $thirdPoints = 0;
-            foreach($cars as $car)
-            {
-                $thirdPoints += CarThirdStandings::where('car_id', $car->car_id)->where('third_id', $third->id)->first()->points;
-            }
+
+            $thirdPoints = array_sum(CarThirdStandings::wherein('car_id', $cars)->where('third_id', $third->id)->pluck('points')->toArray());
+
             $teamThirdTeam->points = $thirdPoints;
             $teamThirdTeam->save();
             array_push($teamThirdResultsArray, [$teamThirdTeam, $cars, $thirdPoints]);

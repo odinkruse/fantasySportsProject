@@ -24,12 +24,6 @@
                     <a class="btn btn-primary" @click="addUrl">
                         Add
                     </a>
-                    <a class="btn btn-primary" @click="updateThird">
-                        Update Third
-                    </a>
-                    <a class="btn btn-primary" @click="updateThird">
-                        Update Season
-                    </a>
                 </form>
             </div>
         </div>

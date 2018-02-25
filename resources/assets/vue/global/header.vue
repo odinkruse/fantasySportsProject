@@ -8,6 +8,8 @@
                     |
                     <a href="/team-cars/current">Current Team Lineups</a>
                     |
+                    <a href="/race-results-list">Race Results</a>
+                    |
                     <a href="#">Third Standings</a>
                     |
                     <a href="#">Season Standings</a>

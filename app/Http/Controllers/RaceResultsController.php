@@ -35,7 +35,21 @@ class RaceResultsController extends Controller
      */
     public function index()
     {
-        //
+        $data = new \stdClass();
+        $data->json = new \stdClass;
+        $data->json->seasons = array();
+        $seasons = Season::orderByDesc('year')->get();
+        foreach($seasons as $season)
+        {
+            $seasonObj = new \stdClass();
+            $seasonObj->name = $season->name;
+            $thirdsArray = $season->thirds->pluck('id')->ToArray();
+            $races = Race::wherein('third_id', $thirdsArray)->where('resultsImported', true)->orderByDesc('raceNo')->get();
+            $seasonObj->races = $races;
+            array_push($data->json->seasons, $seasonObj);
+        }
+        $data->view = "race-results-list-view";
+        return view('main')->with("data",$data);
     }
 
     /**

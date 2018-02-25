@@ -13253,7 +13253,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/app.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/app.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] app.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -13264,9 +13264,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-749cbd59", Component.options)
+    hotAPI.createRecord("data-v-a643bd4e", Component.options)
   } else {
-    hotAPI.reload("data-v-749cbd59", Component.options)
+    hotAPI.reload("data-v-a643bd4e", Component.options)
   }
 })()}
 
@@ -13284,13 +13284,13 @@ var content = __webpack_require__(37);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("47677cf9", content, false);
+var update = __webpack_require__(2)("04798b5f", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-749cbd59\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-749cbd59\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-a643bd4e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-a643bd4e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13308,7 +13308,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13358,16 +13358,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_home_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_addThird_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_teamCars__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_teamCars___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_teamCars__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__global_header_vue__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__global_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__global_header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global_footer_vue__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__global_footer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_teamRaceResults_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_teamRaceResults_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_teamRaceResults_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_raceResultsList__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_raceResultsList___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_raceResultsList__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_addThird_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_teamCars__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_teamCars___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_teamCars__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__global_header_vue__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__global_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__global_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__global_footer_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__global_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__global_footer_vue__);
 //
 //
 //
@@ -13392,15 +13396,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        'header-component': __WEBPACK_IMPORTED_MODULE_6__global_header_vue___default.a,
-        'footer-component': __WEBPACK_IMPORTED_MODULE_7__global_footer_vue___default.a,
+        'header-component': __WEBPACK_IMPORTED_MODULE_8__global_header_vue___default.a,
+        'footer-component': __WEBPACK_IMPORTED_MODULE_9__global_footer_vue___default.a,
         'home-view': __WEBPACK_IMPORTED_MODULE_1__components_home_vue___default.a,
         'add-race-results-view': __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults_vue___default.a,
-        'add-third-view': __WEBPACK_IMPORTED_MODULE_4__components_addThird_vue___default.a,
-        'team-race-results-view': __WEBPACK_IMPORTED_MODULE_3__components_teamRaceResults_vue___default.a,
-        'team-cars-view': __WEBPACK_IMPORTED_MODULE_5__components_teamCars___default.a,
+        'update-third-standings-view': __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings___default.a,
+        'add-third-view': __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue___default.a,
+        'team-race-results-view': __WEBPACK_IMPORTED_MODULE_4__components_teamRaceResults_vue___default.a,
+        'race-results-list-view': __WEBPACK_IMPORTED_MODULE_5__components_raceResultsList___default.a,
+        'team-cars-view': __WEBPACK_IMPORTED_MODULE_7__components_teamCars___default.a,
         //DEV
         'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView_vue___default.a
     },
@@ -13440,11 +13448,11 @@ var Component = __webpack_require__(3)(
   /* template */
   __webpack_require__(44),
   /* scopeId */
-  "data-v-5c7cdd08",
+  "data-v-1f68f57c",
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/components/testDumpView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/testDumpView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] testDumpView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -13455,9 +13463,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5c7cdd08", Component.options)
+    hotAPI.createRecord("data-v-1f68f57c", Component.options)
   } else {
-    hotAPI.reload("data-v-5c7cdd08", Component.options)
+    hotAPI.reload("data-v-1f68f57c", Component.options)
   }
 })()}
 
@@ -13475,13 +13483,13 @@ var content = __webpack_require__(42);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("206d661e", content, false);
+var update = __webpack_require__(2)("1aaafb24", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-5c7cdd08\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./testDumpView.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-5c7cdd08\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./testDumpView.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1f68f57c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./testDumpView.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1f68f57c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./testDumpView.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13540,7 +13548,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-5c7cdd08", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-1f68f57c", module.exports)
   }
 }
 
@@ -13562,7 +13570,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/components/home.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/home.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] home.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -13573,9 +13581,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1abeeff0", Component.options)
+    hotAPI.createRecord("data-v-280a53f0", Component.options)
   } else {
-    hotAPI.reload("data-v-1abeeff0", Component.options)
+    hotAPI.reload("data-v-280a53f0", Component.options)
   }
 })()}
 
@@ -13593,13 +13601,13 @@ var content = __webpack_require__(47);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("05d0a95d", content, false);
+var update = __webpack_require__(2)("668f6c5c", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1abeeff0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1abeeff0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-280a53f0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-280a53f0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13721,7 +13729,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1abeeff0", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-280a53f0", module.exports)
   }
 }
 
@@ -13743,7 +13751,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/components/addRaceResults.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addRaceResults.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] addRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -13754,9 +13762,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4455d9d5", Component.options)
+    hotAPI.createRecord("data-v-74978456", Component.options)
   } else {
-    hotAPI.reload("data-v-4455d9d5", Component.options)
+    hotAPI.reload("data-v-74978456", Component.options)
   }
 })()}
 
@@ -13774,13 +13782,13 @@ var content = __webpack_require__(52);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("763adad0", content, false);
+var update = __webpack_require__(2)("2118943e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-4455d9d5\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceResults.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-4455d9d5\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceResults.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-74978456\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceResults.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-74978456\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceResults.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -13798,7 +13806,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13809,12 +13817,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -14064,23 +14066,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.addUrl
     }
-  }, [_vm._v("\n                    Add\n                ")]), _vm._v(" "), _c('a', {
-    staticClass: "btn btn-primary",
-    on: {
-      "click": _vm.updateThird
-    }
-  }, [_vm._v("\n                    Update Third\n                ")]), _vm._v(" "), _c('a', {
-    staticClass: "btn btn-primary",
-    on: {
-      "click": _vm.updateThird
-    }
-  }, [_vm._v("\n                    Update Season\n                ")])])])])])
+  }, [_vm._v("\n                    Add\n                ")])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-4455d9d5", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-74978456", module.exports)
   }
 }
 
@@ -14102,7 +14094,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/components/teamRaceResults.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/teamRaceResults.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] teamRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14113,9 +14105,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-48269e47", Component.options)
+    hotAPI.createRecord("data-v-1ad68b72", Component.options)
   } else {
-    hotAPI.reload("data-v-48269e47", Component.options)
+    hotAPI.reload("data-v-1ad68b72", Component.options)
   }
 })()}
 
@@ -14133,13 +14125,13 @@ var content = __webpack_require__(57);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("d39e4c6e", content, false);
+var update = __webpack_require__(2)("2eff6f4e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-48269e47\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamRaceResults.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-48269e47\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamRaceResults.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1ad68b72\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamRaceResults.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1ad68b72\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamRaceResults.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14157,7 +14149,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n.bold{\r\n    font-weight:bold;\n}\r\n", ""]);
+exports.push([module.i, "\n.bold{\n    font-weight:bold;\n}\n", ""]);
 
 // exports
 
@@ -14221,7 +14213,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row"
   }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
-    return [_c('h3', [_vm._v("\r\n                    Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\r\n                ")]), _vm._v(" "), _c('table', {
+    return [_c('h3', [_vm._v("\n                    Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                ")]), _vm._v(" "), _c('table', {
       staticClass: "table"
     }, [_c('tbody', [_vm._m(0, true), _vm._v(" "), _vm._l((TeamResults.Results), function(Results) {
       return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.points))])])
@@ -14238,7 +14230,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-48269e47", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-1ad68b72", module.exports)
   }
 }
 
@@ -14260,7 +14252,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/components/addThird.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addThird.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] addThird.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14271,9 +14263,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-eb59b752", Component.options)
+    hotAPI.createRecord("data-v-7b4c8857", Component.options)
   } else {
-    hotAPI.reload("data-v-eb59b752", Component.options)
+    hotAPI.reload("data-v-7b4c8857", Component.options)
   }
 })()}
 
@@ -14291,13 +14283,13 @@ var content = __webpack_require__(62);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("de04a2fe", content, false);
+var update = __webpack_require__(2)("2239bd10", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-eb59b752\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addThird.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-eb59b752\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addThird.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7b4c8857\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addThird.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7b4c8857\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addThird.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14315,7 +14307,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n.inline{\r\n    display: inline-block;\n}\r\n", ""]);
+exports.push([module.i, "\n.inline{\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -14501,7 +14493,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-eb59b752", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-7b4c8857", module.exports)
   }
 }
 
@@ -14523,7 +14515,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/components/teamCars.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/teamCars.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] teamCars.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14534,9 +14526,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b560a9a6", Component.options)
+    hotAPI.createRecord("data-v-d36de1a6", Component.options)
   } else {
-    hotAPI.reload("data-v-b560a9a6", Component.options)
+    hotAPI.reload("data-v-d36de1a6", Component.options)
   }
 })()}
 
@@ -14554,13 +14546,13 @@ var content = __webpack_require__(67);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("44eb8244", content, false);
+var update = __webpack_require__(2)("4c685840", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-b560a9a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamCars.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-b560a9a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamCars.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-d36de1a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamCars.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-d36de1a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./teamCars.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14659,7 +14651,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-b560a9a6", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-d36de1a6", module.exports)
   }
 }
 
@@ -14681,7 +14673,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/global/header.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/global/header.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14692,9 +14684,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-198d61b1", Component.options)
+    hotAPI.createRecord("data-v-0a61c5b1", Component.options)
   } else {
-    hotAPI.reload("data-v-198d61b1", Component.options)
+    hotAPI.reload("data-v-0a61c5b1", Component.options)
   }
 })()}
 
@@ -14712,13 +14704,13 @@ var content = __webpack_require__(72);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("ffa3cee2", content, false);
+var update = __webpack_require__(2)("515ffdc0", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-198d61b1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-198d61b1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0a61c5b1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0a61c5b1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14736,7 +14728,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14745,6 +14737,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /* 73 */
 /***/ (function(module, exports) {
 
+//
+//
 //
 //
 //
@@ -14787,6 +14781,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Current Team Lineups")]), _vm._v("\n                |\n                "), _c('a', {
     attrs: {
+      "href": "/race-results-list"
+    }
+  }, [_vm._v("Race Results")]), _vm._v("\n                |\n                "), _c('a', {
+    attrs: {
       "href": "#"
     }
   }, [_vm._v("Third Standings")]), _vm._v("\n                |\n                "), _c('a', {
@@ -14799,7 +14797,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-198d61b1", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-0a61c5b1", module.exports)
   }
 }
 
@@ -14821,7 +14819,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/code/fantasynascar/resources/assets/vue/global/footer.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/global/footer.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] footer.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14832,9 +14830,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0f4a0482", Component.options)
+    hotAPI.createRecord("data-v-2da13c82", Component.options)
   } else {
-    hotAPI.reload("data-v-0f4a0482", Component.options)
+    hotAPI.reload("data-v-2da13c82", Component.options)
   }
 })()}
 
@@ -14852,13 +14850,13 @@ var content = __webpack_require__(77);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("edb44a44", content, false);
+var update = __webpack_require__(2)("49039e73", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0f4a0482\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0f4a0482\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-2da13c82\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-2da13c82\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14910,7 +14908,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-0f4a0482", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-2da13c82", module.exports)
   }
 }
 
@@ -14932,7 +14930,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-749cbd59", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-a643bd4e", module.exports)
   }
 }
 
@@ -14941,6 +14939,376 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(91)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(93),
+  /* template */
+  __webpack_require__(94),
+  /* scopeId */
+  "data-v-33bcd58c",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/updateThirdStandings.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] updateThirdStandings.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-33bcd58c", Component.options)
+  } else {
+    hotAPI.reload("data-v-33bcd58c", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(92);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("210704ca", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-33bcd58c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateThirdStandings.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-33bcd58c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateThirdStandings.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            formData: {
+                season: "",
+                third: "",
+                auth: ""
+            }
+        };
+    },
+
+    methods: {
+        updateThird: function updateThird() {
+            for (var el in this.formData) {
+                if (el == "") {
+                    alert("Please fill in " + el.constructor.name);
+                    return;
+                }
+            }
+            console.log("updateThird");
+            this.$http.post('/update-third-standings').then(function (response) {
+                console.log(response);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "add-vue container"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('form', [_c('div', {
+    staticClass: "form-group"
+  }, [_c('h3', [_vm._v("Season Year")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.season),
+      expression: "formData.season"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "placeholder": "2018, 2017, 2016 etc etc"
+    },
+    domProps: {
+      "value": (_vm.formData.season)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "season", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Third")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.third),
+      expression: "formData.third"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "placeholder": "1,2 or 3"
+    },
+    domProps: {
+      "value": (_vm.formData.third)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "third", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Auth")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.formData.auth),
+      expression: "formData.auth"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "placeholder": "dont mess this up"
+    },
+    domProps: {
+      "value": (_vm.formData.auth)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.formData, "auth", $event.target.value)
+      }
+    }
+  })]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-primary",
+    on: {
+      "click": _vm.updateThird
+    }
+  }, [_vm._v("\n                    Update Third\n                ")])])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-33bcd58c", module.exports)
+  }
+}
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(96)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(98),
+  /* template */
+  __webpack_require__(99),
+  /* scopeId */
+  "data-v-1ec574bc",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/raceResultsList.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] raceResultsList.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1ec574bc", Component.options)
+  } else {
+    hotAPI.reload("data-v-1ec574bc", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(97);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("9ec84ff4", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1ec574bc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./raceResultsList.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1ec574bc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./raceResultsList.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 98 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['data'],
+    data: function data() {
+        return {};
+    }
+});
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "race-results-list-vue container"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, _vm._l((_vm.data.seasons), function(season) {
+    return _c('div', {
+      staticClass: "row"
+    }, [_c('h3', [_vm._v(_vm._s(season.name))]), _vm._v(" "), _c('div', {
+      staticClass: "col-xs-10 col-lg-offset-1"
+    }, _vm._l((season.races), function(race) {
+      return _c('div', [_c('a', {
+        attrs: {
+          "href": '/team-results/race/' + race.id
+        }
+      }, [_vm._v("\n                        " + _vm._s(race.name) + "\n                    ")])])
+    }))])
+  }))])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-1ec574bc", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -17,7 +17,9 @@
     //Live
     import Home from './components/home.vue';
     import AddRaceResults from './components/addRaceResults.vue';
+    import UpdateThirdStandings from'./components/updateThirdStandings';
     import TeamRaceResults from './components/teamRaceResults.vue';
+    import RaceResultsList from './components/raceResultsList';
     import AddThird from './components/addThird.vue';
     import TeamCars from './components/teamCars';
     import Header from'./global/header.vue';
@@ -28,8 +30,10 @@
             'footer-component': Footer,
             'home-view': Home,
             'add-race-results-view': AddRaceResults,
+            'update-third-standings-view':UpdateThirdStandings,
             'add-third-view': AddThird,
             'team-race-results-view': TeamRaceResults,
+            'race-results-list-view': RaceResultsList,
             'team-cars-view': TeamCars,
             //DEV
             'test-dump-view': TestDump
