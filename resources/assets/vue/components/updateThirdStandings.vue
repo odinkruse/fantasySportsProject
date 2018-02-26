@@ -41,7 +41,7 @@
                     }
                 }
                 console.log("updateThird");
-                this.$http.post('/update-third-standings').then(function(response){
+                this.$http.post('/update-third-standings', {formData:this.formData}).then(function(response){
                     console.log(response);
 
                 });
