@@ -27,7 +27,7 @@ Route::get('/update-third-standings', 'ThirdController@updateThirdStandingsView'
 
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
-Route::post('/update-third-standings', 'ThirdController@updateThirdStandingsView');
+Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
 //Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
 
 Auth::routes();
