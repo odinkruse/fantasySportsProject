@@ -141,7 +141,7 @@ class ThirdController extends Controller
             //should update this to just get a plucked array and just add them with array_sum
             $thirdPoints = 0;
 
-            $thirdPoints = array_sum(CarThirdStandings::wherein('car_id', $cars)->where('third_id', $third->id)->pluck('points')->toArray());
+            $thirdPoints = array_sum(RaceResults::wherein('car_id', $cars)->wherein('race_id', $third->races->pluck('id')->toArray())->pluck('points')->toArray());
 
             $teamThirdTeam->points = $thirdPoints;
             $teamThirdTeam->save();
