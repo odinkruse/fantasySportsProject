@@ -90,6 +90,7 @@ class ThirdController extends Controller
      */
     public function updateThirdStandings(Request $request)
     {
+        return [$request->formData];
         $data = $request->formData;
 
         if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)
