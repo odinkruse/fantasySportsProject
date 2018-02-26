@@ -103,24 +103,25 @@ class ThirdController extends Controller
             ->first()->id)->where('thirdNo', $data['third'])
             ->first();
 
-        $races = Race::where('third_id', $third->id)
-            ->pluck('id')
-            ->toArray();
+        $races = $third->races->pluck('id')->toArray();
+//            Race::where('third_id', $third->id)
+//            ->pluck('id')
+//            ->toArray();
 
-//        $carArray = RaceResults::whereIn('race_id', $races)
-//            ->select('car_id')
-//            ->groupBy('car_id')
-//            ->get();
-//        //return["CarIdArray"=>$car_idArray];
-//        foreach($carArray as $car)
-//        {
-//            $carStanding = CarThirdStandings::firstOrNew(
-//                ["car_id"=>$car->car_id],
-//                ["third_id"=>$third->id]
-//            );
-//            $carStanding->points = array_sum(RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
-//            $carStanding->save();
-//        }
+        $carArray = RaceResults::whereIn('race_id', $races)
+            ->select('car_id')
+            ->groupBy('car_id')
+            ->get();
+        //return["CarIdArray"=>$car_idArray];
+        foreach($carArray as $car)
+        {
+            $carStanding = CarThirdStandings::firstOrNew(
+                ["car_id"=>$car->car_id],
+                ["third_id"=>$third->id]
+            );
+            $carStanding->points = array_sum(RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
+            $carStanding->save();
+        }
 
         //*
         ///I need to go through the races in the third
