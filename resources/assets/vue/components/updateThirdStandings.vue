@@ -1,6 +1,6 @@
 <template>
     <div class="add-vue container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <form>
                     <div class="form-group">

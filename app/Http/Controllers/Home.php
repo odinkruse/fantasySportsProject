@@ -24,7 +24,17 @@ class Home extends Controller
         $data->json->season = Season::where('active', 1)->first();
         $data->json->race = Race::where('active', 1)->first();
         $data->json->seasonStandings = TeamSeasonStandings::where('season_id', $data->json->season->id)->get();
-        $data->json->thirdTeamStandings = TeamThirdStandings::where('third_id', $data->json->race->third_id)->get();
+        $data->json->thirdTeamStandings = array();
+        foreach(TeamThirdStandings::where('third_id', $data->json->race->third_id)->get() as $teamThirdStanding)
+        {
+            $teamStandingData = new \stdClass();
+            $teamStandingData->member1 = explode(" ", $teamThirdStanding->team->member1)[0];
+            $teamStandingData->member2 = explode(" ", $teamThirdStanding->team->member2)[0];
+            $teamStandingData->teamNumber = $teamThirdStanding->team_id;
+            $teamStandingData->points = $teamThirdStanding->points;
+            array_push($data->json->thirdTeamStandings, $teamStandingData);
+        }
+
         $data->json->recentRaceResults = Race::where('third_id',Third::where('active', 1)->first()->id)->where('resultsImported', 1)->orderByDesc('raceNo')->get();
         $data->view = "home-view";
 //        $data = "Coming from Home Controller";

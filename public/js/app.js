@@ -13702,16 +13702,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "container"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race - " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('h4', [_vm._v("Race Number " + _vm._s(_vm.data.race.raceNo))])]), _vm._v(" "), _c('table', {
     staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Teams")]), _vm._v(" "), _vm._l((_vm.data.seasonStandings), function(team) {
-    return _c('td', [_vm._v("\n                                " + _vm._s(team.team_id) + "\n                            ")])
-  })], 2), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Season Points")]), _vm._v(" "), _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_vm._v("\n                                " + _vm._s(team.points) + "\n                            ")])
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Teams")]), _vm._v(" "), _vm._l((_vm.data.thirdTeamStandings), function(team) {
+    return _c('td', [_vm._v("\n                                " + _vm._s(team.member1) + " & " + _vm._s(team.member2) + "\n                            ")])
   })], 2), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Third Points")]), _vm._v(" "), _vm._l((_vm.data.thirdTeamStandings), function(team) {
+    return _c('td', [_vm._v("\n                                " + _vm._s(team.points) + "\n                            ")])
+  })], 2), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Season Points")]), _vm._v(" "), _vm._l((_vm.data.thirdTeamStandings), function(team) {
     return _c('td', [_vm._v("\n                                " + _vm._s(team.points) + "\n                            ")])
   })], 2)])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
@@ -13896,7 +13896,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "add-vue container"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('form', [_c('div', {
@@ -14209,7 +14209,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "team-results-vue container"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
@@ -14630,7 +14630,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "team-cars-vue container"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, _vm._l((_vm.data.teamCarList), function(teamCarObj) {
     return _c('div', {
       staticClass: "row"
@@ -14768,7 +14768,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "header-vue container"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('h1', [_vm._v("Middle of the Pack Fantasy Nascar")]), _vm._v(" "), _c('div', [_c('a', {
@@ -15090,7 +15090,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "add-vue container"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('form', [_c('div', {

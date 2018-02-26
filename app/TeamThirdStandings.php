@@ -10,8 +10,8 @@ class TeamThirdStandings extends Model
     {
         return $this->belongsTo('App\Third');
     }
-    public function teams()
+    public function team()
     {
-        return $this->belongsToMany('App\Team');
+        return $this->belongsTo('App\Team');
     }
 }

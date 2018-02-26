@@ -1,6 +1,6 @@
 <template>
     <div class="team-cars-vue container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div v-for="teamCarObj in data.teamCarList" class="row">
                 <h2>Team {{teamCarObj.teamNumber}}</h2>
                 <h3>{{teamCarObj.member1}} & {{teamCarObj.member2}}</h3>

@@ -1,6 +1,6 @@
 <template>
     <div class="header-vue container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <h1>Middle of the Pack Fantasy Nascar</h1>
                 <div>

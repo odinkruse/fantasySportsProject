@@ -1,6 +1,6 @@
 <template>
     <div class="race-results-list-vue container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div v-for="season in data.seasons" class="row">
                 <h3>{{season.name}}</h3>
                 <div class="col-xs-10 col-lg-offset-1">
