@@ -5,11 +5,11 @@
                 <form>
                     <div class="form-group">
                         <h3>Season Year</h3>
-                        <input class="form-control" v-model="formData.season" placeholder="2018, 2017, 2016 etc etc">
+                        <input class="form-control" v-model="thirdData.year" placeholder="2018, 2017, 2016 etc etc">
                         <h3>Third</h3>
-                        <input class="form-control" v-model="formData.third" placeholder="1,2 or 3">
+                        <input class="form-control" v-model="thirdData.third" placeholder="1,2 or 3">
                         <h3>Auth</h3>
-                        <input class="form-control" v-model="formData.auth" placeholder="dont mess this up">
+                        <input class="form-control" v-model="thirdData.auth" placeholder="dont mess this up">
                     </div>
                     <a class="btn btn-primary" @click="updateThird">
                         Update Third
@@ -24,8 +24,8 @@
     export default {
         data(){
             return {
-                formData: {
-                    season:"",
+                thirdData: {
+                    year:"",
                     third:"",
                     auth:""
                 }
@@ -33,7 +33,7 @@
         },
         methods:{
             updateThird(){
-                for(let el in this.formData){
+                for(let el in this.thirdData){
                     if(el == "")
                     {
                         alert(`Please fill in ${el.constructor.name}`);
@@ -41,7 +41,7 @@
                     }
                 }
                 console.log("updateThird");
-                this.$http.post('/update-third-standings', {formData:this.formData}).then(function(response){
+                this.$http.post('/update-third-standings', {thirdData:this.thirdData}).then(function(response){
                     console.log(response);
 
                 });

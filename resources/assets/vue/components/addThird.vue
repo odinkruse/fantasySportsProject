@@ -35,7 +35,7 @@
         props:['data'],
         data(){
             return{
-                formData:{
+                raceData:{
                     season:"",
                     third:"",
                     teamArray:[]
@@ -46,7 +46,7 @@
         },
         methods:{
             addThird(){
-                for(let entry in this.formData.teamArray){
+                for(let entry in this.raceData.teamArray){
                     for(let input in entry.pickArr) {
                         if (input.carNumber == "" || input.price == "") {
                             alert(`Please fill in ${el.constructor.name}`);
@@ -54,8 +54,8 @@
                         }
                     }
                 }
-                console.log(this.formData);
-                this.$http.post('/add-third', {formData:this.formData}).then(function(response){
+                console.log(this.raceData);
+                this.$http.post('/add-third', {formData:this.raceData}).then(function(response){
                     console.log(response);
                 });
             }
@@ -71,7 +71,7 @@
                         }
                     );
                 }
-                this.formData.teamArray.push({
+                this.raceData.teamArray.push({
                     team,
                     pickArr:defaultPickArr
                 });

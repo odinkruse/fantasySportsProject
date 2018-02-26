@@ -13852,7 +13852,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            formData: {
+            raceData: {
                 season: "",
                 third: "",
                 url: "",
@@ -13867,14 +13867,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         addUrl: function addUrl() {
-            for (var el in this.formData) {
+            for (var el in this.raceData) {
                 if (el == "") {
                     alert("Please fill in " + el.constructor.name);
                     return;
                 }
             }
             console.log("addRaceResults");
-            this.$http.post('/add-race-results', { formData: this.formData }).then(function (response) {
+            this.$http.post('/add-race-results', { raceData: this.raceData }).then(function (response) {
                 console.log(response);
                 //this.updateThird();
             });
@@ -13905,160 +13905,160 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.season),
-      expression: "formData.season"
+      value: (_vm.raceData.season),
+      expression: "raceData.season"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "2018 Season, 2017 Season"
     },
     domProps: {
-      "value": (_vm.formData.season)
+      "value": (_vm.raceData.season)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "season", $event.target.value)
+        _vm.$set(_vm.raceData, "season", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Third")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.third),
-      expression: "formData.third"
+      value: (_vm.raceData.third),
+      expression: "raceData.third"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "1,2 or 3"
     },
     domProps: {
-      "value": (_vm.formData.third)
+      "value": (_vm.raceData.third)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "third", $event.target.value)
+        _vm.$set(_vm.raceData, "third", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Race Name")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.raceName),
-      expression: "formData.raceName"
+      value: (_vm.raceData.raceName),
+      expression: "raceData.raceName"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "Daytona 500"
     },
     domProps: {
-      "value": (_vm.formData.raceName)
+      "value": (_vm.raceData.raceName)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "raceName", $event.target.value)
+        _vm.$set(_vm.raceData, "raceName", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Race Number")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.raceNumber),
-      expression: "formData.raceNumber"
+      value: (_vm.raceData.raceNumber),
+      expression: "raceData.raceNumber"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "1"
     },
     domProps: {
-      "value": (_vm.formData.raceNumber)
+      "value": (_vm.raceData.raceNumber)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "raceNumber", $event.target.value)
+        _vm.$set(_vm.raceData, "raceNumber", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Track")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.track),
-      expression: "formData.track"
+      value: (_vm.raceData.track),
+      expression: "raceData.track"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "Daytona"
     },
     domProps: {
-      "value": (_vm.formData.track)
+      "value": (_vm.raceData.track)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "track", $event.target.value)
+        _vm.$set(_vm.raceData, "track", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("raceDate")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.raceDate),
-      expression: "formData.raceDate"
+      value: (_vm.raceData.raceDate),
+      expression: "raceData.raceDate"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "2/22/2017"
     },
     domProps: {
-      "value": (_vm.formData.raceDate)
+      "value": (_vm.raceData.raceDate)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "raceDate", $event.target.value)
+        _vm.$set(_vm.raceData, "raceDate", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Results URL")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.url),
-      expression: "formData.url"
+      value: (_vm.raceData.url),
+      expression: "raceData.url"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "www.espn.com"
     },
     domProps: {
-      "value": (_vm.formData.url)
+      "value": (_vm.raceData.url)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "url", $event.target.value)
+        _vm.$set(_vm.raceData, "url", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Auth")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.auth),
-      expression: "formData.auth"
+      value: (_vm.raceData.auth),
+      expression: "raceData.auth"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "dont mess this up"
     },
     domProps: {
-      "value": (_vm.formData.auth)
+      "value": (_vm.raceData.auth)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "auth", $event.target.value)
+        _vm.$set(_vm.raceData, "auth", $event.target.value)
       }
     }
   })]), _vm._v(" "), _c('a', {
@@ -14355,7 +14355,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: ['data'],
     data: function data() {
         return {
-            formData: {
+            raceData: {
                 season: "",
                 third: "",
                 teamArray: []
@@ -14366,7 +14366,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {},
     methods: {
         addThird: function addThird() {
-            for (var entry in this.formData.teamArray) {
+            for (var entry in this.raceData.teamArray) {
                 for (var input in entry.pickArr) {
                     if (input.carNumber == "" || input.price == "") {
                         alert("Please fill in " + el.constructor.name);
@@ -14374,8 +14374,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     }
                 }
             }
-            console.log(this.formData);
-            this.$http.post('/add-third', { formData: this.formData }).then(function (response) {
+            console.log(this.raceData);
+            this.$http.post('/add-third', { formData: this.raceData }).then(function (response) {
                 console.log(response);
             });
         }
@@ -14391,7 +14391,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     price: "car " + (i + 1)
                 });
             }
-            _this.formData.teamArray.push({
+            _this.raceData.teamArray.push({
                 team: team,
                 pickArr: defaultPickArr
             });
@@ -15058,8 +15058,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            formData: {
-                season: "",
+            thirdData: {
+                year: "",
                 third: "",
                 auth: ""
             }
@@ -15068,14 +15068,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         updateThird: function updateThird() {
-            for (var el in this.formData) {
+            for (var el in this.thirdData) {
                 if (el == "") {
                     alert("Please fill in " + el.constructor.name);
                     return;
                 }
             }
             console.log("updateThird");
-            this.$http.post('/update-third-standings', { formData: this.formData }).then(function (response) {
+            this.$http.post('/update-third-standings', { thirdData: this.thirdData }).then(function (response) {
                 console.log(response);
             });
         }
@@ -15099,60 +15099,60 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.season),
-      expression: "formData.season"
+      value: (_vm.thirdData.year),
+      expression: "thirdData.year"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "2018, 2017, 2016 etc etc"
     },
     domProps: {
-      "value": (_vm.formData.season)
+      "value": (_vm.thirdData.year)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "season", $event.target.value)
+        _vm.$set(_vm.thirdData, "year", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Third")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.third),
-      expression: "formData.third"
+      value: (_vm.thirdData.third),
+      expression: "thirdData.third"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "1,2 or 3"
     },
     domProps: {
-      "value": (_vm.formData.third)
+      "value": (_vm.thirdData.third)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "third", $event.target.value)
+        _vm.$set(_vm.thirdData, "third", $event.target.value)
       }
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Auth")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.formData.auth),
-      expression: "formData.auth"
+      value: (_vm.thirdData.auth),
+      expression: "thirdData.auth"
     }],
     staticClass: "form-control",
     attrs: {
       "placeholder": "dont mess this up"
     },
     domProps: {
-      "value": (_vm.formData.auth)
+      "value": (_vm.thirdData.auth)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.$set(_vm.formData, "auth", $event.target.value)
+        _vm.$set(_vm.thirdData, "auth", $event.target.value)
       }
     }
   })]), _vm._v(" "), _c('a', {

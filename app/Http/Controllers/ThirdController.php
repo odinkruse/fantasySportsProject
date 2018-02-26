@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Team;
 use App\TeamCars;
 use App\Third;
+use App\Season;
 use App\Race;
 use App\RaceResults;
 use App\CarThirdStandings;
@@ -90,8 +91,8 @@ class ThirdController extends Controller
      */
     public function updateThirdStandings(Request $request)
     {
-        return [$request->formData];
-        $data = $request->formData;
+        //return $request;
+        $data = $request->thirdData;
 
         if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)
         {
@@ -106,20 +107,20 @@ class ThirdController extends Controller
             ->pluck('id')
             ->toArray();
 
-        $carArray = RaceResults::whereIn('race_id', $races)
-            ->select('car_id')
-            ->groupBy('car_id')
-            ->get();
-        //return["CarIdArray"=>$car_idArray];
-        foreach($carArray as $car)
-        {
-            $carStanding = CarThirdStandings::firstOrNew(
-                ["car_id"=>$car->car_id],
-                ["third_id"=>$third->id]
-            );
-            $carStanding->points = array_sum(RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
-            $carStanding->save();
-        }
+//        $carArray = RaceResults::whereIn('race_id', $races)
+//            ->select('car_id')
+//            ->groupBy('car_id')
+//            ->get();
+//        //return["CarIdArray"=>$car_idArray];
+//        foreach($carArray as $car)
+//        {
+//            $carStanding = CarThirdStandings::firstOrNew(
+//                ["car_id"=>$car->car_id],
+//                ["third_id"=>$third->id]
+//            );
+//            $carStanding->points = array_sum(RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
+//            $carStanding->save();
+//        }
 
         //*
         ///I need to go through the races in the third
@@ -132,10 +133,10 @@ class ThirdController extends Controller
         $teamThirdResultsArray = array();
         foreach($teams as $team)
         {
-            $cars = TeamCars::where('teamNumber', $team->number)->where('third_id', $third->id)->pluck('car_id')->toArray();
+            $cars = TeamCars::where('team_id', $team->id)->where('third_id', $third->id)->pluck('car_id')->toArray();
 
             $teamThirdTeam = TeamThirdStandings::firstOrCreate(
-                ['teamNumber'=>$team->number],
+                ['team_id'=>$team->id],
                 ['third_id'=>$third->id]
             );
 
