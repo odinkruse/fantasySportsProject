@@ -123,7 +123,7 @@ class ThirdController extends Controller
             {
                 $carStanding = new CarThirdStandings();
                 $carStanding->car_id = $raceResult->car_id;
-                $carStanding->third_id = $third->third_id;
+                $carStanding->third_id = $third->id;
             }
             $carStanding->points = array_sum(RaceResults::where('car_id', $raceResult->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
             $carStanding->save();
