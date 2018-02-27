@@ -108,18 +108,24 @@ class ThirdController extends Controller
 //            ->pluck('id')
 //            ->toArray();
 
-        $carArray = RaceResults::whereIn('race_id', $races)
+        $raceResults = RaceResults::whereIn('race_id', $races)
             ->select('car_id')
             ->groupBy('car_id')
             ->get();
         //return["CarIdArray"=>$car_idArray];
-        foreach($carArray as $car)
+        foreach($raceResults as $raceResult)
         {
-            $carStanding = CarThirdStandings::firstOrNew(
-                ["car_id"=>$car->car_id],
-                ["third_id"=>$third->id]
-            );
-            $carStanding->points = array_sum(RaceResults::where('car_id', $car->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
+            $carStanding = CarThirdStandings::
+                where('car_id',$raceResult->car_id)->
+                where('third_id',$third->id)->
+                first();
+            if($carStanding == null)
+            {
+                $carStanding = new CarThirdStandings();
+                $carStanding->car_id = $raceResult->car_id;
+                $carStanding->third_id = $third->third_id;
+            }
+            $carStanding->points = array_sum(RaceResults::where('car_id', $raceResult->car_id)->whereIn('race_id', $races)->pluck('points')->toArray());
             $carStanding->save();
         }
 

@@ -20,13 +20,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Third Points</td>
+                                <td>Third</td>
                                 <td v-for="team in data.thirdTeamStandings">
                                     {{team.points}}
                                 </td>
                             </tr>
                             <tr>
-                                <td>Season Points</td>
+                                <td>Season</td>
                                 <td v-for="team in data.thirdTeamStandings">
                                     {{team.points}}
                                 </td>
