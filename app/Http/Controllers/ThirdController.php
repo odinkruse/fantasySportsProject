@@ -148,6 +148,7 @@ class ThirdController extends Controller
                 first();
             if($teamThirdStanding == null)
             {
+                $teamThirdStanding = new TeamThirdStandings();
                 $teamThirdStanding->team_id = $team->id;
                 $teamThirdStanding->third_id = $third->id;
             }
