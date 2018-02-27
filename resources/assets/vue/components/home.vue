@@ -5,46 +5,47 @@
                 <div class="row">
                     <h1>{{data.season.name}}</h1>
                     <div>
-                        <h3>Next Race - {{data.race.name}}</h3>
-                        <h4>Race Number {{data.race.raceNo}}</h4>
+                        <h3>Next Race: {{data.race.name}} - Race {{data.race.raceNo}} </h3>
                     </div>
                     <ul  class="nav nav-pills">
                         <li class="active">
-                            <a data-toggle="tab" @click="toggleThird">Third Standings</a>
+                            <a data-toggle="tab" @click="toggleThird">Third Points</a>
                         </li>
                         <li>
-                            <a data-toggle="tab" @click="toggleSeason">Season Standings</a>
+                            <a data-toggle="tab" @click="toggleSeason">Season Points</a>
                         </li>
                     </ul>
                     <div :style="third">
-                        <h3>Third Standings</h3>
+                        <h3>Third Points</h3>
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <td v-for="team in data.thirdTeamStandings">
-                                        {{team.member1}} & {{team.member2}}
+                                        <h3 class="text-center">{{team.teamNumber}}</h3>
+                                        <p>{{team.member1}} & {{team.member2}}</p>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="text-center">
                                     <td v-for="team in data.thirdTeamStandings">
-                                        {{team.points}}
+                                        <h3>{{team.points}}</h3>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div :style="season">
-                        <h3>Season Standings</h3>
+                        <h3>Season Points</h3>
                         <table class="table">
                             <tbody>
                             <tr>
                                 <td v-for="team in data.thirdTeamStandings">
-                                    {{team.member1}} & {{team.member2}}
+                                    <h3 class="text-center">{{team.teamNumber}}</h3>
+                                    <p>{{team.member1}} & {{team.member2}}</p>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="text-center">
                                 <td v-for="team in data.thirdTeamStandings">
-                                    {{team.points}}
+                                    <h3>{{team.points}}</h3>
                                 </td>
                             </tr>
                             </tbody>
@@ -89,5 +90,4 @@ export default{
 }
 </script>
 <style>
-
 </style>

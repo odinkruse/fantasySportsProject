@@ -13702,6 +13702,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['data'],
@@ -13741,7 +13742,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race - " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('h4', [_vm._v("Race Number " + _vm._s(_vm.data.race.raceNo))])]), _vm._v(" "), _c('ul', {
+  }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race: " + _vm._s(_vm.data.race.name) + " - Race " + _vm._s(_vm.data.race.raceNo) + " ")])]), _vm._v(" "), _c('ul', {
     staticClass: "nav nav-pills"
   }, [_c('li', {
     staticClass: "active"
@@ -13752,29 +13753,37 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.toggleThird
     }
-  }, [_vm._v("Third Standings")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("Third Points")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "data-toggle": "tab"
     },
     on: {
       "click": _vm.toggleSeason
     }
-  }, [_vm._v("Season Standings")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Season Points")])])]), _vm._v(" "), _c('div', {
     style: (_vm.third)
-  }, [_c('h3', [_vm._v("Third Standings")]), _vm._v(" "), _c('table', {
+  }, [_c('h3', [_vm._v("Third Points")]), _vm._v(" "), _c('table', {
     staticClass: "table"
   }, [_c('tbody', [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_vm._v("\n                                    " + _vm._s(team.member1) + " & " + _vm._s(team.member2) + "\n                                ")])
-  })), _vm._v(" "), _c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_vm._v("\n                                    " + _vm._s(team.points) + "\n                                ")])
+    return _c('td', [_c('h3', {
+      staticClass: "text-center"
+    }, [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
+  })), _vm._v(" "), _c('tr', {
+    staticClass: "text-center"
+  }, _vm._l((_vm.data.thirdTeamStandings), function(team) {
+    return _c('td', [_c('h3', [_vm._v(_vm._s(team.points))])])
   }))])])]), _vm._v(" "), _c('div', {
     style: (_vm.season)
-  }, [_c('h3', [_vm._v("Season Standings")]), _vm._v(" "), _c('table', {
+  }, [_c('h3', [_vm._v("Season Points")]), _vm._v(" "), _c('table', {
     staticClass: "table"
   }, [_c('tbody', [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_vm._v("\n                                " + _vm._s(team.member1) + " & " + _vm._s(team.member2) + "\n                            ")])
-  })), _vm._v(" "), _c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_vm._v("\n                                " + _vm._s(team.points) + "\n                            ")])
+    return _c('td', [_c('h3', {
+      staticClass: "text-center"
+    }, [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
+  })), _vm._v(" "), _c('tr', {
+    staticClass: "text-center"
+  }, _vm._l((_vm.data.thirdTeamStandings), function(team) {
+    return _c('td', [_c('h3', [_vm._v(_vm._s(team.points))])])
   }))])])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('h3', [_vm._v("Recent Race Results")]), _vm._v(" "), _vm._l((_vm.data.recentRaceResults), function(race) {
