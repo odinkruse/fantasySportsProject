@@ -21,6 +21,13 @@
                 view = "{{$data->view}}"
             ></app>
         </div>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <script>
+            window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+            ]); ?>
+        </script>
         <script src="/js/app.js"></script>
     </body>
 </html>

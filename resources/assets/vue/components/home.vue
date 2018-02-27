@@ -8,31 +8,48 @@
                         <h3>Next Race - {{data.race.name}}</h3>
                         <h4>Race Number {{data.race.raceNo}}</h4>
                     </div>
-                    <table class="table">
-                        <thead>
-                            <h3>Standings</h3>
-                        </thead>
-                        <tbody>
+                    <ul  class="nav nav-pills">
+                        <li class="active">
+                            <a data-toggle="tab" @click="toggleThird">Third Standings</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" @click="toggleSeason">Season Standings</a>
+                        </li>
+                    </ul>
+                    <div :style="third">
+                        <h3>Third Standings</h3>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td v-for="team in data.thirdTeamStandings">
+                                        {{team.member1}} & {{team.member2}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td v-for="team in data.thirdTeamStandings">
+                                        {{team.points}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div :style="season">
+                        <h3>Season Standings</h3>
+                        <table class="table">
+                            <tbody>
                             <tr>
-                                <td>Teams</td>
                                 <td v-for="team in data.thirdTeamStandings">
                                     {{team.member1}} & {{team.member2}}
                                 </td>
                             </tr>
                             <tr>
-                                <td>Third</td>
                                 <td v-for="team in data.thirdTeamStandings">
                                     {{team.points}}
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Season</td>
-                                <td v-for="team in data.thirdTeamStandings">
-                                    {{team.points}}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="row">
                     <h3>Recent Race Results</h3>
@@ -51,6 +68,22 @@ export default{
     props:['data'],
     data(){
         return {
+            third:{
+                display:'block'
+            },
+            season:{
+                display:'none'
+            }
+        }
+    },
+    methods:{
+        toggleThird(){
+            this.third.display = 'block';
+            this.season.display = 'none';
+        },
+        toggleSeason(){
+            this.third.display = 'none';
+            this.season.display = 'block';
         }
     }
 }
