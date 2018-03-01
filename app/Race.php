@@ -13,7 +13,7 @@ class Race extends Model
     }
     public function track()
     {
-        return $this->hasOne('App\Track');
+        return $this->belongsTo('App\Track');
     }
     public function third()
     {

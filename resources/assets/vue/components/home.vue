@@ -5,7 +5,7 @@
                 <div class="row">
                     <h1>{{data.season.name}}</h1>
                     <div>
-                        <h3>Next Race: {{data.race.name}} - Race {{data.race.raceNo}} </h3>
+                        <h3>Next Race: Race {{data.race.raceNo}} at {{data.track.name}}, {{data.race.name}} </h3>
                     </div>
                     <ul  class="nav nav-pills">
                         <li class="active">

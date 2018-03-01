@@ -13742,7 +13742,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race: " + _vm._s(_vm.data.race.name) + " - Race " + _vm._s(_vm.data.race.raceNo) + " ")])]), _vm._v(" "), _c('ul', {
+  }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race: Race " + _vm._s(_vm.data.race.raceNo) + " at " + _vm._s(_vm.data.track.name) + ", " + _vm._s(_vm.data.race.name) + " ")])]), _vm._v(" "), _c('ul', {
     staticClass: "nav nav-pills"
   }, [_c('li', {
     staticClass: "active"
