@@ -13764,25 +13764,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     style: (_vm.third)
   }, [_c('h3', [_vm._v("Third Points")]), _vm._v(" "), _c('table', {
     staticClass: "table"
-  }, [_c('tbody', [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_c('h3', {
-      staticClass: "text-center"
-    }, [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
-  })), _vm._v(" "), _c('tr', {
+  }, [_c('tbody', {
     staticClass: "text-center"
-  }, _vm._l((_vm.data.thirdTeamStandings), function(team) {
+  }, [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
+    return _c('td', [_c('h3', [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
+  })), _vm._v(" "), _c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
     return _c('td', [_c('h3', [_vm._v(_vm._s(team.points))])])
   }))])])]), _vm._v(" "), _c('div', {
     style: (_vm.season)
   }, [_c('h3', [_vm._v("Season Points")]), _vm._v(" "), _c('table', {
     staticClass: "table"
-  }, [_c('tbody', [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_c('h3', {
-      staticClass: "text-center"
-    }, [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
-  })), _vm._v(" "), _c('tr', {
+  }, [_c('tbody', {
     staticClass: "text-center"
-  }, _vm._l((_vm.data.thirdTeamStandings), function(team) {
+  }, [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
+    return _c('td', [_c('h3', [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
+  })), _vm._v(" "), _c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
     return _c('td', [_c('h3', [_vm._v(_vm._s(team.points))])])
   }))])])])]), _vm._v(" "), _c('div', {
     staticClass: "row"

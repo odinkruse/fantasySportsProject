@@ -18,14 +18,14 @@
                     <div :style="third">
                         <h3>Third Points</h3>
                         <table class="table">
-                            <tbody>
+                            <tbody class="text-center">
                                 <tr>
                                     <td v-for="team in data.thirdTeamStandings">
-                                        <h3 class="text-center">{{team.teamNumber}}</h3>
+                                        <h3>{{team.teamNumber}}</h3>
                                         <p>{{team.member1}} & {{team.member2}}</p>
                                     </td>
                                 </tr>
-                                <tr class="text-center">
+                                <tr>
                                     <td v-for="team in data.thirdTeamStandings">
                                         <h3>{{team.points}}</h3>
                                     </td>
@@ -36,14 +36,14 @@
                     <div :style="season">
                         <h3>Season Points</h3>
                         <table class="table">
-                            <tbody>
+                            <tbody class="text-center">
                             <tr>
                                 <td v-for="team in data.thirdTeamStandings">
-                                    <h3 class="text-center">{{team.teamNumber}}</h3>
+                                    <h3>{{team.teamNumber}}</h3>
                                     <p>{{team.member1}} & {{team.member2}}</p>
                                 </td>
                             </tr>
-                            <tr class="text-center">
+                            <tr>
                                 <td v-for="team in data.thirdTeamStandings">
                                     <h3>{{team.points}}</h3>
                                 </td>
