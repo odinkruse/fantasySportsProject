@@ -19,7 +19,7 @@ Route::get('/test-dump', 'TestDumpController@viewTestDump');
 Route::get('/latest-race-results', 'RaceResultsController@showLatestResults');
 Route::get('/team-standings-current-third', 'TeamThirdStandingsController@showActive');
 Route::get('/team-standings-current-season', 'TeamSeasonStandingsController@showActive');
-Route::get('/team-results/race/{race}', 'RaceResultsController@showRaceResultsByTeam');
+Route::get('/team-results/race/{race}', 'RaceResultsController@showRaceResults');
 Route::get('/team-cars/third/{third}', 'TeamCarsController@show');
 Route::get('/team-cars/current', 'TeamCarsController@showCurrentTeamCars');
 Route::get('/race-results-list','RaceResultsController@index');

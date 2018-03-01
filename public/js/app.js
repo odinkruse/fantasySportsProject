@@ -14262,11 +14262,116 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['data'],
     data: function data() {
-        return {};
+        return {
+            team: {
+                display: 'block'
+            },
+            car: {
+                display: 'none'
+            }
+        };
+    },
+
+    methods: {
+        toggleTeam: function toggleTeam() {
+            this.team.display = 'block';
+            this.car.display = 'none';
+        },
+        toggleCar: function toggleCar() {
+            this.team.display = 'none';
+            this.car.display = 'block';
+        }
     }
 });
 
@@ -14281,19 +14386,47 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
-    return [_c('h3', [_vm._v("\n                    Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                ")]), _vm._v(" "), _c('table', {
+  }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('ul', {
+    staticClass: "nav nav-pills"
+  }, [_c('li', {
+    staticClass: "active"
+  }, [_c('a', {
+    attrs: {
+      "data-toggle": "tab"
+    },
+    on: {
+      "click": _vm.toggleTeam
+    }
+  }, [_vm._v("Team Results")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "data-toggle": "tab"
+    },
+    on: {
+      "click": _vm.toggleCar
+    }
+  }, [_vm._v("Car Results")])])]), _vm._v(" "), _c('div', {
+    style: (_vm.team)
+  }, [_vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
+    return [_c('h3', [_vm._v("\n                        Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                    ")]), _vm._v(" "), _c('table', {
       staticClass: "table"
     }, [_c('tbody', [_vm._m(0, true), _vm._v(" "), _vm._l((TeamResults.Results), function(Results) {
       return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.points))])])
     }), _vm._v(" "), _c('tr', {
       staticClass: "bold"
     }, [_c('td', [_vm._v("Total")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v(_vm._s(TeamResults.TotalPoints))])])], 2)])]
-  })], 2)])])
+  })], 2), _vm._v(" "), _c('div', {
+    style: (_vm.car)
+  }, [_c('table', {
+    staticClass: "table"
+  }, [_c('tbody', [_vm._m(1), _vm._v(" "), _vm._l((_vm.data.raceResultsByCar), function(CarResults) {
+    return _c('tr', [_c('td', [_vm._v("\n                                " + _vm._s(CarResults.position) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.carNumber) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.driver) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n\n                                " + _vm._s(CarResults.standardPoints) + "\n                            ")]), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points - CarResults.standardPoints) + "\n                                ")] : [_vm._v("\n                                    0\n                                ")]], 2), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points) + "\n                                ")] : [_vm._v("\n                                    " + _vm._s(CarResults.standardPoints) + "\n                                ")]], 2), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.team) + "\n                            ")])])
+  })], 2)])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('tr', {
     staticClass: "bold"
   }, [_c('td', [_vm._v("Car")]), _vm._v(" "), _c('td', [_vm._v("Driver")]), _vm._v(" "), _c('td', [_vm._v("Points")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('tr', [_c('td', [_c('h3', [_vm._v("\n                                    Pos.\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Car\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Driver\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Std Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Stage Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Total Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Team\n                                ")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

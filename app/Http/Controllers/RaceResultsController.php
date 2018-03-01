@@ -177,18 +177,24 @@ class RaceResultsController extends Controller
     {
         //
     }
-    public function showRaceResultsByTeam(Race $race)
+    public function showRaceResults(Race $race)
     {
         $data = new \stdClass();
         $data->json = new \stdClass();
-        $data->json->raceResultsByTeam = array();
-        $raceThird = $race->third;
-        $teams = Team::get();
-        //$race = Race::where('resultsImported', 1)->where('third_id', $raceThird->id)->orderBy('raceNo','desc')->first();
+        $data->json->raceResultsByTeam = $this->showRaceResultsByTeam($race);
+        $data->json->raceResultsByCar = $this->showRaceResultsByCar($race);
         $data->json->race = $race;
+        $data->view = "team-race-results-view";
+        return view('main')->with("data",$data);
+    }
+    public function showRaceResultsByTeam(Race $race)
+    {
+        $teamResultsArray = array();
+        $teams = Team::get();
+
         foreach($teams as $team)
         {
-            array_push($data->json->raceResultsByTeam,
+            array_push($teamResultsArray,
                 [
                     "Team"=>$team,
                     "Results"=>$this->getTeamRaceResults($team->id, $race->id),
@@ -196,10 +202,29 @@ class RaceResultsController extends Controller
                 ]
             );
         }
-//        $data->json->raceResults = RaceResults
-//            ::join('teams', 'race_results.team_id',)
-        $data->view = "team-race-results-view";
-        return view('main')->with("data",$data);
+        return $teamResultsArray;
+    }
+    public function showRaceResultsByCar(Race $race)
+    {
+        $formattedResultsArray = array();
+        $raceResults = $race->results;
+        foreach($raceResults as $result)
+        {
+            $raceResult = new \stdClass();
+            $raceResult->position = $result->position;
+            $raceResult->carNumber = $result->car->number;
+            $raceResult->driver = $raceResult->driver = (
+                $result->driver->suffix == null ?
+                $result->driver->firstName." ".$result->driver->lastName :
+                $result->driver->firstName." ".$result->driver->lastName." ".$result->driver->suffix
+            );
+            $result->driver->firstName." ".$result->driver->lastName." ".$result->driver->suffix;
+            $raceResult->points = $result->points;
+            $raceResult->standardPoints = $result->standardPoints;
+            $raceResult->team = $result->team_id;
+            array_push($formattedResultsArray,$raceResult);
+        }
+        return $formattedResultsArray;
     }
     /**
      * Show the form for editing the specified resource.
@@ -260,18 +285,6 @@ class RaceResultsController extends Controller
             $driver->season_id = $season_id;
             $driver->save();
         }
-//        $driver = Driver::firstOrNew(
-//            ['firstName'=>$firstName],
-//            ['lastName'=>$lastName],
-//            ['car_id'=>$car->id],
-//            ['season_id'=>$season_id]
-//
-//        );
-//        if($suffix != null && $driver->suffix == null)
-//        {
-//            $driver->suffix = $suffix;
-//            $driver->save();
-//        }
         return $driver->id;
     }
     public function getTeamForCar($carNumber, $third_id){

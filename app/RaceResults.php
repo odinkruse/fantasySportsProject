@@ -9,22 +9,18 @@ class RaceResults extends Model
     protected $fillable = ['race_id', 'team_id','car_id','driver_id','position','points','penalty'];
     public function race()
     {
-        return $this->belongsToMany('App\Race');
+        return $this->belongsTo('App\Race');
     }
-    public function cars()
+    public function car()
     {
-        return $this->belongsToMany('App\Car');
+        return $this->belongsTo('App\Car');
     }
-    public function drivers()
+    public function driver()
     {
-        $this->belongsToMany('App\Driver');
+        return $this->belongsTo('App\Driver');
     }
-    public function teams()
+    public function team()
     {
-        $this->belongsToMany('App\Team');
-    }
-    public function third()
-    {
-        $this->belongsTo('App\Third');
+        return $this->belongsTo('App\Team');
     }
 }
