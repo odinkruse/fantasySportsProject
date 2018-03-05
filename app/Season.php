@@ -9,7 +9,7 @@ class Season extends Model
     protected $fillable = ['year', 'name'];
     public function thirds()
     {
-        return $this->hasMany('App\Third');
+        return $this->hasMany('App\Third')->orderByDesc('thirdNo');
     }
     public function teamStandings()
     {

@@ -10,7 +10,7 @@
                     |
                     <a href="/race-results-list">Race Results</a>
                     |
-                    <a href="#">Third Standings</a>
+                    <a href="/third-standings">Third Standings</a>
                     |
                     <a href="#">Season Standings</a>
                 </div>

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\CarSeasonStandings;
+use App\Third;
+use App\Season;
 use Illuminate\Http\Request;
 
-class CarSeasonStandingsController extends Controller
+class ThirdStandingsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,15 @@ class CarSeasonStandingsController extends Controller
      */
     public function index()
     {
-        //
+        $seasons = array();
+        $db_seasons = Season::orderByDesc('year')->get();
+        foreach($db_seasons as $db_season)
+        {
+            $season = new \stdClass();
+            $season->thirds = $db_season->thirds;
+            array_push($seasons, $season);
+        }
+        return $seasons;
     }
 
     /**
@@ -41,10 +50,10 @@ class CarSeasonStandingsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\CarSeasonStandings  $carSeasonStandings
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(CarSeasonStandings $carSeasonStandings)
+    public function show(Third $third)
     {
         //
     }
@@ -52,10 +61,10 @@ class CarSeasonStandingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\CarSeasonStandings  $carSeasonStandings
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(CarSeasonStandings $carSeasonStandings)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +73,10 @@ class CarSeasonStandingsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\CarSeasonStandings  $carSeasonStandings
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CarSeasonStandings $carSeasonStandings)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +84,10 @@ class CarSeasonStandingsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CarSeasonStandings  $carSeasonStandings
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CarSeasonStandings $carSeasonStandings)
+    public function destroy($id)
     {
         //
     }

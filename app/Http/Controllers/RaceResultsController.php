@@ -72,8 +72,6 @@ class RaceResultsController extends Controller
      */
     public function store(Request $request)
     {
-
-        return $request;
         $data = $request->raceData;
 
         if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)

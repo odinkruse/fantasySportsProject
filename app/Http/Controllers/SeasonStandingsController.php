@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\TeamSeasonStandings;
 use Illuminate\Http\Request;
 
-class TeamSeasonStandingsController extends Controller
+class SeasonStandingsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +40,10 @@ class TeamSeasonStandingsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(TeamSeasonStandings $teamSeasonStanding)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class TeamSeasonStandingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(TeamSeasonStandings $teamSeasonStanding)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class TeamSeasonStandingsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TeamSeasonStandings $teamSeasonStanding)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class TeamSeasonStandingsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TeamSeasonStandings  $teamSeasonStanding
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TeamSeasonStandings $teamSeasonStanding)
+    public function destroy($id)
     {
         //
     }

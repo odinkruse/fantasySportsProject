@@ -9,7 +9,7 @@ class Race extends Model
     protected $fillable = ['third_id', 'track_id','name','raceNo','raceDate','raceResults'];
     public function results()
     {
-        return $this->hasMany('App\RaceResults');
+        return $this->hasMany('App\RaceResults')->orderBy('position');
     }
     public function track()
     {

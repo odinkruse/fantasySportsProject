@@ -3,14 +3,16 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <h2>Results for {{data.race.name}}</h2>
-                <ul  class="nav nav-pills">
-                    <li class="active">
-                        <a data-toggle="tab" @click="toggleTeam">Team Results</a>
-                    </li>
-                    <li>
-                        <a data-toggle="tab" @click="toggleCar">Car Results</a>
-                    </li>
-                </ul>
+                <div>
+                    <ul  class="nav nav-pills">
+                        <li class="active">
+                            <a data-toggle="tab" @click="toggleTeam">Team Results</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" @click="toggleCar">Car Results</a>
+                        </li>
+                    </ul>
+                </div>
                 <div :style="team">
                     <template v-for="TeamResults in data.raceResultsByTeam">
                         <h3>
