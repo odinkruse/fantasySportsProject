@@ -13790,7 +13790,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
     return _c('td', [_c('h3', [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
   })), _vm._v(" "), _c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_c('h3', [_vm._v(_vm._s(team.total_points))])])
+    return _c('td', [_c('h3', [_vm._v(_vm._s(team.points))])])
   }))])])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('h3', [_vm._v("Recent Race Results")]), _vm._v(" "), _vm._l((_vm.data.recentRaceResults), function(race) {

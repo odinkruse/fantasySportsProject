@@ -50,7 +50,7 @@
                             </tr>
                             <tr>
                                 <td v-for="team in data.thirdTeamStandings">
-                                    <h3>{{team.total_points}}</h3>
+                                    <h3>{{team.points}}</h3>
                                 </td>
                             </tr>
                             </tbody>

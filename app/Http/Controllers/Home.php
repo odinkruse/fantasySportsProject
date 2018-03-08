@@ -32,7 +32,7 @@ class Home extends Controller
             $teamStandingData->member1 = explode(" ", $teamThirdStanding->team->member1)[0];
             $teamStandingData->member2 = explode(" ", $teamThirdStanding->team->member2)[0];
             $teamStandingData->teamNumber = $teamThirdStanding->team_id;
-            $teamStandingData->points = $teamThirdStanding->points;
+            $teamStandingData->points = $teamThirdStanding->total_points;
             array_push($data->json->thirdTeamStandings, $teamStandingData);
         }
 

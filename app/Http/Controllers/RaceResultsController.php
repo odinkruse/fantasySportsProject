@@ -218,6 +218,7 @@ class RaceResultsController extends Controller
             );
             $result->driver->firstName." ".$result->driver->lastName." ".$result->driver->suffix;
             $raceResult->points = $result->points;
+            $raceResult->penalty = $result->penalty;
             $raceResult->standardPoints = $result->standardPoints;
             $raceResult->team = $result->team_id;
             array_push($formattedResultsArray,$raceResult);
