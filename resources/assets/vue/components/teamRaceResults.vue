@@ -110,7 +110,7 @@
                                 </td>
                                 <td>
                                     <template v-if="CarResults.points > 0">
-                                        {{CarResults.points}}
+                                        {{CarResults.points - CarResults.penalty}}
                                     </template>
                                     <template v-else>
                                         {{CarResults.standardPoints}}
