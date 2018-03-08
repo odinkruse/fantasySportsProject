@@ -72,12 +72,12 @@
                                 </td>
                                 <td>
                                     <strong>
-                                        Total Pts
+                                        Penalty
                                     </strong>
                                 </td>
                                 <td>
                                     <strong>
-                                        Penalty
+                                        Total Pts
                                     </strong>
                                 </td>
                                 <td>
@@ -108,6 +108,10 @@
                                         0
                                     </template>
                                 </td>
+                                <td style="color:red;">
+                                    <template v-if="CarResults.penalty == 0"></template>
+                                    <template v-else-if="CarResults.penalty > 0" >{{CarResults.penalty}}</template>
+                                </td>
                                 <td>
                                     <template v-if="CarResults.points > 0">
                                         {{CarResults.points - CarResults.penalty}}
@@ -115,10 +119,6 @@
                                     <template v-else>
                                         {{CarResults.standardPoints}}
                                     </template>
-                                </td>
-                                <td style="color:red;">
-                                    <template v-if="CarResults.penalty == 0"></template>
-                                    <template v-else-if="CarResults.penalty > 0" >{{CarResults.penalty}}</template>
                                 </td>
                                 <td>
                                     {{CarResults.team}}
