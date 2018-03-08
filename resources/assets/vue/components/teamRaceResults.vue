@@ -116,9 +116,9 @@
                                         {{CarResults.standardPoints}}
                                     </template>
                                 </td>
-                                <td>
+                                <td style="color:red;">
                                     <template v-if="CarResults.penalty == 0"></template>
-                                    <template v-else-if="CarResults.penalty > 0" style="color:red;">{{CarResults.penalty}}</template>
+                                    <template v-else-if="CarResults.penalty > 0" >{{CarResults.penalty}}</template>
                                 </td>
                                 <td>
                                     {{CarResults.team}}
