@@ -48,7 +48,7 @@ class RaceResultsController extends Controller
             $seasonObj->races = $races;
             array_push($data->json->seasons, $seasonObj);
         }
-        $data->view = "race-results-list-view";
+        $data->view = "race-results-index-view";
         return view('main')->with("data",$data);
     }
 

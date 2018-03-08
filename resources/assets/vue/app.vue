@@ -34,7 +34,7 @@
             'update-third-standings-view':UpdateThirdStandings,
             'add-third-view': AddThird,
             'team-race-results-view': TeamRaceResults,
-            'race-results-list-view': RaceResultsList,
+            'race-results-index-view': RaceResultsList,
             'third-standings-index-view': ThirdStandings,
             'team-cars-view': TeamCars,
             //DEV

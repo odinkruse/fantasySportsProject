@@ -5,8 +5,13 @@
                 <div class="row">
                     <h1>{{data.season.name}}</h1>
                     <div>
-                        <h3>Next Race: Race {{data.race.raceNo}} at {{data.track.name}}, {{data.race.name}} </h3>
+                        <h3>Next Race</h3>
+                        <h2>Race {{data.race.raceNo}}, {{data.race.name}}<br>
+                            {{data.track.name}}
+                        </h2>
                     </div>
+                </div>
+                <div class="row">
                     <ul  class="nav nav-pills">
                         <li class="active">
                             <a data-toggle="tab" @click="toggleThird">Third Points</a>
@@ -45,7 +50,7 @@
                             </tr>
                             <tr>
                                 <td v-for="team in data.thirdTeamStandings">
-                                    <h3>{{team.points}}</h3>
+                                    <h3>{{team.total_points}}</h3>
                                 </td>
                             </tr>
                             </tbody>
@@ -90,4 +95,7 @@ export default{
 }
 </script>
 <style>
+    .row{
+        padding: 15px 0;
+    }
 </style>

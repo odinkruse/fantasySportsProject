@@ -13411,7 +13411,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         'update-third-standings-view': __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings___default.a,
         'add-third-view': __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue___default.a,
         'team-race-results-view': __WEBPACK_IMPORTED_MODULE_4__components_teamRaceResults___default.a,
-        'race-results-list-view': __WEBPACK_IMPORTED_MODULE_5__components_raceResultsIndex___default.a,
+        'race-results-index-view': __WEBPACK_IMPORTED_MODULE_5__components_raceResultsIndex___default.a,
         'third-standings-index-view': __WEBPACK_IMPORTED_MODULE_7__components_thirdStandingsIndex___default.a,
         'team-cars-view': __WEBPACK_IMPORTED_MODULE_8__components_teamCars___default.a,
         //DEV
@@ -13630,7 +13630,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.row{\n    padding: 15px 0;\n}\n", ""]);
 
 // exports
 
@@ -13641,6 +13641,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13746,7 +13751,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race: Race " + _vm._s(_vm.data.race.raceNo) + " at " + _vm._s(_vm.data.track.name) + ", " + _vm._s(_vm.data.race.name) + " ")])]), _vm._v(" "), _c('ul', {
+  }, [_c('h1', [_vm._v(_vm._s(_vm.data.season.name))]), _vm._v(" "), _c('div', [_c('h3', [_vm._v("Next Race")]), _vm._v(" "), _c('h2', [_vm._v("Race " + _vm._s(_vm.data.race.raceNo) + ", " + _vm._s(_vm.data.race.name)), _c('br'), _vm._v("\n                        " + _vm._s(_vm.data.track.name) + "\n                    ")])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('ul', {
     staticClass: "nav nav-pills"
   }, [_c('li', {
     staticClass: "active"
@@ -13783,7 +13790,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
     return _c('td', [_c('h3', [_vm._v(_vm._s(team.teamNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(team.member1) + " & " + _vm._s(team.member2))])])
   })), _vm._v(" "), _c('tr', _vm._l((_vm.data.thirdTeamStandings), function(team) {
-    return _c('td', [_c('h3', [_vm._v(_vm._s(team.points))])])
+    return _c('td', [_c('h3', [_vm._v(_vm._s(team.total_points))])])
   }))])])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('h3', [_vm._v("Recent Race Results")]), _vm._v(" "), _vm._l((_vm.data.recentRaceResults), function(race) {
@@ -45533,7 +45540,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45544,6 +45551,15 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -45565,14 +45581,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "third-index-vue container"
   }, [_c('div', {
     staticClass: "col-md-10 col-md-offset-1"
-  })])
-}]}
+  }, _vm._l((_vm.data.seasons), function(season) {
+    return _c('div', [_c('h3', [_vm._v("\n                " + _vm._s(season.name) + "\n            ")]), _vm._v(" "), _c('ul', _vm._l((season.thirds), function(third) {
+      return _c('li', [_vm._v("\n                    " + _vm._s(third.name) + "\n                ")])
+    }))])
+  }))])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

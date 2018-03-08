@@ -15,15 +15,19 @@ class ThirdStandingsController extends Controller
      */
     public function index()
     {
-        $seasons = array();
+        $data = new \stdClass();
+        $data->json = new \stdClass;
+        $data->json->seasons = array();
         $db_seasons = Season::orderByDesc('year')->get();
         foreach($db_seasons as $db_season)
         {
             $season = new \stdClass();
+            $season->name = $db_season->name;
             $season->thirds = $db_season->thirds;
-            array_push($seasons, $season);
+            array_push($data->json->seasons, $season);
         }
-        return $seasons;
+        $data->view = "third-standings-index-view";
+        return view('main')->with("data",$data);
     }
 
     /**
