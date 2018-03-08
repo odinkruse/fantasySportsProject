@@ -28,7 +28,9 @@
                                 <tr v-for="Results in TeamResults.Results">
                                     <td>{{Results.carNumber}}</td>
                                     <td>{{Results.driverName.firstName}} {{Results.driverName.lastName}}</td>
-                                    <td>{{Results.points}}</td>
+
+                                    <td v-if="Results.penalty == 0">{{Results.points}}</td>
+                                    <td v-else-if="Results.penalty > 0" style="color:red;">{{Results.points - Results.penalty}}</td>
                                 </tr>
                                 <tr class="bold">
                                     <td>Total</td>
@@ -44,39 +46,44 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <h3>
+                                    <strong>
                                         Pos.
-                                    </h3>
+                                    </strong>
                                 </td>
                                 <td>
-                                    <h3>
+                                    <strong>
                                         Car
-                                    </h3>
+                                    </strong>
                                 </td>
                                 <td>
-                                    <h3>
+                                    <strong>
                                         Driver
-                                    </h3>
+                                    </strong>
                                 </td>
                                 <td>
-                                    <h3>
+                                    <strong>
                                         Std Pts
-                                    </h3>
+                                    </strong>
                                 </td>
                                 <td>
-                                    <h3>
+                                    <strong>
                                         Stage Pts
-                                    </h3>
+                                    </strong>
                                 </td>
                                 <td>
-                                    <h3>
+                                    <strong>
                                         Total Pts
-                                    </h3>
+                                    </strong>
                                 </td>
                                 <td>
-                                    <h3>
+                                    <strong>
+                                        Penalty
+                                    </strong>
+                                </td>
+                                <td>
+                                    <strong>
                                         Team
-                                    </h3>
+                                    </strong>
                                 </td>
                             </tr>
                             <tr v-for="CarResults in data.raceResultsByCar">
@@ -108,6 +115,10 @@
                                     <template v-else>
                                         {{CarResults.standardPoints}}
                                     </template>
+                                </td>
+                                <td>
+                                    <template v-if="CarResults.penalty == 0"></template>
+                                    <template v-else-if="CarResults.penalty > 0" style="color:red;">{{CarResults.penalty}}</template>
                                 </td>
                                 <td>
                                     {{CarResults.team}}

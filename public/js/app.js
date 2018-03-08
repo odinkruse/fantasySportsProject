@@ -14358,6 +14358,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['data'],
@@ -14419,7 +14430,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return [_c('h3', [_vm._v("\n                        Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                    ")]), _vm._v(" "), _c('table', {
       staticClass: "table"
     }, [_c('tbody', [_vm._m(0, true), _vm._v(" "), _vm._l((TeamResults.Results), function(Results) {
-      return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.points))])])
+      return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), (Results.penalty == 0) ? _c('td', [_vm._v(_vm._s(Results.points))]) : (Results.penalty > 0) ? _c('td', {
+        staticStyle: {
+          "color": "red"
+        }
+      }, [_vm._v(_vm._s(Results.points - Results.penalty))]) : _vm._e()])
     }), _vm._v(" "), _c('tr', {
       staticClass: "bold"
     }, [_c('td', [_vm._v("Total")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v(_vm._s(TeamResults.TotalPoints))])])], 2)])]
@@ -14428,14 +14443,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('table', {
     staticClass: "table"
   }, [_c('tbody', [_vm._m(1), _vm._v(" "), _vm._l((_vm.data.raceResultsByCar), function(CarResults) {
-    return _c('tr', [_c('td', [_vm._v("\n                                " + _vm._s(CarResults.position) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.carNumber) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.driver) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n\n                                " + _vm._s(CarResults.standardPoints) + "\n                            ")]), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points - CarResults.standardPoints) + "\n                                ")] : [_vm._v("\n                                    0\n                                ")]], 2), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points) + "\n                                ")] : [_vm._v("\n                                    " + _vm._s(CarResults.standardPoints) + "\n                                ")]], 2), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.team) + "\n                            ")])])
+    return _c('tr', [_c('td', [_vm._v("\n                                " + _vm._s(CarResults.position) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.carNumber) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.driver) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n\n                                " + _vm._s(CarResults.standardPoints) + "\n                            ")]), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points - CarResults.standardPoints) + "\n                                ")] : [_vm._v("\n                                    0\n                                ")]], 2), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points) + "\n                                ")] : [_vm._v("\n                                    " + _vm._s(CarResults.standardPoints) + "\n                                ")]], 2), _vm._v(" "), _c('td', [(CarResults.penalty == 0) ? void 0 : (CarResults.penalty > 0) ? [_vm._v(_vm._s(CarResults.penalty))] : _vm._e()], 2), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.team) + "\n                            ")])])
   })], 2)])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('tr', {
     staticClass: "bold"
   }, [_c('td', [_vm._v("Car")]), _vm._v(" "), _c('td', [_vm._v("Driver")]), _vm._v(" "), _c('td', [_vm._v("Points")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('tr', [_c('td', [_c('h3', [_vm._v("\n                                    Pos.\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Car\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Driver\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Std Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Stage Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Total Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("\n                                    Team\n                                ")])])])
+  return _c('tr', [_c('td', [_c('strong', [_vm._v("\n                                    Pos.\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Car\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Driver\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Std Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Stage Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Total Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Penalty\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Team\n                                ")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

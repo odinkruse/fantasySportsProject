@@ -125,7 +125,9 @@ class ThirdController extends Controller
                 $carStanding->car_id = $raceResult->car_id;
                 $carStanding->third_id = $third->id;
             }
-            $carStanding->points = array_sum(RaceResults::whereIn('race_id', $races)->where('car_id', $raceResult->car_id)->pluck('points')->toArray());
+            $carStanding->points =
+                array_sum(RaceResults::whereIn('race_id', $races)->where('car_id', $raceResult->car_id)->pluck('points')->toArray())
+                - array_sum(RaceResults::whereIn('race_id', $races)->where('car_id', $raceResult->car_id)->pluck('penalty')->toArray());
             $carStanding->save();
         }
 
@@ -153,7 +155,9 @@ class ThirdController extends Controller
                 $teamThirdStanding->third_id = $third->id;
             }
             //should update this to just get a plucked array and just add them with array_sum
-            $teamThirdStanding->total_points = array_sum(RaceResults::wherein('car_id', $cars)->wherein('race_id', $third->races->pluck('id')->toArray())->pluck('points')->toArray());
+            $teamThirdStanding->total_points =
+                array_sum(RaceResults::wherein('car_id', $cars)->wherein('race_id', $third->races->pluck('id')->toArray())->pluck('points')->toArray())
+                - array_sum(RaceResults::wherein('car_id', $cars)->wherein('race_id', $third->races->pluck('id')->toArray())->pluck('penalty')->toArray());
 
             $teamThirdStanding->save();
 

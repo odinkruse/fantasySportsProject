@@ -12,11 +12,14 @@
                         <td>Car</td>
                         <td>Driver</td>
                         <td>Points</td>
+                        <td>Penalty</td>
                     </tr>
                     <tr v-for="Results in TeamResults.Results">
                         <td>{{Results.carNumber}}</td>
                         <td>{{Results.driverName.firstName}} {{Results.driverName.lastName}}</td>
                         <td>{{Results.points}}</td>
+                        <td v-if="Results.penalty == 0"></td>
+                        <td v-else-if="Results.penalty > 0" style="color:red;">{{Results.penalty}}</td>
                     </tr>
                     <tr class="bold">
                         <td>Total</td>

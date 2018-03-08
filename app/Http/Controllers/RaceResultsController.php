@@ -196,7 +196,7 @@ class RaceResultsController extends Controller
                 [
                     "Team"=>$team,
                     "Results"=>$this->getTeamRaceResults($team->id, $race->id),
-                    "TotalPoints"=>array_sum(RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->pluck('points')->toArray())
+                    "TotalPoints"=>array_sum(RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->pluck('points')->toArray()) - array_sum(RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->pluck('penalty')->toArray())
                 ]
             );
         }
@@ -315,6 +315,7 @@ class RaceResultsController extends Controller
             $resultObj->carNumber = Car::where('id', $result->car_id)->first()->number;
             $resultObj->driverName = Driver::select('firstName', 'lastName')->where('id', $result->driver_id)->first();
             $resultObj->points = $result->points;
+            $resultObj->penalty = $result->penalty;
             array_push($teamResults, $resultObj);
         }
         return $teamResults;
