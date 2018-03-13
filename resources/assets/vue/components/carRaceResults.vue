@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-</template>
+
 <script>
     export default{
         props:['data'],
@@ -42,6 +42,7 @@
         }
     }
 </script>
+
 <style>
     .bold{
         font-weight:bold;

@@ -141,8 +141,6 @@ class RaceResultsController extends Controller
                     ->where('team_id',$queryObj->team_id)
                     ->where('car_id',$queryObj->car_id)
                     ->where('driver_id',$queryObj->driver_id)
-                    ->where('position', $queryObj->position)
-                    ->where('points',$queryObj->points)
                     ->first();
                 if($result == null)
                 {
@@ -162,6 +160,7 @@ class RaceResultsController extends Controller
         $race->raceResultsURL = $data['url'];
         $race->resultsImported = 1;
         $race->save();
+        $this->updateThirdStandings($race->id);
         return ["newRaceData",RaceResults::where('race_id', $race->id)->get()];
     }
 
@@ -319,5 +318,13 @@ class RaceResultsController extends Controller
             array_push($teamResults, $resultObj);
         }
         return $teamResults;
+    }
+    public function updateThirdStandings($race_id)
+    {
+        $teams = Team::get()->pluck('id')->toArray();
+        foreach($teams as $team)
+        {
+            
+        }
     }
 }
