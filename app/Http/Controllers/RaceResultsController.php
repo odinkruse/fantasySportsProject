@@ -324,7 +324,7 @@ class RaceResultsController extends Controller
         $teams = Team::get()->pluck('id')->toArray();
         foreach($teams as $team)
         {
-            
+
         }
     }
 }
