@@ -91,7 +91,6 @@ class ThirdController extends Controller
      */
     public function updateThirdStandings(Request $request)
     {
-        //return $request;
         $data = $request->thirdData;
 
         if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)
@@ -103,67 +102,84 @@ class ThirdController extends Controller
             ->first()->id)->where('thirdNo', $data['third'])
             ->first();
 
-        $races = $third->races->pluck('id')->toArray();
-//            Race::where('third_id', $third->id)
-//            ->pluck('id')
-//            ->toArray();
+        $raceIDs = $third->races->pluck('id')->toArray();
+        $teamIDs = Team::get()->pluck('id')->toArray();
 
-        $raceResults = RaceResults::whereIn('race_id', $races)
-            ->select('car_id')
-            ->groupBy('car_id')
-            ->get();
-        //return["CarIdArray"=>$car_idArray];
-        foreach($raceResults as $raceResult)
-        {
-            $carStanding = CarThirdStandings::
-                where('car_id',$raceResult->car_id)->
-                where('third_id',$third->id)->
-                first();
-            if($carStanding == null)
-            {
-                $carStanding = new CarThirdStandings();
-                $carStanding->car_id = $raceResult->car_id;
-                $carStanding->third_id = $third->id;
-            }
-            $carStanding->points =
-                array_sum(RaceResults::whereIn('race_id', $races)->where('car_id', $raceResult->car_id)->pluck('points')->toArray())
-                - array_sum(RaceResults::whereIn('race_id', $races)->where('car_id', $raceResult->car_id)->pluck('penalty')->toArray());
-            $carStanding->save();
-        }
 
         //*
-        ///I need to go through the races in the third
-        ///from those races i need to go through the cars in
-        ///
-        ///
-        ///
+        //Team Third Standings  & Team Car Standings NEW
         //*
-        $teams = Team::get();
-        $teamThirdResultsArray = array();
-        foreach($teams as $team)
+
+        foreach($raceIDs as $raceID)
         {
-            $cars = TeamCars::where('team_id', $team->id)->where('third_id', $third->id)->pluck('car_id')->toArray();
-
-            $teamThirdStanding = TeamThirdStandings::
-                where('team_id',$team->id)->
-                where('third_id',$third->id)->
-                first();
-            if($teamThirdStanding == null)
+            $raceColumn = "race_".Race::where('id', $raceID)->first()->raceNo."_points";
+            $raceResults = RaceResults::where('race_id', $raceID)->get();
+            foreach($raceResults as $raceResult)
             {
-                $teamThirdStanding = new TeamThirdStandings();
-                $teamThirdStanding->team_id = $team->id;
-                $teamThirdStanding->third_id = $third->id;
+                $thirdStandingsByCar = CarThirdStandings::where('car_id', $raceResult->car_id)->
+                    where('third_id', $third->id)->first();
+                if($thirdStandingsByCar == null)
+                {
+                    $thirdStandingsByCar = new CarThirdStandings();
+                    $thirdStandingsByCar->car_id = $raceResult->car_id;
+                    $thirdStandingsByCar->third_id = $third->id;
+                }
+                $thirdStandingsByCar->{$raceColumn} = $raceResult->points - $raceResult->penalty;
+                $thirdStandingsByCar->total_points =
+                    $thirdStandingsByCar->race_1_points +
+                    $thirdStandingsByCar->race_2_points +
+                    $thirdStandingsByCar->race_3_points +
+                    $thirdStandingsByCar->race_4_points +
+                    $thirdStandingsByCar->race_5_points +
+                    $thirdStandingsByCar->race_6_points +
+                    $thirdStandingsByCar->race_7_points +
+                    $thirdStandingsByCar->race_8_points +
+                    $thirdStandingsByCar->race_9_points +
+                    $thirdStandingsByCar->race_10_points +
+                    $thirdStandingsByCar->race_11_points +
+                    $thirdStandingsByCar->race_12_points;
+                $thirdStandingsByCar->save();
             }
-            //should update this to just get a plucked array and just add them with array_sum
-            $teamThirdStanding->total_points =
-                array_sum(RaceResults::wherein('car_id', $cars)->wherein('race_id', $third->races->pluck('id')->toArray())->pluck('points')->toArray())
-                - array_sum(RaceResults::wherein('car_id', $cars)->wherein('race_id', $third->races->pluck('id')->toArray())->pluck('penalty')->toArray());
 
-            $teamThirdStanding->save();
+            foreach ($teamIDs as $teamID)
+            {
+                $thirdStandingsByTeam = TeamThirdStandings::where('team_id',$teamID)->
+                where('third_id', $third->id)->first();
+                if($thirdStandingsByTeam == null)
+                {
+                    $thirdStandingsByTeam = new TeamThirdStandings();
+                    $thirdStandingsByTeam->team_id = $teamID;
+                    $thirdStandingsByTeam->third_id = $third->id;
+                }
+                $thirdStandingsByTeam->{$raceColumn} = array_sum(
+                        RaceResults::where("race_id",$raceID)->
+                        where("team_id", $teamID)->
+                        pluck('points')->
+                        toArray()
+                    ) - array_sum(
+                        RaceResults::where("race_id",$raceID)->
+                        where("team_id", $teamID)->
+                        pluck('penalty')->
+                        toArray()
+                    );
+                $thirdStandingsByTeam->total_points =
+                    $thirdStandingsByTeam->race_1_points +
+                    $thirdStandingsByTeam->race_2_points +
+                    $thirdStandingsByTeam->race_3_points +
+                    $thirdStandingsByTeam->race_4_points +
+                    $thirdStandingsByTeam->race_5_points +
+                    $thirdStandingsByTeam->race_6_points +
+                    $thirdStandingsByTeam->race_7_points +
+                    $thirdStandingsByTeam->race_8_points +
+                    $thirdStandingsByTeam->race_9_points +
+                    $thirdStandingsByTeam->race_10_points +
+                    $thirdStandingsByTeam->race_11_points +
+                    $thirdStandingsByTeam->race_12_points;
+                $thirdStandingsByTeam->save();
+            }
 
-            array_push($teamThirdResultsArray, $teamThirdStanding);
         }
-        return ["ThirdStandings"=>[CarThirdStandings::where('third_id', $third->id)->get(),TeamThirdStandings::where('third_id', $third->id)->get()]];
+        return "success???";//["ThirdStandings"=>[CarThirdStandings::where('third_id', $third->id)->get(),TeamThirdStandings::where('third_id', $third->id)->get()]];
 
     }
 

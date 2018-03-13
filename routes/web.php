@@ -25,6 +25,7 @@ Route::get('/team-cars/current', 'TeamCarsController@showCurrentTeamCars');
 Route::get('/race-results-list','RaceResultsController@index');
 Route::get('/update-third-standings', 'ThirdController@updateThirdStandingsView');
 Route::get('/third-standings','ThirdStandingsController@index');
+Route::get('/third-standings/{third}','ThirdStandingsController@show');
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
 Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');

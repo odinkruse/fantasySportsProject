@@ -1,5 +1,5 @@
 <template>
-    <div class="team-results-vue container">
+    <div class="race-results-vue container">
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <h2>Results for {{data.race.name}}</h2>

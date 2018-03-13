@@ -7,7 +7,7 @@
                 </h3>
                 <ul>
                     <li v-for="third in season.thirds">
-                        {{third.name}}
+                        <a :href="'/third-standings/'+third.id">{{third.name}}</a>
                     </li>
                 </ul>
             </div>

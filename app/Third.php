@@ -13,11 +13,11 @@ class Third extends Model
     }
     public function teamStandings()
     {
-        return $this->hasOne('App\TeamThirdStandings');
+        return $this->hasMany('App\TeamThirdStandings')->orderByDesc('total_points');
     }
     public function carStandings()
     {
-        return $this->hasOne('App\CarThirdStandings');
+        return $this->hasMany('App\CarThirdStandings')->orderByDesc('total_points');
     }
     public function season()
     {
