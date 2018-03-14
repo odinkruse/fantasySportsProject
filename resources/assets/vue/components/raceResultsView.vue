@@ -141,7 +141,7 @@
                 },
                 car:{
                     display:'none'
-                }
+                },
             }
         },
         methods:{

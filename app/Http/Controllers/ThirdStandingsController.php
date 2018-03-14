@@ -68,9 +68,11 @@ class ThirdStandingsController extends Controller
     {
         $data = new \stdClass();
         $data->json = new \stdClass();
+        $data->json->third = $third;
         $data->json->teamThirdStandings = $this->formatTeamThirdStandings($third);
         $data->json->carThirdStandings = $this->formatCarThirdStandings($third);
-        return ["Team Standings"=>$data->json->teamThirdStandings, "Car Standings"=>$data->json->carThirdStandings];
+        $data->view = "third-standings-view";
+        return view('main')->with('data',$data);
     }
 
     /**
