@@ -10,6 +10,7 @@ use App\Season;
 use App\Team;
 use App\TeamCars;
 use App\TeamThirdStandings;
+use App\CarThirdStandings;
 use App\Third;
 use App\Track;
 use \DateTime;

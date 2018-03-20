@@ -39,8 +39,7 @@
                                     <p>{{teamStanding.number}}</p>
                                 </td>
                                 <td>
-                                    <p>{{teamStanding.member1}}</p>
-                                    <p>{{teamStanding.member2}}</p>
+                                    <p>{{parseFirstName(teamStanding.member1)}} & {{parseFirstName(teamStanding.member2)}}</p>
                                 </td>
                                 <td>
                                     {{teamStanding.total_points}}
@@ -220,7 +219,12 @@
                 }
             }
         },
+        computed:{
+        },
         methods:{
+            parseFirstName(name){
+                return name.split(' ')[0];
+            },
             toggleTeam(){
                 this.team.display = 'block';
                 this.car.display = 'none';
