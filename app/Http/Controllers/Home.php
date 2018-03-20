@@ -41,4 +41,11 @@ class Home extends Controller
 //        $data = "Coming from Home Controller";
         return view('main')->with("data",$data);
     }
+    public function wesBet(){
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $data->view = "the-wes-bet-view";
+//        $data = "Coming from Home Controller";
+        return view('main')->with("data",$data);
+    }
 }

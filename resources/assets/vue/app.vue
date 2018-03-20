@@ -15,15 +15,16 @@
     //DEV
     import TestDump from './components/testDumpView';
     //Live
-    import Home from './components/home';
+    import Home from './components/homeView';
     import AddRaceResults from './components/addRaceResults';
     import UpdateThirdStandings from'./components/updateThirdStandings';
     import RaceResultsView from './components/raceResultsView';
     import RaceResultsList from './components/raceResultsIndex';
     import AddThird from './components/addThird.vue';
-    import ThirdStandings from './components/thirdStandingsIndex';
-    import ThirdStandingsView from './components/thirdStandings';
-    import TeamCars from './components/teamCars';
+    import ThirdStandingsIndex from './components/thirdStandingsIndex';
+    import ThirdStandingsView from './components/thirdStandingsView';
+    import TeamCars from './components/teamCarsView';
+    import WesBet from './components/wesBetView';
     import Header from'./global/header';
     import Footer from './global/footer';
     export default {
@@ -36,9 +37,10 @@
             'add-third-view': AddThird,
             'race-results-view': RaceResultsView,
             'race-results-index-view': RaceResultsList,
-            'third-standings-index-view': ThirdStandings,
+            'third-standings-index-view': ThirdStandingsIndex,
             'third-standings-view': ThirdStandingsView,
             'team-cars-view': TeamCars,
+            'the-wes-bet-view':WesBet,
             //DEV
             'test-dump-view': TestDump
         },

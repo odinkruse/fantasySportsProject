@@ -26,6 +26,7 @@ Route::get('/race-results-list','RaceResultsController@index');
 Route::get('/update-third-standings', 'ThirdController@updateThirdStandingsView');
 Route::get('/third-standings','ThirdStandingsController@index');
 Route::get('/third-standings/{third}','ThirdStandingsController@show');
+Route::get('/the-wes-bet','Home@wesBet');
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
 Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
