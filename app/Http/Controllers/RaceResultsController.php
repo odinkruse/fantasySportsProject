@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\NascarStandardPoints;
 use App\RaceResults;
 use App\Race;
 use App\Car;
@@ -153,6 +154,7 @@ class RaceResultsController extends Controller
                     $result->driver_id = $queryObj->driver_id;
                     $result->position = $queryObj->position;
                     $result->points = $queryObj->points;
+                    $result->standardPoints = NascarStandardPoints::where('position', $result->position)->first()->points;
                     $result->save();
                 }
                 //array_push($resultArray, $result);
