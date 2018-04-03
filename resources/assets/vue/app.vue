@@ -25,6 +25,7 @@
     import ThirdStandingsView from './components/thirdStandingsView';
     import TeamCars from './components/teamCarsView';
     import WesBet from './components/wesBetView';
+    import AddRace from './components/addRaceView';
     import Header from'./global/header';
     import Footer from './global/footer';
     export default {
@@ -41,6 +42,7 @@
             'third-standings-view': ThirdStandingsView,
             'team-cars-view': TeamCars,
             'the-wes-bet-view':WesBet,
+            'add-race-view': AddRace,
             //DEV
             'test-dump-view': TestDump
         },

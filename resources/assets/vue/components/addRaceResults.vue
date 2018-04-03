@@ -64,7 +64,6 @@ export default{
             console.log("updateThird");
             this.$http.post('/update-third-standings').then(function(response){
                 console.log(response);
-
             });
         }
     }

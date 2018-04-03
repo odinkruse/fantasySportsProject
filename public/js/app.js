@@ -13309,7 +13309,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13375,10 +13375,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_teamCarsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_teamCarsView__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_wesBetView__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_wesBetView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_wesBetView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__global_header__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__global_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__global_header__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__global_footer__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__global_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__global_footer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_addRaceView__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_addRaceView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_addRaceView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__global_header__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__global_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__global_header__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__global_footer__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__global_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__global_footer__);
 //
 //
 //
@@ -13408,10 +13410,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        'header-component': __WEBPACK_IMPORTED_MODULE_11__global_header___default.a,
-        'footer-component': __WEBPACK_IMPORTED_MODULE_12__global_footer___default.a,
+        'header-component': __WEBPACK_IMPORTED_MODULE_12__global_header___default.a,
+        'footer-component': __WEBPACK_IMPORTED_MODULE_13__global_footer___default.a,
         'home-view': __WEBPACK_IMPORTED_MODULE_1__components_homeView___default.a,
         'add-race-results-view': __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults___default.a,
         'update-third-standings-view': __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings___default.a,
@@ -13422,6 +13425,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         'third-standings-view': __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsView___default.a,
         'team-cars-view': __WEBPACK_IMPORTED_MODULE_9__components_teamCarsView___default.a,
         'the-wes-bet-view': __WEBPACK_IMPORTED_MODULE_10__components_wesBetView___default.a,
+        'add-race-view': __WEBPACK_IMPORTED_MODULE_11__components_addRaceView___default.a,
         //DEV
         'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView___default.a
     },
@@ -13643,7 +13647,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -46223,6 +46227,393 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-8e24b9fc", module.exports)
+  }
+}
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(147)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(149),
+  /* template */
+  __webpack_require__(150),
+  /* scopeId */
+  "data-v-721955d6",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addRaceView.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] addRaceView.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-721955d6", Component.options)
+  } else {
+    hotAPI.reload("data-v-721955d6", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(148);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("5253ca3e", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-721955d6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceView.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-721955d6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addRaceView.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 149 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['data'],
+    data: function data() {
+        return {
+            raceData: {
+                raceName: "",
+                raceNumber: "",
+                raceDate: "",
+                track: this.data.tracks[0],
+                third: this.data.thirds[0],
+                active: false
+            }
+        };
+    },
+
+    computed: {
+        valid: function valid() {
+            return this.raceData.raceName && this.raceData.raceNumber && this.raceData.raceDate;
+        }
+    },
+    methods: {
+        createRace: function createRace() {
+            this.$http.post('/add-race', { raceData: JSON.stringify(this.raceData) }).then(function (response) {
+                console.log(response);
+                //this.updateThird();
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "add-race-vue container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-5 col-md-offset-1"
+  }, [_c('form', [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "raceName"
+    }
+  }, [_vm._v("Race Name")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.raceData.raceName),
+      expression: "raceData.raceName"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "raceName",
+      "placeholder": "Daytona 500"
+    },
+    domProps: {
+      "value": (_vm.raceData.raceName)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.raceData, "raceName", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('label', {
+    attrs: {
+      "for": "raceNumber"
+    }
+  }, [_vm._v("Race Number")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.raceData.raceNumber),
+      expression: "raceData.raceNumber"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "raceNumber",
+      "placeholder": "8"
+    },
+    domProps: {
+      "value": (_vm.raceData.raceNumber)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.raceData, "raceNumber", $event.target.value)
+      }
+    }
+  }), _vm._v(" "), _c('label', {
+    attrs: {
+      "for": "raceDate"
+    }
+  }, [_vm._v("Race Date")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.raceData.raceDate),
+      expression: "raceData.raceDate"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "raceDate",
+      "placeholder": "04/02/2018"
+    },
+    domProps: {
+      "value": (_vm.raceData.raceDate)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.raceData, "raceDate", $event.target.value)
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "track"
+    }
+  }, [_vm._v("Track")]), _vm._v(" "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.raceData.track),
+      expression: "raceData.track"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "track"
+    },
+    on: {
+      "change": function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.$set(_vm.raceData, "track", $event.target.multiple ? $$selectedVal : $$selectedVal[0])
+      }
+    }
+  }, _vm._l((_vm.data.tracks), function(track) {
+    return _c('option', {
+      domProps: {
+        "value": track
+      }
+    }, [_vm._v("\n                            " + _vm._s(track.name) + "\n                        ")])
+  }))]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "third"
+    }
+  }, [_vm._v("Third")]), _vm._v(" "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.raceData.third),
+      expression: "raceData.third"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "third"
+    },
+    on: {
+      "change": function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.$set(_vm.raceData, "third", $event.target.multiple ? $$selectedVal : $$selectedVal[0])
+      }
+    }
+  }, [_vm._l((_vm.data.thirds), function(third) {
+    return [_c('option', {
+      domProps: {
+        "value": third
+      }
+    }, [_vm._v("\n                                " + _vm._s(third.name) + "\n                            ")])]
+  })], 2)]), _vm._v(" "), _c('div', {
+    staticClass: "form-check"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.raceData.active),
+      expression: "raceData.active"
+    }],
+    staticClass: "form-check-input",
+    attrs: {
+      "type": "checkbox",
+      "id": "activeRace"
+    },
+    domProps: {
+      "checked": Array.isArray(_vm.raceData.active) ? _vm._i(_vm.raceData.active, null) > -1 : (_vm.raceData.active)
+    },
+    on: {
+      "change": function($event) {
+        var $$a = _vm.raceData.active,
+          $$el = $event.target,
+          $$c = $$el.checked ? (true) : (false);
+        if (Array.isArray($$a)) {
+          var $$v = null,
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && (_vm.raceData.active = $$a.concat([$$v]))
+          } else {
+            $$i > -1 && (_vm.raceData.active = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+          }
+        } else {
+          _vm.$set(_vm.raceData, "active", $$c)
+        }
+      }
+    }
+  }), _vm._v(" "), _c('label', {
+    staticClass: "form-check-label",
+    attrs: {
+      "for": "activeRace"
+    }
+  }, [_vm._v("Active Race")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('h3', [_vm._v("New Race")]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.raceData.raceName))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.raceData.raceNumber))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.raceData.raceDate))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.raceData.track.name) + ", ID " + _vm._s(_vm.raceData.track.id))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.raceData.third.name) + ", ID " + _vm._s(_vm.raceData.third.id))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.raceData.active))]), _vm._v(" "), _c('a', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.valid),
+      expression: "valid"
+    }],
+    staticClass: "btn btn-primary",
+    on: {
+      "click": _vm.createRace
+    }
+  }, [_vm._v("\n                Create Race\n            ")])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-721955d6", module.exports)
   }
 }
 

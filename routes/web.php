@@ -27,9 +27,11 @@ Route::get('/update-third-standings', 'ThirdController@updateThirdStandingsView'
 Route::get('/third-standings','ThirdStandingsController@index');
 Route::get('/third-standings/{third}','ThirdStandingsController@show');
 Route::get('/the-wes-bet','Home@wesBet');
+Route::get('/add-race','RaceController@Create');
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
 Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
+Route::post('/add-race','RaceController@Store');
 //Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
 
 Auth::routes();

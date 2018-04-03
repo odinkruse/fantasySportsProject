@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Race;
 use App\Third;
+use App\Track;
 use Illuminate\Http\Request;
 
 class RaceController extends Controller
@@ -24,7 +25,12 @@ class RaceController extends Controller
      */
     public function create()
     {
-        //
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $data->json->tracks = Track::get();
+        $data->json->thirds = Third::get();
+        $data->view = "add-race-view";
+        return view('main')->with("data",$data);
     }
 
     /**
@@ -35,7 +41,33 @@ class RaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $raceData = json_decode($request->raceData);
+        $race = Race::where('third_id', $raceData->third->id)->where('raceNo',$raceData->raceNumber)->first();
+        $race = Race::where('third_id', $raceData->third->id)->where('raceNo',$raceData->raceNumber)->first();
+        if($race == null)
+        {
+            $race = new Race();
+            $race->third_id = $raceData->third->id;
+            $race->track_id = $raceData->track->id;
+            $race->name = $raceData->raceName;
+            $race->raceDate = $raceData->raceDate;
+            $race->resultsImported = false;
+            $race->active = $raceData->active;
+            if($race->active)
+            {
+                $activeRaces = Race::where('active', true)->get();
+                foreach($activeRaces as $activeRace){
+                    $activeRace->active = false;
+                    $activeRace->save();
+                }
+            }
+            $race->save();
+            return ["Race Created"=>$race];
+        }
+        else {
+            //we are in big trouble
+            return "fail";
+        }
     }
 
     /**
