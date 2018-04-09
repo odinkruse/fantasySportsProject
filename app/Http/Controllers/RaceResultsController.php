@@ -64,6 +64,7 @@ class RaceResultsController extends Controller
     {
         $data = new \stdClass();
         $data->json = new \stdClass;
+        $data->json->races = Race::where('resultsImported', false)->get();
         $data->view = "add-race-results-view";
         return view('main')->with("data",$data);
     }
@@ -76,52 +77,23 @@ class RaceResultsController extends Controller
     public function store(Request $request)
     {
 
-        $data = $request->raceData;
-
-        if(strcmp ( (string)date("m/d/Y") , $data['auth'] ) != 0)
-        {
-            return ["Failed Auth"=>[$data['auth'],date("m/d/Y")]];
-        }
+        $raceData = json_decode($request->raceData);
 
         //should really validate the data
-        $season = Season::firstOrCreate(
-            ['year'=>$data['season']]
-        );
-        if($season->name == null)
-        {
-            $season->name = $season->year." Season";
-            $season->save();
-        }
+//        $season = Season::firstOrCreate(
+//            ['year'=>$data['season']]
+//        );
+//        if($season->name == null)
+//        {
+//            $season->name = $season->year." Season";
+//            $season->save();
+//        }
 
-        $third = Third::firstOrCreate(
-            ['season_id'=>$season->id],
-            ['thirdNo'=>$data['third']]
-        );
-        if($third->name == null)
-        {
-            $numberToNameArray = ["First", "Second", "Third"];
-            $third->name = $numberToNameArray[$third->thirdNo-1]." Third of ".$season->year;
-            $third->save();
-        }
+        $third = Third::where('id',$raceData->race->third_id)->first();
 
-        $track = Track::firstOrCreate(
-            ['name'=>$data['track']]
-        );
-        $race = Race::where('third_id',$third->id)
-            ->where('track_id',$track->id)
-            ->where('raceNo',(int)$data['raceNumber'])
-            ->first();
-        if($race == null) {
-            $race = new Race();
-            $race->third_id = $third->id;
-            $race->track_id = $track->id;
-            $race->raceNo = (int)$data['raceNumber'];
-            $race->name = $data['raceName'];
-            $race->raceDate = DateTime::createFromFormat('m-d-Y', $data['raceDate'])->format('Y-m-d');
-            $race->save();
-        }
+        $race = Race::where('id',$raceData->race->id)->first();
         $client = new Client();
-        $html = $client->request('GET', $data['url']);
+        $html = $client->request('GET', $raceData->url);
         $table = $html->filterXPath('//table[@class="tb"][3]');
         $tableArray = $table->filter('tr')->each(function ($row) {
             return $rowArray = $row->filter('td')->each(function ($cell) {
@@ -138,7 +110,7 @@ class RaceResultsController extends Controller
                 $queryObj->race_id = $race->id;
                 $queryObj->team_id = $teamCarData->teamNumber;
                 $queryObj->car_id = $teamCarData->car_id;
-                $queryObj->driver_id = $this->getDriverId($row[self::DRIVER], $teamCarData->car_id, $season->id);
+                $queryObj->driver_id = $this->getDriverId($row[self::DRIVER], $teamCarData->car_id, $race->third->season->id);
                 $queryObj->position = $row[self::POSITION];
                 $queryObj->points = $row[self::POINTS];
                 $result = RaceResults::where('race_id',$queryObj->race_id)
@@ -162,7 +134,7 @@ class RaceResultsController extends Controller
             }
         }
         //return [$resultArray];
-        $race->raceResultsURL = $data['url'];
+        $race->raceResultsURL = $raceData->url;
         $race->resultsImported = 1;
         $race->save();
         $this->updateThirdStandings($race);
