@@ -50,6 +50,7 @@ class RaceController extends Controller
             $race->third_id = $raceData->third->id;
             $race->track_id = $raceData->track->id;
             $race->name = $raceData->raceName;
+            $race->raceNo = $raceData->raceNumber;
             $race->raceDate = $raceData->raceDate;
             $race->resultsImported = false;
             $race->active = $raceData->active;
