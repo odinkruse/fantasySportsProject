@@ -51,7 +51,7 @@ class RaceController extends Controller
             $race->track_id = $raceData->track->id;
             $race->name = $raceData->raceName;
             $race->raceNo = $raceData->raceNumber;
-            $race->raceDate = $raceData->raceDate;
+            $race->raceDate = date('Y-m-d',strtotime($raceData->raceDate));
             $race->resultsImported = false;
             $race->active = $raceData->active;
             if($race->active)
