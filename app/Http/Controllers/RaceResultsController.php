@@ -299,7 +299,7 @@ class RaceResultsController extends Controller
     public function updateThirdStandings($race)
     {
         $teamIDs = Team::get()->pluck('id')->toArray();
-        $raceColumn = "race_".($race->raceNo - ($race->raceNo*($race->third->thirdNo - 1)))."_points";
+        $raceColumn = "race_".($race->raceNo - (12*($race->third->thirdNo - 1)))."_points";
         $raceResults = RaceResults::where('race_id', $race->id)->get();
         foreach($raceResults as $raceResult)
         {

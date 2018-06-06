@@ -113,7 +113,7 @@ class ThirdController extends Controller
         foreach($raceIDs as $raceID)
         {
             $raceNo = Race::where('id', $raceID)->first()->raceNo;
-            $raceColumn = "race_".($raceNo - ($raceNo*($third->thirdNo - 1)))."_points";
+            $raceColumn = "race_".($raceNo - (12*($third->thirdNo - 1)))."_points";
             $raceResults = RaceResults::where('race_id', $raceID)->get();
             foreach($raceResults as $raceResult)
             {
