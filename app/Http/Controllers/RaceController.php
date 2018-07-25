@@ -28,7 +28,7 @@ class RaceController extends Controller
         $data = new \stdClass();
         $data->json = new \stdClass();
         $data->json->tracks = Track::get();
-        $data->json->thirds = Third::get();
+        $data->json->thirds = Third::orderByDesc('active')->get();
         $data->view = "add-race-view";
         return view('main')->with("data",$data);
     }

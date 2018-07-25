@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Team;
 use Illuminate\Http\Request;
 
 use App\Race;
@@ -24,16 +25,17 @@ class Home extends Controller
         $data->json->season = Season::where('active', 1)->first();
         $data->json->race = Race::where('active', 1)->first();
         $data->json->track = $data->json->race->track;
-        $data->json->seasonStandings = TeamSeasonStandings::where('season_id', $data->json->season->id)->get();
-        $data->json->thirdTeamStandings = array();
-        foreach(TeamThirdStandings::where('third_id', $data->json->race->third_id)->get() as $teamThirdStanding)
+        $data->json->teamStandings = array();
+        //foreach(TeamThirdStandings::where('third_id', $data->json->race->third_id)->get() as $teamThirdStanding)
+        foreach(Team::get() as $team)
         {
             $teamStandingData = new \stdClass();
-            $teamStandingData->member1 = explode(" ", $teamThirdStanding->team->member1)[0];
-            $teamStandingData->member2 = explode(" ", $teamThirdStanding->team->member2)[0];
-            $teamStandingData->teamNumber = $teamThirdStanding->team_id;
-            $teamStandingData->points = $teamThirdStanding->total_points;
-            array_push($data->json->thirdTeamStandings, $teamStandingData);
+            $teamStandingData->member1 = explode(" ", $team->member1)[0];
+            $teamStandingData->member2 = explode(" ", $team->member2)[0];
+            $teamStandingData->teamNumber = $team->id;
+            $teamStandingData->thirdPoints = TeamThirdStandings::where('team_id',$team->id)->where('third_id', $data->json->race->third_id)->first()->total_points;
+            $teamStandingData->seasonPoints = TeamSeasonStandings::where('team_id',$team->id)->where('season_id', $data->json->season->id)->first()->points;
+            array_push($data->json->teamStandings, $teamStandingData);
         }
 
         $data->json->recentRaceResults = Race::where('third_id',Third::where('active', 1)->first()->id)->where('resultsImported', 1)->orderByDesc('raceNo')->get();

@@ -18,11 +18,14 @@
     import Home from './components/homeView';
     import AddRaceResults from './components/addRaceResults';
     import UpdateThirdStandings from'./components/updateThirdStandings';
+    import UpdateSeasonStandings from'./components/updateSeasonStandings';
     import RaceResultsView from './components/raceResultsView';
     import RaceResultsList from './components/raceResultsIndex';
     import AddThird from './components/addThird.vue';
     import ThirdStandingsIndex from './components/thirdStandingsIndex';
     import ThirdStandingsView from './components/thirdStandingsView';
+    import SeasonStandingsIndex from './components/seasonStandingsIndex';
+    import SeasonStandingsView from './components/seasonStandingsView';
     import TeamCars from './components/teamCarsView';
     import WesBet from './components/wesBetView';
     import AddRace from './components/addRaceView';
@@ -35,11 +38,14 @@
             'home-view': Home,
             'add-race-results-view': AddRaceResults,
             'update-third-standings-view':UpdateThirdStandings,
+            'update-season-standings-view':UpdateSeasonStandings,
             'add-third-view': AddThird,
             'race-results-view': RaceResultsView,
             'race-results-index-view': RaceResultsList,
             'third-standings-index-view': ThirdStandingsIndex,
             'third-standings-view': ThirdStandingsView,
+            'season-standings-index-view': SeasonStandingsIndex,
+            'season-standings-view': SeasonStandingsView,
             'team-cars-view': TeamCars,
             'the-wes-bet-view':WesBet,
             'add-race-view': AddRace,

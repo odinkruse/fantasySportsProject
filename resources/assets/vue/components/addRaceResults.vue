@@ -29,6 +29,12 @@ export default{
             raceData: {
                 race:this.data.races[0],
                 url: ""
+            },
+            thirdData:{
+                third:{}
+            },
+            seasonData:{
+                season:{}
             }
         }
     },
@@ -41,15 +47,27 @@ export default{
                    return;
                }
             }
+            const vue = this;
             console.log("addRaceResults");
             this.$http.post('/add-race-results', {raceData:JSON.stringify(this.raceData)}).then(function(response){
                console.log(response);
-               //this.updateThird();
+                vue.thirdData.third = response.data.third;
+                vue.updateThird();
             });
         },
         updateThird(){
+            const vue = this;
             console.log("updateThird");
-            this.$http.post('/update-third-standings').then(function(response){
+            this.$http.post('/update-third-standings', {thirdData:JSON.stringify(this.thirdData)}).then(function(response){
+                console.log(response);
+                vue.seasonData.season = response.data.season;
+                vue.updateSeason();
+
+            });
+        },
+        updateSeason(){
+            console.log("updateSeason");
+            this.$http.post('/update-season-standings', {seasonData:JSON.stringify(this.seasonData)}).then(function(response){
                 console.log(response);
             });
         }

@@ -4,16 +4,19 @@
             <div class="row">
                 <form>
                     <div class="form-group">
-                        <!--<h3>Third</h3>-->
-                        <label for="third">Third</label>
-                        <select class="form-control" id="third" v-model="thirdData.third">
-                            <option v-for="third in data.thirds" :value="third">
-                                {{third.name}}
+
+                        <!--<input class="form-control" v-model="seasonData.year" placeholder="2018, 2017, 2016 etc etc">-->
+
+                        <label for="season">Season</label>
+                        <select class="form-control" id="season" v-model="seasonData.season">
+                            <option v-for="season in data.seasons" :value="season">
+                                {{season.name}}
                             </option>
                         </select>
+
                     </div>
-                    <a class="btn btn-primary" @click="updateThird">
-                        Update Third
+                    <a class="btn btn-primary" @click="updateSeason">
+                        Update Season
                     </a>
                 </form>
             </div>
@@ -26,33 +29,20 @@
         props:['data'],
         data(){
             return {
-                thirdData: {
-                    third:this.data.thirds[0]
-                },
                 seasonData: {
-                    season:{}
+                    season:this.data.seasons[0]
                 }
             }
         },
         methods:{
-            updateThird(){
-                for(let el in this.thirdData){
+            updateSeason(){
+                for(let el in this.seasonData){
                     if(el == "")
                     {
                         alert(`Please fill in ${el.constructor.name}`);
                         return;
                     }
                 }
-                const vue = this;
-                console.log("updateThird");
-                this.$http.post('/update-third-standings', {thirdData:JSON.stringify(this.thirdData)}).then(function(response){
-                    console.log(response);
-                    vue.seasonData.season = response.data.season;
-                    vue.updateSeason();
-
-                });
-            },
-            updateSeason(){
                 console.log("updateSeason");
                 this.$http.post('/update-season-standings', {seasonData:JSON.stringify(this.seasonData)}).then(function(response){
                     console.log(response);

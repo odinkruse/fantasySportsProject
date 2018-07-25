@@ -25,14 +25,14 @@
                         <table class="table">
                             <tbody class="text-center">
                                 <tr>
-                                    <td v-for="team in data.thirdTeamStandings">
+                                    <td v-for="team in data.teamStandings">
                                         <h3>{{team.teamNumber}}</h3>
                                         <p>{{team.member1}} & {{team.member2}}</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td v-for="team in data.thirdTeamStandings">
-                                        <h3>{{team.points}}</h3>
+                                    <td v-for="team in data.teamStandings">
+                                        <h3>{{team.thirdPoints}}</h3>
                                     </td>
                                 </tr>
                             </tbody>
@@ -43,14 +43,14 @@
                         <table class="table">
                             <tbody class="text-center">
                             <tr>
-                                <td v-for="team in data.thirdTeamStandings">
+                                <td v-for="team in data.teamStandings">
                                     <h3>{{team.teamNumber}}</h3>
                                     <p>{{team.member1}} & {{team.member2}}</p>
                                 </td>
                             </tr>
                             <tr>
-                                <td v-for="team in data.thirdTeamStandings">
-                                    <h3>{{team.points}}</h3>
+                                <td v-for="team in data.teamStandings">
+                                    <h3>{{team.seasonPoints}}</h3>
                                 </td>
                             </tr>
                             </tbody>

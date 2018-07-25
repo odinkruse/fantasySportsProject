@@ -23,14 +23,18 @@ Route::get('/team-results/race/{race}', 'RaceResultsController@showRaceResults')
 Route::get('/team-cars/third/{third}', 'TeamCarsController@show');
 Route::get('/team-cars/current', 'TeamCarsController@showCurrentTeamCars');
 Route::get('/race-results-list','RaceResultsController@index');
-Route::get('/update-third-standings', 'ThirdController@updateThirdStandingsView');
+Route::get('/update-third-standings', 'ThirdStandingsController@updateThirdStandingsView');
+Route::get('/update-season-standings', 'SeasonStandingsController@updateSeasonStandingsView');
 Route::get('/third-standings','ThirdStandingsController@index');
 Route::get('/third-standings/{third}','ThirdStandingsController@show');
+Route::get('/season-standings','SeasonStandingsController@index');
+Route::get('/season-standings/{season}','SeasonStandingsController@show');
 Route::get('/the-wes-bet','Home@wesBet');
 Route::get('/add-race','RaceController@Create');
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
-Route::post('/update-third-standings', 'ThirdController@updateThirdStandings');
+Route::post('/update-third-standings', 'ThirdStandingsController@updateThirdStandings');
+Route::post('/update-season-standings', 'SeasonStandingsController@updateSeasonStandings');
 Route::post('/add-race','RaceController@Store');
 //Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
 

@@ -12,7 +12,7 @@
                     |
                     <a href="/third-standings">Third Standings</a>
                     |
-                    <a href="#">Season Standings</a>
+                    <a href="/season-standings">Season Standings</a>
                     |
                     <a href="/the-wes-bet">Wes's Side Bet</a>
                 </div>
