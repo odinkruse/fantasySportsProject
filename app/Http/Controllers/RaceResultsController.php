@@ -78,7 +78,7 @@ class RaceResultsController extends Controller
     {
 
         $raceData = json_decode($request->raceData);
-        
+
         $third = Third::where('id',$raceData->race->third_id)->first();
 
         $race = Race::where('id',$raceData->race->id)->first();

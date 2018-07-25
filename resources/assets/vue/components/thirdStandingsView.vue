@@ -124,7 +124,7 @@
                                 <td>
                                     Total
                                 </td>
-                                <td>R1</td><td>R2</td><td>R3</td><td>R4</td><td>R5</td><td>R6</td><td>R7</td><td>R8</td><td>R9</td><td>R10</td><td>R11</td><td>R12</td>
+                                <td>R{{getRaceNo(1)}}</td><td>R{{getRaceNo(2)}}</td><td>R{{getRaceNo(3)}}</td><td>R{{getRaceNo(4)}}</td><td>R{{getRaceNo(5)}}</td><td>R{{getRaceNo(6)}}</td><td>R{{getRaceNo(7)}}</td><td>R{{getRaceNo(8)}}</td><td>R{{getRaceNo(9)}}</td><td>R{{getRaceNo(10)}}</td><td>R{{getRaceNo(11)}}</td><td>R{{getRaceNo(12)}}</td>
                             </tr>
                             <tr v-for="(carStanding, index) in data.carThirdStandings">
                                 <td>{{index+1}}</td>
