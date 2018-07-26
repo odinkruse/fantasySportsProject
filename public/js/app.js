@@ -45685,28 +45685,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-xs-6"
-  }, [(_vm.data.lastThird != null) ? [_c('div', {
-    staticClass: "row"
-  }, [_c('span', {
-    staticClass: "return bold"
-  }, [_vm._v("Last")]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": '/third-standings/' + _vm.data.lastThird.id
-    }
-  }, [_vm._v(_vm._s(_vm.data.lastThird.name))])])] : _vm._e()], 2), _vm._v(" "), _c('div', {
-    staticClass: "col-xs-6 text-right"
-  }, [(_vm.data.nextThird != null) ? [_c('div', {
-    staticClass: "row"
-  }, [_c('span', {
-    staticClass: "return bold"
-  }, [_vm._v("Next")]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": '/third-standings/' + _vm.data.nextThird.id
-    }
-  }, [_vm._v(_vm._s(_vm.data.nextThird.name))])])] : _vm._e()], 2)]), _vm._v(" "), _c('div', {
-    staticClass: "row"
   }, [_c('h1', [_vm._v(_vm._s(_vm.data.third.season.name))]), _vm._v(" "), _c('h2', [_vm._v("Third " + _vm._s(_vm.data.third.thirdNo))]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "nav nav-pills"
   }, [_c('li', {
@@ -45741,7 +45719,29 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return _c('tr', [_c('td', [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(carStanding.number))])]), _vm._v(" "), _c('td', _vm._l((carStanding.drivers), function(driver) {
       return _c('p', [_vm._v(_vm._s(driver.firstName) + " " + _vm._s(driver.lastName) + " " + _vm._s(driver.suffix))])
     })), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(carStanding.total_points) + "\n                            ")]), _vm._v(" "), _c('td', [(carStanding.race_1_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_1_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_2_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_2_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_3_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_3_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_4_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_4_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_5_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_5_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_6_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_6_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_7_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_7_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_8_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_8_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_9_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_9_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_10_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_10_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_11_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_11_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(carStanding.race_12_points > 0) ? [_vm._v("\n                                    " + _vm._s(carStanding.race_12_points) + "\n                                ")] : _vm._e()], 2)])
-  })], 2)])])])])])
+  })], 2)])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-6"
+  }, [(_vm.data.lastThird != null) ? [_c('div', {
+    staticClass: "row"
+  }, [_c('span', {
+    staticClass: "return bold"
+  }, [_vm._v("Last")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": '/third-standings/' + _vm.data.lastThird.id
+    }
+  }, [_vm._v(_vm._s(_vm.data.lastThird.name))])])] : _vm._e()], 2), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-6 text-right"
+  }, [(_vm.data.nextThird != null) ? [_c('div', {
+    staticClass: "row"
+  }, [_c('span', {
+    staticClass: "return bold"
+  }, [_vm._v("Next")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": '/third-standings/' + _vm.data.nextThird.id
+    }
+  }, [_vm._v(_vm._s(_vm.data.nextThird.name))])])] : _vm._e()], 2)])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
