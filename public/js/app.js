@@ -45404,7 +45404,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.bold[data-v-296acf16]{\n    font-weight:bold;\n}\n.return[data-v-296acf16]:after {\n    content: '\\A';\n    white-space: pre;\n}\n", ""]);
 
 // exports
 
@@ -45415,6 +45415,24 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -45666,6 +45684,28 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-6"
+  }, [(_vm.data.lastThird != null) ? [_c('div', {
+    staticClass: "row"
+  }, [_c('span', {
+    staticClass: "return bold"
+  }, [_vm._v("Last")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": '/third-standings/' + _vm.data.lastThird.id
+    }
+  }, [_vm._v(_vm._s(_vm.data.lastThird.name))])])] : _vm._e()], 2), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-6 text-right"
+  }, [(_vm.data.nextThird != null) ? [_c('div', {
+    staticClass: "row"
+  }, [_c('span', {
+    staticClass: "return bold"
+  }, [_vm._v("Next")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": '/third-standings/' + _vm.data.nextThird.id
+    }
+  }, [_vm._v(_vm._s(_vm.data.nextThird.name))])])] : _vm._e()], 2)]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('h1', [_vm._v(_vm._s(_vm.data.third.season.name))]), _vm._v(" "), _c('h2', [_vm._v("Third " + _vm._s(_vm.data.third.thirdNo))]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "nav nav-pills"

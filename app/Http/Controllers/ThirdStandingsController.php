@@ -73,6 +73,8 @@ class ThirdStandingsController extends Controller
         $data->json->third = $third;
         $data->json->teamThirdStandings = $this->formatTeamThirdStandings($third);
         $data->json->carThirdStandings = $this->formatCarThirdStandings($third);
+        $data->json->nextThird = $this->getNextThird($third);
+        $data->json->lastThird = $this->getLastThird($third);
         $data->view = "third-standings-view";
         return view('main')->with('data',$data);
     }
@@ -222,5 +224,77 @@ class ThirdStandingsController extends Controller
                 where('season_id', $third->season->id)->select('firstName','lastName','suffix')->get();
         }
         return $carStandings;
+    }
+
+    private function getNextThird($third)
+    {
+        if($third->thirdNo == 3)
+        {
+            return $this->getNextThirdBySeason($third->season->year+1);
+        }
+        else
+        {
+            return $this->getNextThirdByThirdNo($third->season,$third->thirdNo+1);
+        }
+    }
+    private function getLastThird($third)
+    {
+        if($third->thirdNo == 1)
+        {
+            return $this->getLastThirdBySeason($third->season->year-1);
+        }
+        else
+        {
+            return $this->getLastThirdByThirdNo($third->season,$third->thirdNo-1);
+        }
+    }
+    private function getNextThirdBySeason($year)
+    {
+        $season = Season::where('year',$year)->first();
+        if($season != null)
+        {
+            return Third::where('season_id', $season->id)->orderBy('thirdNo')->first();
+        }
+        else
+        {
+            return null;
+        }
+    }
+    private function getNextThirdByThirdNo($season, $thirdNo)
+    {
+        $nextThird = Third::where('thirdNo',$thirdNo)->where('season_id',$season->id)->first();
+        if($nextThird != null)
+        {
+            return $nextThird;
+        }
+        else
+        {
+            return $this->getNextThirdBySeason($season->year+1);
+        }
+
+    }
+    private function getLastThirdBySeason($year)
+    {
+        $season = Season::where('year',$year)->first();
+        if($season != null)
+        {
+            return Third::where('season_id', $season->id)->orderByDesc('thirdNo')->first();
+        }
+        else
+        {
+            return null;
+        }
+    }
+    private function getLastThirdByThirdNo($season, $thirdNo)
+    {
+        $lastThird = Third::where('thirdNo',$thirdNo)->where('season_id',$season->id)->first();
+        if($lastThird != null)
+        {
+            return $lastThird;
+        }
+        else
+        {
+            return $this->getNextThirdBySeason($season->year-1);
+        }
     }
 }

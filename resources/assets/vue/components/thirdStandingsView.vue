@@ -2,6 +2,24 @@
     <div class="third-standings-vue container">
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
+                <div  class="col-xs-6">
+                    <template v-if="data.lastThird != null">
+                        <div class="row">
+                            <span class="return bold">Last</span>
+                            <a :href="'/third-standings/'+data.lastThird.id">{{data.lastThird.name}}</a>
+                        </div>
+                    </template>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <template v-if="data.nextThird != null">
+                        <div class="row">
+                            <span class="return bold">Next</span>
+                            <a :href="'/third-standings/'+data.nextThird.id">{{data.nextThird.name}}</a>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="row">
                 <h1>{{data.third.season.name}}</h1>
                 <h2>Third {{data.third.thirdNo}}</h2>
                 <div>
@@ -242,5 +260,11 @@
 </script>
 
 <style scoped>
-
+    .bold{
+        font-weight:bold;
+    }
+    .return:after {
+        content: '\A';
+        white-space: pre;
+    }
 </style>
