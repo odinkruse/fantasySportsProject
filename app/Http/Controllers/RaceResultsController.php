@@ -301,7 +301,7 @@ class RaceResultsController extends Controller
             if($thirdNo == 3)
             {
                 $seasonYear++;
-                $nextRace = getNextRaceBySeason($seasonYear);
+                $nextRace = $this->getNextRaceBySeason($seasonYear);
             }
             else
             {
