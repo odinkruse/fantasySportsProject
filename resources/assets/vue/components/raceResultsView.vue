@@ -2,6 +2,40 @@
     <div class="race-results-vue container">
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
+                <div  class="col-xs-6">
+                    <template v-if="data.lastRace != null">
+                        <div class="row">
+                            <span class="return bold">Last Race</span>
+                            <template v-if="data.lastRace.resultsImported == 1">
+                                <a :href="'/team-results/race/'+data.lastRace.id">
+                                    {{data.lastRace.name}}
+                                </a>
+                            </template>
+                            <template v-else>
+                                <span class="return">{{data.lastRace.name}}</span>
+                                <span>Results Not Available</span>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <template v-if="data.nextRace != null">
+                        <div class="row">
+                            <span class="return bold">Next Race</span>
+                            <template v-if="data.nextRace.resultsImported == true">
+                                <a :href="'/team-results/race/'+data.nextRace.id">
+                                    {{data.nextRace.name}}
+                                </a>
+                            </template>
+                            <template v-else>
+                                <span class="return">{{data.nextRace.name}}</span>
+                                <span>Results Not Available</span>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="row">
                 <h2>Results for {{data.race.name}}</h2>
                 <div>
                     <ul  class="nav nav-pills">
@@ -159,5 +193,9 @@
 <style>
 .bold{
     font-weight:bold;
+}
+.return:after {
+    content: '\A';
+    white-space: pre;
 }
 </style>

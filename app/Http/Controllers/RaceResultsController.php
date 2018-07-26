@@ -147,6 +147,8 @@ class RaceResultsController extends Controller
         $data->json = new \stdClass();
         $data->json->raceResultsByTeam = $this->showRaceResultsByTeam($race);
         $data->json->raceResultsByCar = $this->showRaceResultsByCar($race);
+        $data->json->nextRace = $this->getNextRace($race);
+        $data->json->lastRace = $this->getLastRace($race);
         $data->json->race = $race;
         $data->view = "race-results-view";
         return view('main')->with("data",$data);
@@ -285,5 +287,60 @@ class RaceResultsController extends Controller
             array_push($teamResults, $resultObj);
         }
         return $teamResults;
+    }
+
+    private function getNextRace($race)
+    {
+        $third = $race->third;
+        $season = $race->third->season;
+        $thirdNo = $race->third->thirdNo;
+        $seasonYear = $race->third->season->year;
+        $nextRace = Race::where('raceNo','>',$race->raceNo)->where('third_id',$third->id)->orderBy('raceNo')->first();
+        if($nextRace == null)
+        {
+            if($thirdNo == 3)
+            {
+                $seasonYear++;
+                $season = Season::where('year',$seasonYear)->first();
+                if($season != null) {
+                    $thirdIDs = Third::where('season_id',$season->id)->pluck('id')->toArray();
+                    $nextRace = Race::whereIn('third_id', $thirdIDs)->orderBy('raceNo')->first();
+                }
+            }
+            else
+            {
+                $thirdNo++;
+                $third = Third::where('season_id', $season->id)->where('thirdNo', $thirdNo)->first();
+                $nextRace = Race::where('third_id', $third->id)->orderBy('raceNo')->first();
+            }
+        }
+        return $nextRace;
+    }
+    private function getLastRace($race)
+    {
+        $third = $race->third;
+        $season = $race->third->season;
+        $thirdNo = $race->third->thirdNo;
+        $seasonYear = $race->third->season->year;
+        $lastRace = Race::where('raceNo','<',$race->raceNo)->where('third_id',$third->id)->orderByDesc('raceNo')->first();
+        if($lastRace == null)
+        {
+            if($thirdNo == 1)
+            {
+                $seasonYear--;
+                $season = Season::where('year',$seasonYear)->first();
+                if($season != null) {
+                    $thirdIDs = Third::where('season_id',$season->id)->pluck('id')->toArray();
+                    $lastRace = Race::whereIn('third_id', $thirdIDs)->orderByDesc('raceNo')->first();
+                }
+            }
+            else
+            {
+                $thirdNo--;
+                $third = Third::where('season_id', $season->id)->where('thirdNo', $thirdNo)->first();
+                $lastRace = Race::where('third_id', $third->id)->orderByDesc('raceNo')->first();
+            }
+        }
+        return $lastRace;
     }
 }

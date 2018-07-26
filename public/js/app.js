@@ -44493,7 +44493,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.bold{\n    font-weight:bold;\n}\n", ""]);
+exports.push([module.i, "\n.bold{\n    font-weight:bold;\n}\n.return:after {\n    content: '\\A';\n    white-space: pre;\n}\n", ""]);
 
 // exports
 
@@ -44504,6 +44504,40 @@ exports.push([module.i, "\n.bold{\n    font-weight:bold;\n}\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -44673,6 +44707,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-6"
+  }, [(_vm.data.lastRace != null) ? [_c('div', {
+    staticClass: "row"
+  }, [_c('span', {
+    staticClass: "return bold"
+  }, [_vm._v("Last Race")]), _vm._v(" "), (_vm.data.lastRace.resultsImported == 1) ? [_c('a', {
+    attrs: {
+      "href": '/team-results/race/' + _vm.data.lastRace.id
+    }
+  }, [_vm._v("\n                                " + _vm._s(_vm.data.lastRace.name) + "\n                            ")])] : [_c('span', {
+    staticClass: "return"
+  }, [_vm._v(_vm._s(_vm.data.lastRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]], 2)] : _vm._e()], 2), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-6 text-right"
+  }, [(_vm.data.nextRace != null) ? [_c('div', {
+    staticClass: "row"
+  }, [_c('span', {
+    staticClass: "return bold"
+  }, [_vm._v("Next Race")]), _vm._v(" "), (_vm.data.nextRace.resultsImported == true) ? [_c('a', {
+    attrs: {
+      "href": '/team-results/race/' + _vm.data.nextRace.id
+    }
+  }, [_vm._v("\n                                " + _vm._s(_vm.data.nextRace.name) + "\n                            ")])] : [_c('span', {
+    staticClass: "return"
+  }, [_vm._v(_vm._s(_vm.data.nextRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]], 2)] : _vm._e()], 2)]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "nav nav-pills"
