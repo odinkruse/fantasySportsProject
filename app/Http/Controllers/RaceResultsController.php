@@ -359,7 +359,7 @@ class RaceResultsController extends Controller
         else{
             if($thirdNo+1 == 3)
             {
-                $season = Season::where('year', $season->year)->first();
+                $season = Season::where('year', $season->year+1)->first();
                return $this->getNextRaceBySeason($season->year);
             }
             else
