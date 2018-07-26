@@ -5,10 +5,10 @@
                 <div  class="col-xs-6">
                     <template v-if="data.lastRace != null">
                         <div class="row">
-                            <span class="return bold">Last Race</span>
+                            <span class="return bold">Last - {{data.lastRace.raceDate}}</span>
                             <template v-if="data.lastRace.resultsImported == 1">
                                 <a :href="'/team-results/race/'+data.lastRace.id">
-                                    {{data.lastRace.name}}
+                                     {{data.lastRace.name}}
                                 </a>
                             </template>
                             <template v-else>
@@ -21,10 +21,10 @@
                 <div class="col-xs-6 text-right">
                     <template v-if="data.nextRace != null">
                         <div class="row">
-                            <span class="return bold">Next Race</span>
+                            <span class="return bold">Next - {{data.nextRace.raceDate}}</span>
                             <template v-if="data.nextRace.resultsImported == true">
                                 <a :href="'/team-results/race/'+data.nextRace.id">
-                                    {{data.nextRace.name}}
+                                     {{data.nextRace.name}}
                                 </a>
                             </template>
                             <template v-else>

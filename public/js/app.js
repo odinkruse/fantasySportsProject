@@ -44714,11 +44714,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('span', {
     staticClass: "return bold"
-  }, [_vm._v("Last Race")]), _vm._v(" "), (_vm.data.lastRace.resultsImported == 1) ? [_c('a', {
+  }, [_vm._v("Last - " + _vm._s(_vm.data.lastRace.raceDate))]), _vm._v(" "), (_vm.data.lastRace.resultsImported == 1) ? [_c('a', {
     attrs: {
       "href": '/team-results/race/' + _vm.data.lastRace.id
     }
-  }, [_vm._v("\n                                " + _vm._s(_vm.data.lastRace.name) + "\n                            ")])] : [_c('span', {
+  }, [_vm._v("\n                                 " + _vm._s(_vm.data.lastRace.name) + "\n                            ")])] : [_c('span', {
     staticClass: "return"
   }, [_vm._v(_vm._s(_vm.data.lastRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]], 2)] : _vm._e()], 2), _vm._v(" "), _c('div', {
     staticClass: "col-xs-6 text-right"
@@ -44726,11 +44726,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('span', {
     staticClass: "return bold"
-  }, [_vm._v("Next Race")]), _vm._v(" "), (_vm.data.nextRace.resultsImported == true) ? [_c('a', {
+  }, [_vm._v("Next - " + _vm._s(_vm.data.nextRace.raceDate))]), _vm._v(" "), (_vm.data.nextRace.resultsImported == true) ? [_c('a', {
     attrs: {
       "href": '/team-results/race/' + _vm.data.nextRace.id
     }
-  }, [_vm._v("\n                                " + _vm._s(_vm.data.nextRace.name) + "\n                            ")])] : [_c('span', {
+  }, [_vm._v("\n                                 " + _vm._s(_vm.data.nextRace.name) + "\n                            ")])] : [_c('span', {
     staticClass: "return"
   }, [_vm._v(_vm._s(_vm.data.nextRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]], 2)] : _vm._e()], 2)]), _vm._v(" "), _c('div', {
     staticClass: "row"
