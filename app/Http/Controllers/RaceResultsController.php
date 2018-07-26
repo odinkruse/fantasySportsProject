@@ -301,17 +301,12 @@ class RaceResultsController extends Controller
             if($thirdNo == 3)
             {
                 $seasonYear++;
-                $season = Season::where('year',$seasonYear)->first();
-                if($season != null) {
-                    $thirdIDs = Third::where('season_id',$season->id)->pluck('id')->toArray();
-                    $nextRace = Race::whereIn('third_id', $thirdIDs)->orderBy('raceNo')->first();
-                }
+                $nextRace = getNextRaceBySeason($seasonYear);
             }
             else
             {
                 $thirdNo++;
-                $third = Third::where('season_id', $season->id)->where('thirdNo', $thirdNo)->first();
-                $nextRace = Race::where('third_id', $third->id)->orderBy('raceNo')->first();
+                $nextRace = $this->getNextRaceByThird($season, $thirdNo);
             }
         }
         return $nextRace;
@@ -342,5 +337,35 @@ class RaceResultsController extends Controller
             }
         }
         return $lastRace;
+    }
+    private function getNextRaceBySeason($year)
+    {
+        $season = Season::where('year',$year)->first();
+        if($season != null) {
+            $thirdIDs = Third::where('season_id',$season->id)->pluck('id')->toArray();
+            return Race::whereIn('third_id', $thirdIDs)->orderBy('raceNo')->first();
+        }
+        else{
+            return null;
+        }
+    }
+    private function getNextRaceByThird($season, $thirdNo)
+    {
+
+        $third = Third::where('season_id', $season->id)->where('thirdNo', $thirdNo)->first();
+        if($third != null) {
+            return Race::where('third_id', $third->id)->orderBy('raceNo')->first();
+        }
+        else{
+            if($thirdNo+1 == 3)
+            {
+                $season = Season::where('year', $season->year)->first();
+               return $this->getNextRaceBySeason($season->year);
+            }
+            else
+            {
+                return getNextRaceByThird($season, $thirdNo+1);
+            }
+        }
     }
 }
