@@ -357,10 +357,16 @@ class RaceResultsController extends Controller
             return Race::where('third_id', $third->id)->orderBy('raceNo')->first();
         }
         else{
-            if($thirdNo+1 == 3)
+            if($thirdNo == 3)
             {
                 $season = Season::where('year', $season->year+1)->first();
-               return $this->getNextRaceBySeason($season->year);
+                if($season != null) {
+                    return $this->getNextRaceBySeason($season->year);
+                }
+                else
+                {
+                    return null;
+                }
             }
             else
             {
