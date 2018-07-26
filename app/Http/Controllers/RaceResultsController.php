@@ -364,7 +364,7 @@ class RaceResultsController extends Controller
             }
             else
             {
-                return getNextRaceByThird($season, $thirdNo+1);
+                return $this->getNextRaceByThird($season, $thirdNo+1);
             }
         }
     }
