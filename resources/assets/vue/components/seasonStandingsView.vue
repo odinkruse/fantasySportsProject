@@ -40,7 +40,7 @@
                                     <p>{{parseFirstName(teamStanding.member1)}} & {{parseFirstName(teamStanding.member2)}}</p>
                                 </td>
                                 <td>
-                                    {{teamStanding.points}}
+                                    {{teamStanding.season_points}}
                                 </td>
                             </tr>
                         </tbody>
@@ -72,7 +72,7 @@
                                     <p v-for="driver in carStanding.drivers">{{driver.firstName}} {{driver.lastName}} {{driver.suffix}}</p>
                                 </td>
                                 <td>
-                                    {{carStanding.points}}
+                                    {{carStanding.season_points}}
                                 </td>
                             </tr>
                         </tbody>

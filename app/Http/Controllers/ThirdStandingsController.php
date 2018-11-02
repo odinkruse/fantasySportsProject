@@ -108,7 +108,7 @@ class ThirdStandingsController extends Controller
     {
         //
     }
-    public function updateThirdStandings(Request $request)
+/*    public function updateThirdStandings(Request $request)
     {
         $thirdData = json_decode($request->thirdData);
 
@@ -193,7 +193,7 @@ class ThirdStandingsController extends Controller
         }
         return ["season"=>$third->season];//["ThirdStandings"=>[CarThirdStandings::where('third_id', $third->id)->get(),TeamThirdStandings::where('third_id', $third->id)->get()]];
 
-    }
+    }*/
     /**
      * Remove the specified resource from storage.
      *
@@ -206,18 +206,18 @@ class ThirdStandingsController extends Controller
     }
     public function formatTeamThirdStandings(Third $third)
     {
-        $teamStandings = DB::table('team_third_standings')->
-            join('teams', 'team_third_standings.team_id', '=', 'teams.id')->
-            where('team_third_standings.third_id', $third->id)->
-            select('teams.number','teams.member1','teams.member2','team_third_standings.*')->orderByDesc('total_points')->get();
+        $teamStandings = DB::table('view_team_third_points')->
+            join('teams', 'view_team_third_points.team_id', '=', 'teams.id')->
+            where('view_team_third_points.third_id', $third->id)->
+            select('teams.number','teams.member1','teams.member2','view_team_third_points.*')->orderByDesc('third_points')->get();
         return $teamStandings;
     }
     public function formatCarThirdStandings(Third $third)
     {
-        $carStandings = DB::table('car_third_standings')->
-            join('cars','car_third_standings.car_id','=','cars.id')->
-            where('car_third_standings.third_id', $third->id)->
-            select('cars.number','car_third_standings.*')->orderByDesc('total_points')->get();
+        $carStandings = DB::table('view_car_third_points')->
+            join('cars','view_car_third_points.car_id','=','cars.id')->
+            where('view_car_third_points.third_id', $third->id)->
+            select('cars.number','view_car_third_points.*')->orderByDesc('third_points')->get();
         foreach($carStandings as $carStanding)
         {
             $carStanding->drivers = Driver::where('car_id',$carStanding->car_id)->

@@ -33,8 +33,8 @@ class Home extends Controller
             $teamStandingData->member1 = explode(" ", $team->member1)[0];
             $teamStandingData->member2 = explode(" ", $team->member2)[0];
             $teamStandingData->teamNumber = $team->id;
-            $teamStandingData->thirdPoints = TeamThirdStandings::where('team_id',$team->id)->where('third_id', $data->json->race->third_id)->first()->total_points;
-            $teamStandingData->seasonPoints = TeamSeasonStandings::where('team_id',$team->id)->where('season_id', $data->json->season->id)->first()->points;
+            $teamStandingData->thirdPoints = \DB::table('view_team_third_points')->where('team_id',$team->id)->where('third_id', $data->json->race->third_id)->first()->third_points;
+            $teamStandingData->seasonPoints = \DB::table('view_team_season_points')->where('team_id',$team->id)->where('season_id', $data->json->season->id)->first()->season_points;
             array_push($data->json->teamStandings, $teamStandingData);
         }
 

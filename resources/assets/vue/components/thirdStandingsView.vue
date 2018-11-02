@@ -42,7 +42,7 @@
                                     <p>{{parseFirstName(teamStanding.member1)}} & {{parseFirstName(teamStanding.member2)}}</p>
                                 </td>
                                 <td>
-                                    {{teamStanding.total_points}}
+                                    {{teamStanding.third_points}}
                                 </td>
                                 <td>
                                     <template v-if="teamStanding.race_1_points  > 0">
@@ -135,7 +135,7 @@
                                     <p v-for="driver in carStanding.drivers">{{driver.firstName}} {{driver.lastName}} {{driver.suffix}}</p>
                                 </td>
                                 <td>
-                                    {{carStanding.total_points}}
+                                    {{carStanding.third_points}}
                                 </td>
                                 <td>
                                     <template v-if="carStanding.race_1_points  > 0">
