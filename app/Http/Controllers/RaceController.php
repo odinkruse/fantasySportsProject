@@ -62,7 +62,11 @@ class RaceController extends Controller
                     $activeRace->save();
                 }
             }
-            $race->save();
+            //$race->save();
+            //$data = new \stdClass();
+            //$data->json = new \stdClass();
+            //$data->view = "home-view";
+            //return view('main')->with('data',$data);
             return ["Race Created"=>$race];
         }
         else {

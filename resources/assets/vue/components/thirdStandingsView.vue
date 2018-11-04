@@ -31,7 +31,10 @@
                                 <td>
                                     Total
                                 </td>
-                                <td>R{{getRaceNo(1)}}</td><td>R{{getRaceNo(2)}}</td><td>R{{getRaceNo(3)}}</td><td>R{{getRaceNo(4)}}</td><td>R{{getRaceNo(5)}}</td><td>R{{getRaceNo(6)}}</td><td>R{{getRaceNo(7)}}</td><td>R{{getRaceNo(8)}}</td><td>R{{getRaceNo(9)}}</td><td>R{{getRaceNo(10)}}</td><td>R{{getRaceNo(11)}}</td><td>R{{getRaceNo(12)}}</td>
+                                <template v-for="n in 12">
+                                    <td>R{{getRaceNo(n)}}</td>
+                                </template>
+                                <!--<td>R{{getRaceNo(1)}}</td><td>R{{getRaceNo(2)}}</td><td>R{{getRaceNo(3)}}</td><td>R{{getRaceNo(4)}}</td><td>R{{getRaceNo(5)}}</td><td>R{{getRaceNo(6)}}</td><td>R{{getRaceNo(7)}}</td><td>R{{getRaceNo(8)}}</td><td>R{{getRaceNo(9)}}</td><td>R{{getRaceNo(10)}}</td><td>R{{getRaceNo(11)}}</td><td>R{{getRaceNo(12)}}</td>-->
                             </tr>
                             <tr v-for="(teamStanding, index) in data.teamThirdStandings">
                                 <td>{{index+1}}</td>

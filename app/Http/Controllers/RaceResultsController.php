@@ -128,7 +128,7 @@ class RaceResultsController extends Controller
         $race->resultsImported = 1;
         $race->save();
 //        $this->updateThirdStandings($race);
-        return ["third"=>$race->third];//["newRaceData",RaceResults::where('race_id', $race->id)->get()];
+        return ["success"];//["newRaceData",RaceResults::where('race_id', $race->id)->get()];
     }
 
     /**
@@ -199,9 +199,18 @@ class RaceResultsController extends Controller
      * @param  \App\RaceResults  $raceResults
      * @return \Illuminate\Http\Response
      */
-    public function edit(RaceResults $raceResults)
+    public function edit(Race $race)
     {
-        //
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $data->json->race = Race::where('id',$race->id)->first();
+        $data->json->raceResults = \DB::table('dev_race_results')->where('race_id',$race->id)
+            ->join('cars', 'dev_race_results.car_id','cars.id')
+            ->join('drivers', 'dev_race_results.driver_id','drivers.id')
+            ->select('dev_race_results.id','dev_race_results.position','dev_race_results.penalty','dev_race_results.points','dev_race_results.standardPoints','cars.number','drivers.firstName','drivers.lastName')
+            ->get();
+        $data->view = 'update-race-results-view';
+        return view('main')->with('data',$data);
     }
 
     /**
@@ -211,9 +220,16 @@ class RaceResultsController extends Controller
      * @param  \App\RaceResults  $raceResults
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RaceResults $raceResults)
+    public function update(Request $request)
     {
-        //
+        $raceData = json_decode($request->raceData);
+        \DB::table('dev_race_results')->where('id',$raceData->id)->update(
+            [
+                'points'=>$raceData->points,
+                'penalty'=>$raceData->penalty
+            ]
+        );
+        return ["raceData"=>\DB::table('dev_race_results')->where('id',$raceData->id)->first()];
     }
 
     /**
@@ -288,7 +304,6 @@ class RaceResultsController extends Controller
         }
         return $teamResults;
     }
-
     private function getNextRace($race)
     {
         $third = $race->third;

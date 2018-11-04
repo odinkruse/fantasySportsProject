@@ -53,7 +53,7 @@
 
 <script>
     export default {
-        props:['data'],
+        props:['result'],
         data(){
             return{
                 raceData: {
@@ -73,9 +73,8 @@
         },
         methods:{
             createRace(){
-                this.$http.post('/add-race', {raceData:JSON.stringify(this.raceData)}).then(function(response){
-                    console.log(response);
-                    //this.updateThird();
+                this.$http.post('/add-race', {raceData:JSON.stringify(this.raceData)}).then(function(response) {
+                    window.location.pathname="/";
                 });
             }
         }

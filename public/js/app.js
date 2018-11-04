@@ -43249,7 +43249,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43299,34 +43299,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_homeView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_homeView__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addRaceResults__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_updateSeasonStandings__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_updateSeasonStandings___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_updateSeasonStandings__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_raceResultsView__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_raceResultsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_raceResultsView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_raceResultsIndex__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_raceResultsIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_raceResultsIndex__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_addThird_vue__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_addThird_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsIndex__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsIndex__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_thirdStandingsView__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_thirdStandingsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_thirdStandingsView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsIndex__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsIndex__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_seasonStandingsView__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_seasonStandingsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_seasonStandingsView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_teamCarsView__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_teamCarsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_teamCarsView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_wesBetView__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_wesBetView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_wesBetView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_addRaceView__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_addRaceView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__components_addRaceView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_header__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__global_header__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__global_footer__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__global_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__global_footer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_updateRaceResults__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_updateRaceResults___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_updateRaceResults__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_raceResultsView__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_raceResultsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_raceResultsView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_raceResultsIndex__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_raceResultsIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_raceResultsIndex__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_addThird_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_thirdStandingsIndex__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_thirdStandingsIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_thirdStandingsIndex__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsView__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_seasonStandingsIndex__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_seasonStandingsIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_seasonStandingsIndex__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsView__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_teamCarsView__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_teamCarsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_teamCarsView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_wesBetView__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_wesBetView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_wesBetView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addRaceView__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addRaceView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_addRaceView__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__global_header__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__global_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__global_header__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_footer__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__global_footer__);
 //
 //
 //
@@ -43346,7 +43344,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //Live
 
 
-
+//import UpdateThirdStandings from'./components/updateThirdStandings';
+//import UpdateSeasonStandings from'./components/updateSeasonStandings';
 
 
 
@@ -43362,22 +43361,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        'header-component': __WEBPACK_IMPORTED_MODULE_15__global_header___default.a,
-        'footer-component': __WEBPACK_IMPORTED_MODULE_16__global_footer___default.a,
+        'header-component': __WEBPACK_IMPORTED_MODULE_14__global_header___default.a,
+        'footer-component': __WEBPACK_IMPORTED_MODULE_15__global_footer___default.a,
         'home-view': __WEBPACK_IMPORTED_MODULE_1__components_homeView___default.a,
         'add-race-results-view': __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults___default.a,
-        'update-third-standings-view': __WEBPACK_IMPORTED_MODULE_3__components_updateThirdStandings___default.a,
-        'update-season-standings-view': __WEBPACK_IMPORTED_MODULE_4__components_updateSeasonStandings___default.a,
-        'add-third-view': __WEBPACK_IMPORTED_MODULE_7__components_addThird_vue___default.a,
-        'race-results-view': __WEBPACK_IMPORTED_MODULE_5__components_raceResultsView___default.a,
-        'race-results-index-view': __WEBPACK_IMPORTED_MODULE_6__components_raceResultsIndex___default.a,
-        'third-standings-index-view': __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsIndex___default.a,
-        'third-standings-view': __WEBPACK_IMPORTED_MODULE_9__components_thirdStandingsView___default.a,
-        'season-standings-index-view': __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsIndex___default.a,
-        'season-standings-view': __WEBPACK_IMPORTED_MODULE_11__components_seasonStandingsView___default.a,
-        'team-cars-view': __WEBPACK_IMPORTED_MODULE_12__components_teamCarsView___default.a,
-        'the-wes-bet-view': __WEBPACK_IMPORTED_MODULE_13__components_wesBetView___default.a,
-        'add-race-view': __WEBPACK_IMPORTED_MODULE_14__components_addRaceView___default.a,
+        //'update-third-standings-view':UpdateThirdStandings,
+        //'update-season-standings-view':UpdateSeasonStandings,
+        'update-race-results-view': __WEBPACK_IMPORTED_MODULE_3__components_updateRaceResults___default.a,
+        'add-third-view': __WEBPACK_IMPORTED_MODULE_6__components_addThird_vue___default.a,
+        'race-results-view': __WEBPACK_IMPORTED_MODULE_4__components_raceResultsView___default.a,
+        'race-results-index-view': __WEBPACK_IMPORTED_MODULE_5__components_raceResultsIndex___default.a,
+        'third-standings-index-view': __WEBPACK_IMPORTED_MODULE_7__components_thirdStandingsIndex___default.a,
+        'third-standings-view': __WEBPACK_IMPORTED_MODULE_8__components_thirdStandingsView___default.a,
+        'season-standings-index-view': __WEBPACK_IMPORTED_MODULE_9__components_seasonStandingsIndex___default.a,
+        'season-standings-view': __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsView___default.a,
+        'team-cars-view': __WEBPACK_IMPORTED_MODULE_11__components_teamCarsView___default.a,
+        'the-wes-bet-view': __WEBPACK_IMPORTED_MODULE_12__components_wesBetView___default.a,
+        'add-race-view': __WEBPACK_IMPORTED_MODULE_13__components_addRaceView___default.a,
         //DEV
         'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView___default.a
     },
@@ -43846,7 +43846,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43909,26 +43909,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var vue = this;
             console.log("addRaceResults");
             this.$http.post('/add-race-results', { raceData: JSON.stringify(this.raceData) }).then(function (response) {
-                console.log(response);
-                vue.thirdData.third = response.data.third;
-                vue.updateThird();
-            });
-        },
-        updateThird: function updateThird() {
-            var vue = this;
-            console.log("updateThird");
-            this.$http.post('/update-third-standings', { thirdData: JSON.stringify(this.thirdData) }).then(function (response) {
-                console.log(response);
-                vue.seasonData.season = response.data.season;
-                vue.updateSeason();
-            });
-        },
-        updateSeason: function updateSeason() {
-            console.log("updateSeason");
-            this.$http.post('/update-season-standings', { seasonData: JSON.stringify(this.seasonData) }).then(function (response) {
-                console.log(response);
+                window.location.pathname = "/";
             });
         }
+        // updateThird(){
+        //     const vue = this;
+        //     console.log("updateThird");
+        //     this.$http.post('/update-third-standings', {thirdData:JSON.stringify(this.thirdData)}).then(function(response){
+        //         console.log(response);
+        //         vue.seasonData.season = response.data.season;
+        //         vue.updateSeason();
+        //
+        //     });
+        // },
+        // updateSeason(){
+        //     console.log("updateSeason");
+        //     this.$http.post('/update-season-standings', {seasonData:JSON.stringify(this.seasonData)}).then(function(response){
+        //         console.log(response);
+        //     });
+        //}
+
     }
 });
 
@@ -44018,409 +44018,16 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(61)
-
-var Component = __webpack_require__(2)(
-  /* script */
-  __webpack_require__(63),
-  /* template */
-  __webpack_require__(64),
-  /* scopeId */
-  "data-v-33bcd58c",
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/updateThirdStandings.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] updateThirdStandings.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-33bcd58c", Component.options)
-  } else {
-    hotAPI.reload("data-v-33bcd58c", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(62);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(1)("210704ca", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-33bcd58c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateThirdStandings.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-33bcd58c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateThirdStandings.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 63 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['data'],
-    data: function data() {
-        return {
-            thirdData: {
-                third: this.data.thirds[0]
-            },
-            seasonData: {
-                season: {}
-            }
-        };
-    },
-
-    methods: {
-        updateThird: function updateThird() {
-            for (var el in this.thirdData) {
-                if (el == "") {
-                    alert("Please fill in " + el.constructor.name);
-                    return;
-                }
-            }
-            var vue = this;
-            console.log("updateThird");
-            this.$http.post('/update-third-standings', { thirdData: JSON.stringify(this.thirdData) }).then(function (response) {
-                console.log(response);
-                vue.seasonData.season = response.data.season;
-                vue.updateSeason();
-            });
-        },
-        updateSeason: function updateSeason() {
-            console.log("updateSeason");
-            this.$http.post('/update-season-standings', { seasonData: JSON.stringify(this.seasonData) }).then(function (response) {
-                console.log(response);
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "add-vue container"
-  }, [_c('div', {
-    staticClass: "col-md-10 col-md-offset-1"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('form', [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "third"
-    }
-  }, [_vm._v("Third")]), _vm._v(" "), _c('select', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.thirdData.third),
-      expression: "thirdData.third"
-    }],
-    staticClass: "form-control",
-    attrs: {
-      "id": "third"
-    },
-    on: {
-      "change": function($event) {
-        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
-          return o.selected
-        }).map(function(o) {
-          var val = "_value" in o ? o._value : o.value;
-          return val
-        });
-        _vm.$set(_vm.thirdData, "third", $event.target.multiple ? $$selectedVal : $$selectedVal[0])
-      }
-    }
-  }, _vm._l((_vm.data.thirds), function(third) {
-    return _c('option', {
-      domProps: {
-        "value": third
-      }
-    }, [_vm._v("\n                            " + _vm._s(third.name) + "\n                        ")])
-  }))]), _vm._v(" "), _c('a', {
-    staticClass: "btn btn-primary",
-    on: {
-      "click": _vm.updateThird
-    }
-  }, [_vm._v("\n                    Update Third\n                ")])])])])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-33bcd58c", module.exports)
-  }
-}
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(66)
-
-var Component = __webpack_require__(2)(
-  /* script */
-  __webpack_require__(68),
-  /* template */
-  __webpack_require__(69),
-  /* scopeId */
-  "data-v-1113a03a",
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/updateSeasonStandings.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] updateSeasonStandings.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1113a03a", Component.options)
-  } else {
-    hotAPI.reload("data-v-1113a03a", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(67);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(1)("2c69c1b3", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1113a03a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateSeasonStandings.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1113a03a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateSeasonStandings.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 68 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['data'],
-    data: function data() {
-        return {
-            seasonData: {
-                season: this.data.seasons[0]
-            }
-        };
-    },
-
-    methods: {
-        updateSeason: function updateSeason() {
-            for (var el in this.seasonData) {
-                if (el == "") {
-                    alert("Please fill in " + el.constructor.name);
-                    return;
-                }
-            }
-            console.log("updateSeason");
-            this.$http.post('/update-season-standings', { seasonData: JSON.stringify(this.seasonData) }).then(function (response) {
-                console.log(response);
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "add-vue container"
-  }, [_c('div', {
-    staticClass: "col-md-10 col-md-offset-1"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('form', [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "season"
-    }
-  }, [_vm._v("Season")]), _vm._v(" "), _c('select', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.seasonData.season),
-      expression: "seasonData.season"
-    }],
-    staticClass: "form-control",
-    attrs: {
-      "id": "season"
-    },
-    on: {
-      "change": function($event) {
-        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
-          return o.selected
-        }).map(function(o) {
-          var val = "_value" in o ? o._value : o.value;
-          return val
-        });
-        _vm.$set(_vm.seasonData, "season", $event.target.multiple ? $$selectedVal : $$selectedVal[0])
-      }
-    }
-  }, _vm._l((_vm.data.seasons), function(season) {
-    return _c('option', {
-      domProps: {
-        "value": season
-      }
-    }, [_vm._v("\n                            " + _vm._s(season.name) + "\n                        ")])
-  }))]), _vm._v(" "), _c('a', {
-    staticClass: "btn btn-primary",
-    on: {
-      "click": _vm.updateSeason
-    }
-  }, [_vm._v("\n                    Update Season\n                ")])])])])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1113a03a", module.exports)
-  }
-}
-
-/***/ }),
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45641,6 +45248,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['data'],
@@ -45709,7 +45319,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     style: (_vm.team)
   }, [_c('table', {
     staticClass: "table"
-  }, [_c('tbody', [_c('tr', [_c('td', [_vm._v("\n                                Position\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                Team\n                            ")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v("\n                                Total\n                            ")]), _vm._v(" "), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(1)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(2)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(3)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(4)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(5)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(6)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(7)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(8)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(9)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(10)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(11)))]), _c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(12)))])]), _vm._v(" "), _vm._l((_vm.data.teamThirdStandings), function(teamStanding, index) {
+  }, [_c('tbody', [_c('tr', [_c('td', [_vm._v("\n                                Position\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                Team\n                            ")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v("\n                                Total\n                            ")]), _vm._v(" "), _vm._l((12), function(n) {
+    return [_c('td', [_vm._v("R" + _vm._s(_vm.getRaceNo(n)))])]
+  })], 2), _vm._v(" "), _vm._l((_vm.data.teamThirdStandings), function(teamStanding, index) {
     return _c('tr', [_c('td', [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(teamStanding.number))])]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(_vm.parseFirstName(teamStanding.member1)) + " & " + _vm._s(_vm.parseFirstName(teamStanding.member2)))])]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(teamStanding.third_points) + "\n                            ")]), _vm._v(" "), _c('td', [(teamStanding.race_1_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_1_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_2_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_2_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_3_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_3_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_4_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_4_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_5_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_5_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_6_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_6_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_7_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_7_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_8_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_8_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_9_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_9_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_10_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_10_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_11_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_11_points) + "\n                                ")] : _vm._e()], 2), _vm._v(" "), _c('td', [(teamStanding.race_12_points > 0) ? [_vm._v("\n                                    " + _vm._s(teamStanding.race_12_points) + "\n                                ")] : _vm._e()], 2)])
   })], 2)])]), _vm._v(" "), _c('div', {
     style: (_vm.car)
@@ -46115,7 +45727,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('table', {
     staticClass: "table"
   }, [_c('tbody', [_vm._m(0), _vm._v(" "), _vm._l((_vm.data.teamSeasonStandings), function(teamStanding, index) {
-    return _c('tr', [_c('td', [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(teamStanding.number))])]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(_vm.parseFirstName(teamStanding.member1)) + " & " + _vm._s(_vm.parseFirstName(teamStanding.member2)))])]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(teamStanding.season_points) + "\n                            ")])])
+    return _c('tr', [_c('td', [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(teamStanding.number))])]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(_vm.parseFirstName(teamStanding.member1)) + " & " + _vm._s(_vm.parseFirstName(teamStanding.member2)))])]), _vm._v(" "), _c('td', [_vm._v("\n                            " + _vm._s(teamStanding.season_points) + "\n                        ")])])
   })], 2)])]), _vm._v(" "), _c('div', {
     style: (_vm.car)
   }, [_c('table', {
@@ -46123,12 +45735,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('tbody', [_vm._m(1), _vm._v(" "), _vm._l((_vm.data.carSeasonStandings), function(carStanding, index) {
     return _c('tr', [_c('td', [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c('td', [_c('p', [_vm._v(_vm._s(carStanding.number))])]), _vm._v(" "), _c('td', _vm._l((carStanding.drivers), function(driver) {
       return _c('p', [_vm._v(_vm._s(driver.firstName) + " " + _vm._s(driver.lastName) + " " + _vm._s(driver.suffix))])
-    })), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(carStanding.season_points) + "\n                            ")])])
+    })), _vm._v(" "), _c('td', [_vm._v("\n                            " + _vm._s(carStanding.season_points) + "\n                        ")])])
   })], 2)])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('tr', [_c('td', [_vm._v("\n                                Position\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                Team\n                            ")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v("\n                                Points\n                            ")])])
+  return _c('tr', [_c('td', [_vm._v("\n                            Position\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            Team\n                        ")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td', [_vm._v("\n                            Points\n                        ")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('tr', [_c('td', [_vm._v("\n                                Position\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                Car\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                Driver(s)\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                Points\n                            ")])])
+  return _c('tr', [_c('td', [_vm._v("\n                            Position\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            Car\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            Driver(s)\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            Points\n                        ")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -46369,7 +45981,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.useless[data-v-8e24b9fc]{\n    color: #969EA2;\n}\n", ""]);
+exports.push([module.i, "\n.useless[data-v-8e24b9fc]{\n    color: #969EA2;\n}\n.out[data-v-8e24b9fc]{\n    color:red;\n}\n", ""]);
 
 // exports
 
@@ -46380,6 +45992,9 @@ exports.push([module.i, "\n.useless[data-v-8e24b9fc]{\n    color: #969EA2;\n}\n"
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -46465,17 +46080,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('h1', [_vm._v("Wes's Side Bet")]), _vm._v(" "), _c('table', {
     staticClass: "table"
-  }, [_c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Wes")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1326")]), _vm._v(" "), _c('td', [_vm._v("4")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Darrell")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1422")]), _vm._v(" "), _c('td', [_vm._v("5")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Jason")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1470")]), _vm._v(" "), _c('td', [_vm._v("8")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Bob")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1150")]), _vm._v(" "), _c('td', [_vm._v("7")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Danny")]), _vm._v(" "), _c('td', [_vm._v("2")]), _vm._v(" "), _c('td', [_vm._v("Brad Keslowski")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("1399")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v(" - ")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Odin")]), _vm._v(" "), _c('td', [_vm._v("22")]), _vm._v(" "), _c('td', [_vm._v("Joey Logano")]), _vm._v(" "), _c('td', {
+  }, [_c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Darrell")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1422")]), _vm._v(" "), _c('td', [_vm._v("5")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Wes")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1326")]), _vm._v(" "), _c('td', [_vm._v("4")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Jason")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1470")]), _vm._v(" "), _c('td', [_vm._v("8")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Bob")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1150")]), _vm._v(" "), _c('td', [_vm._v("7")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Odin")]), _vm._v(" "), _c('td', [_vm._v("22")]), _vm._v(" "), _c('td', [_vm._v("Joey Logano")]), _vm._v(" "), _c('td', {
     staticClass: "useless"
   }, [_vm._v("1350")]), _vm._v(" "), _c('td', {
     staticClass: "useless"
-  }, [_vm._v("5")])])])]), _vm._v(" "), _c('p', {
+  }, [_vm._v("5")])]), _vm._v(" "), _c('tr', {
+    staticClass: "out"
+  }, [_c('td', [_vm._v("Danny")]), _vm._v(" "), _c('td', [_vm._v("2")]), _vm._v(" "), _c('td', [_vm._v("Brad Keslowski")]), _vm._v(" "), _c('td', [_vm._v("1399")]), _vm._v(" "), _c('td', [_vm._v(" - ")])])])]), _vm._v(" "), _c('p', {
     staticClass: "useless"
-  }, [_vm._v("\n            Greyed out numbers mean they are more or less useless because there isn't a duplicate pick.\n        ")])])])
+  }, [_vm._v("\n            Greyed out numbers mean they are more or less useless because there isn't a duplicate pick.\n        ")]), _vm._v(" "), _c('p', {
+    staticClass: "out"
+  }, [_vm._v("\n            Red rows mean the driver is out of playoff contention, or an opponent has already beaten you in the tiebreak.\n        ")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -46558,7 +46173,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -46624,7 +46239,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['data'],
+    props: ['result'],
     data: function data() {
         return {
             raceData: {
@@ -46646,8 +46261,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         createRace: function createRace() {
             this.$http.post('/add-race', { raceData: JSON.stringify(this.raceData) }).then(function (response) {
-                console.log(response);
-                //this.updateThird();
+                window.location.pathname = "/";
             });
         }
     }
@@ -47162,6 +46776,409 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(141)
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(143),
+  /* template */
+  __webpack_require__(144),
+  /* scopeId */
+  "data-v-6c11a09b",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/updateRaceResults.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] updateRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6c11a09b", Component.options)
+  } else {
+    hotAPI.reload("data-v-6c11a09b", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(142);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("4faa57ec", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-6c11a09b\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateRaceResults.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-6c11a09b\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./updateRaceResults.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 142 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 143 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__subcomponents_raceUpdateRow__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__subcomponents_raceUpdateRow___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__subcomponents_raceUpdateRow__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        RowComponent: __WEBPACK_IMPORTED_MODULE_0__subcomponents_raceUpdateRow___default.a,
+        'row-component': __WEBPACK_IMPORTED_MODULE_0__subcomponents_raceUpdateRow___default.a
+    },
+    props: ['data'],
+    data: function data() {
+        return {
+            raceData: this.data.raceResults
+        };
+    },
+
+    methods: {
+        commitUpdate: function commitUpdate(index) {}
+    }
+});
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "update-race-results-vue container"
+  }, [_c('div', {
+    staticClass: "col-md-10 col-md-offset-1"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('h1', [_vm._v(_vm._s(_vm.data.race.name) + " " + _vm._s(_vm.data.race.raceDate))]), _vm._v(" "), _c('table', {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_vm._l((_vm.raceData), function(result) {
+    return [_c('row-component', {
+      attrs: {
+        "result": result
+      }
+    })]
+  })], 2)])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('th', [_vm._v("\n                            Position\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Car Number\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Driver\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Standard Points\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Penalty\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Total Points\n                        ")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6c11a09b", module.exports)
+  }
+}
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(146)
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(148),
+  /* template */
+  __webpack_require__(149),
+  /* scopeId */
+  "data-v-684a3a86",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/subcomponents/raceUpdateRow.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] raceUpdateRow.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-684a3a86", Component.options)
+  } else {
+    hotAPI.reload("data-v-684a3a86", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(147);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("b68ac6a2", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-684a3a86\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./raceUpdateRow.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-684a3a86\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./raceUpdateRow.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 148 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ["result"],
+    data: function data() {
+        return {
+            updateOpen: false,
+            initialPenalty: this.result.penalty,
+            initialPoints: this.result.points
+        };
+    },
+
+    methods: {
+        updateRace: function updateRace() {
+            this.updateOpen = true;
+        },
+        cancelUpdate: function cancelUpdate() {
+            this.updateOpen = false;
+            this.result.penalty = this.initialPenalty;
+            this.result.points = this.initialPoints;
+        },
+        commitUpdate: function commitUpdate() {
+            var vue = this;
+            this.$http.post('/update-race-results', { raceData: JSON.stringify(this.result) }).then(function (response) {
+                vue.updateOpen = false;
+                vue.result.penalty = response.data.raceData.penalty;
+                vue.result.points = response.data.raceData.points;
+                vue.initialPenalty = response.data.raceData.penalty;
+                vue.initialPoints = response.data.raceData.points;
+                console.log(response);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('tr', [_c('td', [_vm._v("\n        " + _vm._s(_vm.result.position) + "\n    ")]), _vm._v(" "), _c('td', [_vm._v("\n        " + _vm._s(_vm.result.number) + "\n    ")]), _vm._v(" "), _c('td', [_vm._v("\n        " + _vm._s(_vm.result.firstName) + " " + _vm._s(_vm.result.lastName) + "\n    ")]), _vm._v(" "), _c('td', [_vm._v("\n        " + _vm._s(_vm.result.standardPoints) + "\n    ")]), _vm._v(" "), (_vm.updateOpen) ? _c('td', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.result.penalty),
+      expression: "result.penalty"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "number"
+    },
+    domProps: {
+      "value": (_vm.result.penalty)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.result, "penalty", $event.target.value)
+      }
+    }
+  })]) : _c('td', [_vm._v("\n        " + _vm._s(_vm.result.penalty) + "\n    ")]), _vm._v(" "), (_vm.updateOpen) ? _c('td', [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.result.points),
+      expression: "result.points"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "number"
+    },
+    domProps: {
+      "value": (_vm.result.points)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.$set(_vm.result, "points", $event.target.value)
+      }
+    }
+  })]) : _c('td', [_vm._v("\n        " + _vm._s(_vm.result.points) + "\n    ")]), _vm._v(" "), (!_vm.updateOpen) ? _c('td', [_c('a', {
+    on: {
+      "click": _vm.updateRace
+    }
+  }, [_vm._v("Update")])]) : _c('td', [_c('a', {
+    on: {
+      "click": _vm.cancelUpdate
+    }
+  }, [_vm._v("Cancel")]), _vm._v(" / "), _c('a', {
+    on: {
+      "click": _vm.commitUpdate
+    }
+  }, [_vm._v("Commit")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-684a3a86", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
