@@ -204,10 +204,10 @@ class RaceResultsController extends Controller
         $data = new \stdClass();
         $data->json = new \stdClass();
         $data->json->race = Race::where('id',$race->id)->first();
-        $data->json->raceResults = \DB::table('dev_race_results')->where('race_id',$race->id)
-            ->join('cars', 'dev_race_results.car_id','cars.id')
-            ->join('drivers', 'dev_race_results.driver_id','drivers.id')
-            ->select('dev_race_results.id','dev_race_results.position','dev_race_results.penalty','dev_race_results.points','dev_race_results.standardPoints','cars.number','drivers.firstName','drivers.lastName')
+        $data->json->raceResults = RaceResults::where('race_id',$race->id)
+            ->join('cars', 'race_results.car_id','cars.id')
+            ->join('drivers', 'race_results.driver_id','drivers.id')
+            ->select('race_results.id','race_results.position','race_results.penalty','race_results.points','race_results.standardPoints','cars.number','drivers.firstName','drivers.lastName')
             ->get();
         $data->view = 'update-race-results-view';
         return view('main')->with('data',$data);
@@ -223,13 +223,13 @@ class RaceResultsController extends Controller
     public function update(Request $request)
     {
         $raceData = json_decode($request->raceData);
-        \DB::table('dev_race_results')->where('id',$raceData->id)->update(
+        RaceResults::where('id',$raceData->id)->update(
             [
                 'points'=>$raceData->points,
                 'penalty'=>$raceData->penalty
             ]
         );
-        return ["raceData"=>\DB::table('dev_race_results')->where('id',$raceData->id)->first()];
+        return ["raceData"=>RaceResults::where('id',$raceData->id)->first()];
     }
 
     /**
