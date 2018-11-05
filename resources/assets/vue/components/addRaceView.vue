@@ -53,7 +53,7 @@
 
 <script>
     export default {
-        props:['result'],
+        props:['data'],
         data(){
             return{
                 raceData: {
