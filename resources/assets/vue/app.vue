@@ -30,6 +30,7 @@
     import TeamCars from './components/teamCarsView';
     import WesBet from './components/wesBetView';
     import AddRace from './components/addRaceView';
+    import ShowTestRace from './components/showTestRace';
     import Header from'./global/header';
     import Footer from './global/footer';
     export default {
@@ -52,7 +53,8 @@
             'the-wes-bet-view':WesBet,
             'add-race-view': AddRace,
             //DEV
-            'test-dump-view': TestDump
+            'test-dump-view': TestDump,
+            'show-test-race':ShowTestRace
         },
         props:['json','view'],
         created(){

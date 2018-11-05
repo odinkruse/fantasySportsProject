@@ -32,6 +32,7 @@ Route::get('/season-standings','SeasonStandingsController@index');
 Route::get('/season-standings/{season}','SeasonStandingsController@show');
 Route::get('/the-wes-bet','Home@wesBet');
 Route::get('/add-race','RaceController@Create');
+Route::get('/show-test-race','RaceResultsController@showTestRace');
 
 //POST
 Route::post('/add-race-results', 'RaceResultsController@store');
@@ -40,6 +41,8 @@ Route::post('/add-race-results', 'RaceResultsController@store');
 Route::post('/add-race','RaceController@Store');
 //Route::post('/update-season-standings', 'SeasonController@updateSeasonStandings');
 Route::post('/update-race-results', 'RaceResultsController@update');
+Route::post('/get-test-race','RaceResultsController@getTestRace');
+
 
 Auth::routes();
 

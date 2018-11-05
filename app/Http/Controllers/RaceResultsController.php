@@ -389,4 +389,54 @@ class RaceResultsController extends Controller
             }
         }
     }
+    public function getTestRace(Request $request)
+    {
+        $url = json_decode($request->url);
+
+        //$third = Third::where('id',$raceData->race->third_id)->first();
+
+        //$race = Race::where('id',$raceData->race->id)->first();
+        $client = new Client();
+        $html = $client->request('GET', $url);
+        $test1 = $html->filterXPath('//text()[contains(.,\'#\')][following-sibling::br][1]');
+        $test2 = $html->filterXPath('//text()[contains(.,\'#\')][following-sibling::br][2]');
+        $table = $html->filterXPath('//table[@class="tb"][3]');
+        $testArr = $tableArray = $table->filter('p')->each(function ($cell) {
+            return $cell->text();
+        });
+        $tableArray = $table->filter('tr')->each(function ($row) {
+            return $rowArray = $row->filter('td')->each(function ($cell) {
+                return preg_replace("/[^A-Za-z0-9 ]/", '', preg_replace('/\n/', "", $cell->text()));
+            });
+        });
+        $resultArray = array();
+        foreach($tableArray as $row)
+        {
+            if(!empty($row)) {
+                //$teamCarData = $this->getTeamForCar($row[self::CAR], $third->id);
+                $queryObj = new \stdClass();
+                //$queryObj->teamCarData = $teamCarData;
+                //$queryObj->race_id = $race->id;
+                //$queryObj->team_id = $teamCarData->teamNumber;
+                $queryObj->car = $row[self::CAR];//$teamCarData->car_id;
+                $queryObj->driver = $row[self::DRIVER];//$this->getDriverId($row[self::DRIVER], $teamCarData->car_id, $race->third->season->id);
+                $queryObj->position = $row[self::POSITION];
+                $queryObj->points = $row[self::POINTS];
+
+                array_push($resultArray, $queryObj);
+            }
+        }
+        $raceData = new \stdClass();
+        $raceData->resultArray = $resultArray;
+        $raceData->test1 = $test1->text();
+        $raceData->test2 = $test2->text();
+        return ['raceData' => $raceData];
+    }
+    public function showTestRace()
+    {
+        $data = new \stdClass();
+        $data->json = new \stdClass();
+        $data->view = "show-test-race";
+        return view('main')->with("data",$data);
+    }
 }

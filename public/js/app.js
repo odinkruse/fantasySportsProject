@@ -43249,7 +43249,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43321,10 +43321,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_wesBetView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_wesBetView__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addRaceView__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addRaceView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_addRaceView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__global_header__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__global_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__global_header__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_footer__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__global_footer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_showTestRace__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_showTestRace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__components_showTestRace__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_header__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__global_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__global_header__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__global_footer__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__global_footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__global_footer__);
 //
 //
 //
@@ -43359,10 +43361,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        'header-component': __WEBPACK_IMPORTED_MODULE_14__global_header___default.a,
-        'footer-component': __WEBPACK_IMPORTED_MODULE_15__global_footer___default.a,
+        'header-component': __WEBPACK_IMPORTED_MODULE_15__global_header___default.a,
+        'footer-component': __WEBPACK_IMPORTED_MODULE_16__global_footer___default.a,
         'home-view': __WEBPACK_IMPORTED_MODULE_1__components_homeView___default.a,
         'add-race-results-view': __WEBPACK_IMPORTED_MODULE_2__components_addRaceResults___default.a,
         //'update-third-standings-view':UpdateThirdStandings,
@@ -43379,7 +43382,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         'the-wes-bet-view': __WEBPACK_IMPORTED_MODULE_12__components_wesBetView___default.a,
         'add-race-view': __WEBPACK_IMPORTED_MODULE_13__components_addRaceView___default.a,
         //DEV
-        'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView___default.a
+        'test-dump-view': __WEBPACK_IMPORTED_MODULE_0__components_testDumpView___default.a,
+        'show-test-race': __WEBPACK_IMPORTED_MODULE_14__components_showTestRace___default.a
     },
     props: ['json', 'view'],
     created: function created() {
@@ -44278,6 +44282,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['data'],
@@ -44317,9 +44322,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-xs-6"
-  }, [(_vm.data.lastRace != null) ? [_c('div', {
-    staticClass: "row"
-  }, [_c('span', {
+  }, [(_vm.data.lastRace != null) ? [_c('span', {
     staticClass: "return bold"
   }, [_vm._v("Last - " + _vm._s(_vm.data.lastRace.raceDate))]), _vm._v(" "), (_vm.data.lastRace.resultsImported == 1) ? [_c('a', {
     attrs: {
@@ -44327,11 +44330,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("\n                                 " + _vm._s(_vm.data.lastRace.name) + "\n                            ")])] : [_c('span', {
     staticClass: "return"
-  }, [_vm._v(_vm._s(_vm.data.lastRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]], 2)] : _vm._e()], 2), _vm._v(" "), _c('div', {
+  }, [_vm._v(_vm._s(_vm.data.lastRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]] : _vm._e()], 2), _vm._v(" "), _c('div', {
     staticClass: "col-xs-6 text-right"
-  }, [(_vm.data.nextRace != null) ? [_c('div', {
-    staticClass: "row"
-  }, [_c('span', {
+  }, [(_vm.data.nextRace != null) ? [_c('span', {
     staticClass: "return bold"
   }, [_vm._v("Next - " + _vm._s(_vm.data.nextRace.raceDate))]), _vm._v(" "), (_vm.data.nextRace.resultsImported == true) ? [_c('a', {
     attrs: {
@@ -44339,8 +44340,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("\n                                 " + _vm._s(_vm.data.nextRace.name) + "\n                            ")])] : [_c('span', {
     staticClass: "return"
-  }, [_vm._v(_vm._s(_vm.data.nextRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]], 2)] : _vm._e()], 2)]), _vm._v(" "), _c('div', {
-    staticClass: "row"
+  }, [_vm._v(_vm._s(_vm.data.nextRace.name))]), _vm._v(" "), _c('span', [_vm._v("Results Not Available")])]] : _vm._e()], 2), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-12"
   }, [_c('h2', [_vm._v("Results for " + _vm._s(_vm.data.race.name))]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "nav nav-pills"
   }, [_c('li', {
@@ -44362,7 +44363,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Car Results")])])])]), _vm._v(" "), _c('div', {
     style: (_vm.team)
   }, [_vm._l((_vm.data.raceResultsByTeam), function(TeamResults) {
-    return [_c('h3', [_vm._v("\n                        Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                    ")]), _vm._v(" "), _c('table', {
+    return [_c('h3', [_vm._v("\n                            Team " + _vm._s(TeamResults.Team.number) + " - " + _vm._s(TeamResults.Team.member1) + " & " + _vm._s(TeamResults.Team.member2) + "\n                        ")]), _vm._v(" "), _c('table', {
       staticClass: "table"
     }, [_c('tbody', [_vm._m(0, true), _vm._v(" "), _vm._l((TeamResults.Results), function(Results) {
       return _c('tr', [_c('td', [_vm._v(_vm._s(Results.carNumber))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(Results.driverName.firstName) + " " + _vm._s(Results.driverName.lastName))]), _vm._v(" "), (Results.penalty == 0) ? _c('td', [_vm._v(_vm._s(Results.points))]) : (Results.penalty > 0) ? _c('td', {
@@ -44378,18 +44379,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('table', {
     staticClass: "table"
   }, [_c('tbody', [_vm._m(1), _vm._v(" "), _vm._l((_vm.data.raceResultsByCar), function(CarResults) {
-    return _c('tr', [_c('td', [_vm._v("\n                                " + _vm._s(CarResults.position) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.carNumber) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.driver) + "\n                            ")]), _vm._v(" "), _c('td', [_vm._v("\n\n                                " + _vm._s(CarResults.standardPoints) + "\n                            ")]), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points - CarResults.standardPoints) + "\n                                ")] : [_vm._v("\n                                    0\n                                ")]], 2), _vm._v(" "), _c('td', {
+    return _c('tr', [_c('td', [_vm._v("\n                                    " + _vm._s(CarResults.position) + "\n                                ")]), _vm._v(" "), _c('td', [_vm._v("\n                                    " + _vm._s(CarResults.carNumber) + "\n                                ")]), _vm._v(" "), _c('td', [_vm._v("\n                                    " + _vm._s(CarResults.driver) + "\n                                ")]), _vm._v(" "), _c('td', [_vm._v("\n\n                                    " + _vm._s(CarResults.standardPoints) + "\n                                ")]), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                        " + _vm._s(CarResults.points - CarResults.standardPoints) + "\n                                    ")] : [_vm._v("\n                                        0\n                                    ")]], 2), _vm._v(" "), _c('td', {
       staticStyle: {
         "color": "red"
       }
-    }, [(CarResults.penalty == 0) ? void 0 : (CarResults.penalty > 0) ? [_vm._v(_vm._s(CarResults.penalty))] : _vm._e()], 2), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                    " + _vm._s(CarResults.points - CarResults.penalty) + "\n                                ")] : [_vm._v("\n                                    " + _vm._s(CarResults.standardPoints) + "\n                                ")]], 2), _vm._v(" "), _c('td', [_vm._v("\n                                " + _vm._s(CarResults.team) + "\n                            ")])])
-  })], 2)])])])])])
+    }, [(CarResults.penalty == 0) ? void 0 : (CarResults.penalty > 0) ? [_vm._v(_vm._s(CarResults.penalty))] : _vm._e()], 2), _vm._v(" "), _c('td', [(CarResults.points > 0) ? [_vm._v("\n                                        " + _vm._s(CarResults.points - CarResults.penalty) + "\n                                    ")] : [_vm._v("\n                                        " + _vm._s(CarResults.standardPoints) + "\n                                    ")]], 2), _vm._v(" "), _c('td', [_vm._v("\n                                    " + _vm._s(CarResults.team) + "\n                                ")])])
+  })], 2)])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('tr', {
     staticClass: "bold"
   }, [_c('td', [_vm._v("Car")]), _vm._v(" "), _c('td', [_vm._v("Driver")]), _vm._v(" "), _c('td', [_vm._v("Points")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('tr', [_c('td', [_c('strong', [_vm._v("\n                                    Pos.\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Car\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Driver\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Std Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Stage Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Penalty\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Total Pts\n                                ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                    Team\n                                ")])])])
+  return _c('tr', [_c('td', [_c('strong', [_vm._v("\n                                        Pos.\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Car\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Driver\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Std Pts\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Stage Pts\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Penalty\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Total Pts\n                                    ")])]), _vm._v(" "), _c('td', [_c('strong', [_vm._v("\n                                        Team\n                                    ")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -46080,11 +46081,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('h1', [_vm._v("Wes's Side Bet")]), _vm._v(" "), _c('table', {
     staticClass: "table"
-  }, [_c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Darrell")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1422")]), _vm._v(" "), _c('td', [_vm._v("5")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Wes")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1326")]), _vm._v(" "), _c('td', [_vm._v("4")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Jason")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1470")]), _vm._v(" "), _c('td', [_vm._v("8")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Bob")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1150")]), _vm._v(" "), _c('td', [_vm._v("7")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Odin")]), _vm._v(" "), _c('td', [_vm._v("22")]), _vm._v(" "), _c('td', [_vm._v("Joey Logano")]), _vm._v(" "), _c('td', {
+  }, [_c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Jason")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', {
+    staticClass: "useless"
+  }, [_vm._v("1470")]), _vm._v(" "), _c('td', {
+    staticClass: "useless"
+  }, [_vm._v("8")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Darrell")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1422")]), _vm._v(" "), _c('td', [_vm._v("5")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Wes")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1326")]), _vm._v(" "), _c('td', [_vm._v("4")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Odin")]), _vm._v(" "), _c('td', [_vm._v("22")]), _vm._v(" "), _c('td', [_vm._v("Joey Logano")]), _vm._v(" "), _c('td', {
     staticClass: "useless"
   }, [_vm._v("1350")]), _vm._v(" "), _c('td', {
     staticClass: "useless"
   }, [_vm._v("5")])]), _vm._v(" "), _c('tr', {
+    staticClass: "out"
+  }, [_c('td', [_vm._v("Bob")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1150")]), _vm._v(" "), _c('td', [_vm._v("7")])]), _vm._v(" "), _c('tr', {
     staticClass: "out"
   }, [_c('td', [_vm._v("Danny")]), _vm._v(" "), _c('td', [_vm._v("2")]), _vm._v(" "), _c('td', [_vm._v("Brad Keslowski")]), _vm._v(" "), _c('td', [_vm._v("1399")]), _vm._v(" "), _c('td', [_vm._v(" - ")])])])]), _vm._v(" "), _c('p', {
     staticClass: "useless"
@@ -47177,6 +47184,238 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-684a3a86", module.exports)
+  }
+}
+
+/***/ }),
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(156)
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(158),
+  /* template */
+  __webpack_require__(159),
+  /* scopeId */
+  "data-v-7bf6ea31",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/showTestRace.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] showTestRace.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7bf6ea31", Component.options)
+  } else {
+    hotAPI.reload("data-v-7bf6ea31", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(157);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("17dce07c", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7bf6ea31\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./showTestRace.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7bf6ea31\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./showTestRace.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 157 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 158 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            url: '',
+            resultArray: [],
+            test1: '',
+            test2: '',
+            data: {}
+        };
+    },
+
+    methods: {
+        addUrl: function addUrl() {
+            var vue = this;
+            this.$http.post('/get-test-race', { url: JSON.stringify(this.url) }).then(function (response) {
+                vue.data = response.data;
+                vue.resultArray = response.data.raceData.resultArray;
+                vue.test1 = response.data.raceData.test1;
+                vue.test2 = response.data.raceData.test2;
+                console.log(response);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "show-race-test-vue container"
+  }, [_c('div', {
+    staticClass: "col-md-10 col-md-offset-1"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('form', [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "resultsURL"
+    }
+  }, [_vm._v("ResultsURL")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.url),
+      expression: "url"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "resultsURL",
+      "placeholder": "www.espn.com"
+    },
+    domProps: {
+      "value": (_vm.url)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.url = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-primary",
+    on: {
+      "click": _vm.addUrl
+    }
+  }, [_vm._v("\n                    Get Results\n                ")])]), _vm._v(" "), _c('table', {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.resultArray), function(result) {
+    return _c('tr', [_c('td', [_vm._v("\n                            " + _vm._s(result.position) + "\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            " + _vm._s(result.car) + "\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            " + _vm._s(result.driver) + "\n                        ")]), _vm._v(" "), _c('td', [_vm._v("\n                            " + _vm._s(result.points) + "\n                        ")])])
+  }))]), _vm._v(" "), _c('div', [_vm._v("\n                " + _vm._s(_vm.test1) + "\n            ")]), _vm._v(" "), _c('div', [_vm._v("\n                " + _vm._s(_vm.test2) + "\n            ")])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('th', [_vm._v("\n                            Position\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Car\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Driver\n                        ")]), _vm._v(" "), _c('th', [_vm._v("\n                            Points\n                        ")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-7bf6ea31", module.exports)
   }
 }
 
