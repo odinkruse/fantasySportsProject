@@ -74,6 +74,7 @@
         methods:{
             createRace(){
                 this.$http.post('/add-race', {raceData:JSON.stringify(this.raceData)}).then(function(response) {
+                    console.log(response);
                     window.location.pathname="/";
                 });
             }
