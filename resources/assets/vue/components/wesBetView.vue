@@ -13,26 +13,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Jason</td>
-                    <td>4</td>
-                    <td>Kevin Harvick</td>
-                    <td class="useless">1470</td>
-                    <td class="useless">8</td>
-                </tr>
+                    <tr>
+                        <td>Jason</td>
+                        <td>4</td>
+                        <td>Kevin Harvick</td>
+                        <td class="useless">1470</td>
+                        <td class="useless">8</td>
+                    </tr>
                     <tr>
                         <td>Darrell</td>
                         <td>18</td>
                         <td>KY Busch</td>
-                        <td>1422</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>Wes</td>
-                        <td>18</td>
-                        <td>KY Busch</td>
-                        <td>1326</td>
-                        <td>4</td>
+                        <td class="useless">1422</td>
+                        <td class="useless">5</td>
                     </tr>
                     <tr>
                         <td>Odin</td>
@@ -40,6 +33,13 @@
                         <td>Joey Logano</td>
                         <td class="useless">1350</td>
                         <td class="useless">5</td>
+                    </tr>
+                    <tr class="out">
+                        <td>Wes</td>
+                        <td>18</td>
+                        <td>KY Busch</td>
+                        <td>1326</td>
+                        <td>4</td>
                     </tr>
                     <tr class="out">
                         <td>Bob</td>

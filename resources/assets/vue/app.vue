@@ -17,8 +17,6 @@
     //Live
     import Home from './components/homeView';
     import AddRaceResults from './components/addRaceResults';
-    //import UpdateThirdStandings from'./components/updateThirdStandings';
-    //import UpdateSeasonStandings from'./components/updateSeasonStandings';
     import UpdateRaceResults from'./components/updateRaceResults';
     import RaceResultsView from './components/raceResultsView';
     import RaceResultsList from './components/raceResultsIndex';
@@ -39,8 +37,6 @@
             'footer-component': Footer,
             'home-view': Home,
             'add-race-results-view': AddRaceResults,
-            //'update-third-standings-view':UpdateThirdStandings,
-            //'update-season-standings-view':UpdateSeasonStandings,
             'update-race-results-view':UpdateRaceResults,
             'add-third-view': AddThird,
             'race-results-view': RaceResultsView,
@@ -52,6 +48,7 @@
             'team-cars-view': TeamCars,
             'the-wes-bet-view':WesBet,
             'add-race-view': AddRace,
+
             //DEV
             'test-dump-view': TestDump,
             'show-test-race':ShowTestRace
@@ -70,11 +67,6 @@
             console.log("data");
             console.log(this.data);
         }
-//        data(){
-//            return{
-//                data
-//            }
-//        }
     };
 </script>
 <style>
