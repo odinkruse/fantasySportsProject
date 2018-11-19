@@ -46358,7 +46358,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.useless[data-v-8e24b9fc]{\n    color: #969EA2;\n}\n.out[data-v-8e24b9fc]{\n    color:red;\n}\n", ""]);
+exports.push([module.i, "\n.useless[data-v-8e24b9fc]{\n    color: #969EA2;\n}\n.out[data-v-8e24b9fc]{\n    color:red;\n}\n.winner[data-v-8e24b9fc]{\n    color:limegreen;\n    font-size:16px;\n}\n", ""]);
 
 // exports
 
@@ -46457,19 +46457,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-10 col-md-offset-1"
   }, [_c('h1', [_vm._v("Wes's Side Bet")]), _vm._v(" "), _c('table', {
     staticClass: "table"
-  }, [_c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Jason")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("1470")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("8")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Darrell")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("1422")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("5")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Odin")]), _vm._v(" "), _c('td', [_vm._v("22")]), _vm._v(" "), _c('td', [_vm._v("Joey Logano")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("1350")]), _vm._v(" "), _c('td', {
-    staticClass: "useless"
-  }, [_vm._v("5")])]), _vm._v(" "), _c('tr', {
+  }, [_c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])])])]), _vm._v(" "), _c('tbody', [_c('tr', {
+    staticClass: "winner"
+  }, [_c('td', [_vm._v("Odin")]), _vm._v(" "), _c('td', [_vm._v("22")]), _vm._v(" "), _c('td', [_vm._v("Joey Logano")]), _vm._v(" "), _c('td', [_vm._v("1350")]), _vm._v(" "), _c('td', [_vm._v("5")])]), _vm._v(" "), _c('tr', {
+    staticClass: "out"
+  }, [_c('td', [_vm._v("Jason")]), _vm._v(" "), _c('td', [_vm._v("4")]), _vm._v(" "), _c('td', [_vm._v("Kevin Harvick")]), _vm._v(" "), _c('td', [_vm._v("1470")]), _vm._v(" "), _c('td', [_vm._v("8")])]), _vm._v(" "), _c('tr', {
+    staticClass: "out"
+  }, [_c('td', [_vm._v("Darrell")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1422")]), _vm._v(" "), _c('td', [_vm._v("5")])]), _vm._v(" "), _c('tr', {
     staticClass: "out"
   }, [_c('td', [_vm._v("Wes")]), _vm._v(" "), _c('td', [_vm._v("18")]), _vm._v(" "), _c('td', [_vm._v("KY Busch")]), _vm._v(" "), _c('td', [_vm._v("1326")]), _vm._v(" "), _c('td', [_vm._v("4")])]), _vm._v(" "), _c('tr', {
     staticClass: "out"
