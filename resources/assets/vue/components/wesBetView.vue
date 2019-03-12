@@ -8,52 +8,17 @@
                         <td></td>
                         <td><h3>Car</h3></td>
                         <td><h3>Driver</h3></td>
-                        <td><h3>Points</h3></td>
                         <td><h3>Wins</h3></td>
+                        <td><h3>Points</h3></td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="winner">
-                        <td>Odin</td>
-                        <td>22</td>
-                        <td>Joey Logano</td>
-                        <td>1350</td>
-                        <td>5</td>
-                    </tr>
-                    <tr class="out">
-                        <td>Jason</td>
-                        <td>4</td>
-                        <td>Kevin Harvick</td>
-                        <td>1470</td>
-                        <td>8</td>
-                    </tr>
-                    <tr class="out">
-                        <td>Darrell</td>
-                        <td>18</td>
-                        <td>KY Busch</td>
-                        <td>1422</td>
-                        <td>5</td>
-                    </tr>
-                    <tr class="out">
-                        <td>Wes</td>
-                        <td>18</td>
-                        <td>KY Busch</td>
-                        <td>1326</td>
-                        <td>4</td>
-                    </tr>
-                    <tr class="out">
-                        <td>Bob</td>
-                        <td>4</td>
-                        <td>Kevin Harvick</td>
-                        <td>1150</td>
-                        <td>7</td>
-                    </tr>
-                    <tr class="out">
-                        <td>Danny</td>
-                        <td>2</td>
-                        <td>Brad Keslowski</td>
-                        <td>1399</td>
-                        <td> - </td>
+                    <tr v-for="bet in data.betData">
+                        <td>{{bet.name}}</td>
+                        <td>{{bet.number}}</td>
+                        <td>{{bet.firstName}} {{bet.lastName}}</td>
+                        <td>{{bet.wins}}</td>
+                        <td>{{bet.points}}</td>
                     </tr>
                 </tbody>
             </table>

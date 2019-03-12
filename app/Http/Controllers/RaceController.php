@@ -43,7 +43,6 @@ class RaceController extends Controller
     {
         $raceData = json_decode($request->raceData);
         $race = Race::where('third_id', $raceData->third->id)->where('raceNo',$raceData->raceNumber)->first();
-        $race = Race::where('third_id', $raceData->third->id)->where('raceNo',$raceData->raceNumber)->first();
         if($race == null)
         {
             $race = new Race();
@@ -79,7 +78,7 @@ class RaceController extends Controller
      */
     public function show(Race $race)
     {
-        //
+
     }
 
     /**

@@ -29,6 +29,7 @@
     import WesBet from './components/wesBetView';
     import AddRace from './components/addRaceView';
     import ShowTestRace from './components/showTestRace';
+    import AddWesBet from './components/addWesBet';
     import Header from'./global/header';
     import Footer from './global/footer';
     export default {
@@ -46,8 +47,9 @@
             'season-standings-index-view': SeasonStandingsIndex,
             'season-standings-view': SeasonStandingsView,
             'team-cars-view': TeamCars,
-            'the-wes-bet-view':WesBet,
+            'the-wes-bet-view': WesBet,
             'add-race-view': AddRace,
+            'add-wes-bet-view': AddWesBet,
 
             //DEV
             'test-dump-view': TestDump,
