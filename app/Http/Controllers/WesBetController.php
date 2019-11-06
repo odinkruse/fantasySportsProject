@@ -69,7 +69,7 @@ class WesBetController extends Controller
             ->join('cars', 'wes_bets.car_id', '=', 'cars.id')
             ->where('wes_bets.season_id', '=', '3')
             ->where('drivers.season_id', '=', '3')
-            ->select('wes_bets.name','wes_bets.points','wes_bets.wins', 'cars.number', 'drivers.firstName','drivers.lastName')
+            ->select('wes_bets.name','wes_bets.points','wes_bets.wins', 'cars.number', 'drivers.firstName','drivers.lastName','wes_bets.out')
             ->orderBy('cars.number')
             ->get();
         $data->view = "the-wes-bet-view";

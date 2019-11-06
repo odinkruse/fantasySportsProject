@@ -43194,7 +43194,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/app.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/app.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] app.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -43317,7 +43317,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_seasonStandingsView__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_teamCarsView__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_teamCarsView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_teamCarsView__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_wesBetView__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_wesBetView__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_wesBetView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_wesBetView__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addRaceView__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addRaceView___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_addRaceView__);
@@ -43420,7 +43420,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/testDumpView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/testDumpView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] testDumpView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -43538,7 +43538,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/homeView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/homeView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] homeView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -43790,7 +43790,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/addRaceResults.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addRaceResults.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] addRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44034,7 +44034,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/updateRaceResults.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/updateRaceResults.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] updateRaceResults.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44178,7 +44178,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/subcomponents/raceUpdateRow.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/subcomponents/raceUpdateRow.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] raceUpdateRow.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44429,7 +44429,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/raceResultsView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/raceResultsView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] raceResultsView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44798,7 +44798,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/raceResultsIndex.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/raceResultsIndex.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] raceResultsIndex.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44938,7 +44938,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/addThird.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addThird.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] addThird.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44993,7 +44993,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.inline{\r\n    display: inline-block;\n}\r\n", ""]);
+exports.push([module.i, "\n.inline{\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -45201,7 +45201,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/thirdStandingsIndex.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/thirdStandingsIndex.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] thirdStandingsIndex.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45337,7 +45337,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/thirdStandingsView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/thirdStandingsView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] thirdStandingsView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45762,7 +45762,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/seasonStandingsIndex.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/seasonStandingsIndex.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] seasonStandingsIndex.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45891,7 +45891,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/seasonStandingsView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/seasonStandingsView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] seasonStandingsView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -46149,7 +46149,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/teamCarsView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/teamCarsView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] teamCarsView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -46290,11 +46290,166 @@ if (false) {
 }
 
 /***/ }),
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(111)
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(113),
+  /* template */
+  __webpack_require__(114),
+  /* scopeId */
+  "data-v-8e24b9fc",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/wesBetView.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] wesBetView.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8e24b9fc", Component.options)
+  } else {
+    hotAPI.reload("data-v-8e24b9fc", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(112);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("4fba3879", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-8e24b9fc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wesBetView.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-8e24b9fc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wesBetView.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 113 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__subcomponents_wesBetRow__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__subcomponents_wesBetRow___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__subcomponents_wesBetRow__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        RowComponent: __WEBPACK_IMPORTED_MODULE_0__subcomponents_wesBetRow___default.a,
+        'row-component': __WEBPACK_IMPORTED_MODULE_0__subcomponents_wesBetRow___default.a
+    },
+    props: ['data']
+});
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wes-bet-vue container"
+  }, [_c('div', {
+    staticClass: "col-md-10 col-md-offset-1"
+  }, [_c('h1', [_vm._v("Wes's Side Bet")]), _vm._v(" "), _c('table', {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_vm._l((_vm.data.betData), function(row) {
+    return [_c('row-component', {
+      attrs: {
+        "rowData": row
+      }
+    })]
+  })], 2)]), _vm._v(" "), _c('p', {
+    staticClass: "useless"
+  }, [_vm._v("\n            Greyed out numbers mean they are more or less useless because there isn't a duplicate pick.\n        ")]), _vm._v(" "), _c('p', {
+    staticClass: "out"
+  }, [_vm._v("\n            Red rows mean the driver is out of playoff contention, or an opponent has already beaten you in the tiebreak.\n        ")])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-8e24b9fc", module.exports)
+  }
+}
+
+/***/ }),
 /* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -46312,7 +46467,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/addRaceView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addRaceView.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] addRaceView.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -46699,7 +46854,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/showTestRace.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/showTestRace.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] showTestRace.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -46926,7 +47081,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/addWesBet.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/addWesBet.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] addWesBet.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -47238,7 +47393,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/global/header.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/global/header.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -47390,7 +47545,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/global/footer.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/global/footer.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] footer.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -47533,13 +47688,13 @@ var Component = __webpack_require__(2)(
   /* template */
   __webpack_require__(154),
   /* scopeId */
-  "data-v-8e24b9fc",
+  "data-v-4a483954",
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/FantasyNascar/resources/assets/vue/components/wesBetView.vue"
+Component.options.__file = "/Users/odinkruse/Sites/FantasyNascar/resources/assets/vue/components/subcomponents/wesBetRow.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] wesBetView.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] wesBetRow.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -47548,9 +47703,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8e24b9fc", Component.options)
+    hotAPI.createRecord("data-v-4a483954", Component.options)
   } else {
-    hotAPI.reload("data-v-8e24b9fc", Component.options)
+    hotAPI.reload("data-v-4a483954", Component.options)
   }
 })()}
 
@@ -47568,13 +47723,13 @@ var content = __webpack_require__(152);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("4fba3879", content, false);
+var update = __webpack_require__(1)("b669f0c8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-8e24b9fc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wesBetView.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-8e24b9fc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wesBetView.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-4a483954\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wesBetRow.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-4a483954\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wesBetRow.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -47592,7 +47747,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.useless[data-v-8e24b9fc]{\n    color: #969EA2;\n}\n.out[data-v-8e24b9fc]{\n    color:red;\n}\n.winner[data-v-8e24b9fc]{\n    color:limegreen;\n    font-size:16px;\n}\n", ""]);
+exports.push([module.i, "\n.useless[data-v-4a483954]{\n    color: #969EA2;\n}\n.out[data-v-4a483954]{\n    color:red;\n}\n.winner[data-v-4a483954]{\n    color:limegreen;\n    font-size:16px;\n}\n", ""]);
 
 // exports
 
@@ -47612,35 +47767,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['data']
+    props: ["rowData"],
+    data: function data() {
+        return {};
+    },
+
+    computed: {
+        rowStyle: function rowStyle() {
+            return {
+                out: this.rowData.out == 1
+            };
+        }
+    }
 });
 
 /***/ }),
@@ -47648,27 +47788,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "wes-bet-vue container"
-  }, [_c('div', {
-    staticClass: "col-md-10 col-md-offset-1"
-  }, [_c('h1', [_vm._v("Wes's Side Bet")]), _vm._v(" "), _c('table', {
-    staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.data.betData), function(bet) {
-    return _c('tr', [_c('td', [_vm._v(_vm._s(bet.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(bet.number))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(bet.firstName) + " " + _vm._s(bet.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(bet.wins))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(bet.points))])])
-  }))]), _vm._v(" "), _c('p', {
-    staticClass: "useless"
-  }, [_vm._v("\n            Greyed out numbers mean they are more or less useless because there isn't a duplicate pick.\n        ")]), _vm._v(" "), _c('p', {
-    staticClass: "out"
-  }, [_vm._v("\n            Red rows mean the driver is out of playoff contention, or an opponent has already beaten you in the tiebreak.\n        ")])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('thead', [_c('tr', [_c('td'), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Car")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Driver")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Wins")])]), _vm._v(" "), _c('td', [_c('h3', [_vm._v("Points")])])])])
-}]}
+  return _c('tr', {
+    class: _vm.rowStyle
+  }, [_c('td', [_vm._v(_vm._s(_vm.rowData.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.rowData.number))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.rowData.firstName) + " " + _vm._s(_vm.rowData.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.rowData.wins))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.rowData.points))])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-8e24b9fc", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-4a483954", module.exports)
   }
 }
 

@@ -13,13 +13,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="bet in data.betData">
-                        <td>{{bet.name}}</td>
-                        <td>{{bet.number}}</td>
-                        <td>{{bet.firstName}} {{bet.lastName}}</td>
-                        <td>{{bet.wins}}</td>
-                        <td>{{bet.points}}</td>
-                    </tr>
+                    <template v-for="row in data.betData">
+                        <row-component :rowData="row"></row-component>
+                    </template>
                 </tbody>
             </table>
             <p class="useless">
@@ -34,20 +30,15 @@
 </template>
 
 <script>
+    import RowComponent from './subcomponents/wesBetRow';
     export default {
+        components:{
+            RowComponent,
+            'row-component':RowComponent
+        },
         props:['data']
     }
 </script>
 
 <style scoped>
-    .useless{
-        color: #969EA2;
-    }
-    .out{
-        color:red;
-    }
-    .winner{
-        color:limegreen;
-        font-size:16px;
-    }
 </style>
