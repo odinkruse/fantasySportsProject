@@ -62,15 +62,20 @@ class WesBetController extends Controller
      */
     public function show(WesBet $wesBet)
     {
+        $currentSeason = Season::where('active', '1')->select('id')->first();
         $data = new \stdClass();
         $data->json = new \stdClass();
         $data->json->betData = DB::table('wes_bets')
             ->join('drivers','wes_bets.car_id','=','drivers.car_id')
             ->join('cars', 'wes_bets.car_id', '=', 'cars.id')
-            ->where('wes_bets.season_id', '=', '3')
-            ->where('drivers.season_id', '=', '3')
-            ->select('wes_bets.name','wes_bets.points','wes_bets.wins', 'cars.number', 'drivers.firstName','drivers.lastName','wes_bets.out')
-            ->orderBy('cars.number')
+            ->join('view_car_season_points', 'wes_bets.car_id', '=', 'view_car_season_points.car_id')
+            ->where('view_car_season_points.season_id', $currentSeason->id)
+            ->where('wes_bets.season_id', $currentSeason->id)
+            ->where('drivers.season_id', $currentSeason->id)
+            ->select('wes_bets.name','wes_bets.points','wes_bets.wins', 'cars.number', 'drivers.firstName','drivers.lastName', 'view_car_season_points.season_points', 'wes_bets.out', 'wes_bets.win')
+            ->orderBy('wes_bets.win', 'DESC')
+            ->orderBy('wes_bets.out', 'ASC')
+            ->orderBy('view_car_season_points.season_points', 'DESC')
             ->get();
         $data->view = "the-wes-bet-view";
         return view('main')->with("data",$data);
