@@ -29,13 +29,16 @@ class Home extends Controller
         //foreach(TeamThirdStandings::where('third_id', $data->json->race->third_id)->get() as $teamThirdStanding)
         foreach(Team::get() as $team)
         {
-            $teamStandingData = new \stdClass();
-            $teamStandingData->member1 = explode(" ", $team->member1)[0];
-            $teamStandingData->member2 = explode(" ", $team->member2)[0];
-            $teamStandingData->teamNumber = $team->id;
-            $teamStandingData->thirdPoints = \DB::table('view_team_third_points')->where('team_id',$team->id)->where('third_id', $data->json->race->third_id)->first()->third_points;
-            $teamStandingData->seasonPoints = \DB::table('view_team_season_points')->where('team_id',$team->id)->where('season_id', $data->json->season->id)->first()->season_points;
-            array_push($data->json->teamStandings, $teamStandingData);
+            if($team->active)
+            {
+                $teamStandingData = new \stdClass();
+                $teamStandingData->member1 = explode(" ", $team->member1)[0];
+                $teamStandingData->member2 = explode(" ", $team->member2)[0];
+                $teamStandingData->teamNumber = $team->id;
+                $teamStandingData->thirdPoints = \DB::table('view_team_third_points')->where('team_id',$team->id)->where('third_id', $data->json->race->third_id)->first()->third_points;
+                $teamStandingData->seasonPoints = \DB::table('view_team_season_points')->where('team_id',$team->id)->where('season_id', $data->json->season->id)->first()->season_points;
+                array_push($data->json->teamStandings, $teamStandingData);
+            }
         }
 
         $data->json->recentRaceResults = Race::where('third_id',Third::where('active', 1)->first()->id)->where('resultsImported', 1)->orderByDesc('raceNo')->get();
