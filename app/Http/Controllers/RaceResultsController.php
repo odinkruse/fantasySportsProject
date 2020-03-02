@@ -160,13 +160,17 @@ class RaceResultsController extends Controller
 
         foreach($teams as $team)
         {
-            array_push($teamResultsArray,
+            if($team->active)
+            {
+                array_push($teamResultsArray,
                 [
                     "Team"=>$team,
                     "Results"=>$this->getTeamRaceResults($team->id, $race->id),
                     "TotalPoints"=>array_sum(RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->pluck('points')->toArray()) - array_sum(RaceResults::where('race_id', $race->id)->where('team_id',$team->id)->pluck('penalty')->toArray())
                 ]
             );
+         }
+            
         }
         return $teamResultsArray;
     }
