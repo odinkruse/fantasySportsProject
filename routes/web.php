@@ -45,6 +45,10 @@ Route::post('/update-race-results', 'RaceResultsController@update');
 Route::post('/get-test-race','RaceResultsController@getTestRace');
 Route::post('/add-wes-bet','WesBetController@store');
 
+//TEMP
+Route::get('/.well-known/pki-validation/885771C664A9907AA0F285C15B06FE0D.txt', function() {
+  return File::get(public_path() . '/.well-known/pki-validation/885771C664A9907AA0F285C15B06FE0D.txt');
+});
 
 Auth::routes();
 
