@@ -84,7 +84,7 @@ class RaceResultsController extends Controller
         $race = Race::where('id',$raceData->race->id)->first();
         $client = new Client();
         $html = $client->request('GET', $raceData->url);
-        $table = $html->filterXPath('//table[@class="tb"][3]');
+        $table = $html->filterXPath('//table[@class="tb"][1]');
         $tableArray = $table->filter('tr')->each(function ($row) {
             return $rowArray = $row->filter('td')->each(function ($cell) {
                 return preg_replace("/[^A-Za-z0-9 ]/", '', preg_replace('/\n/', "", $cell->text()));
